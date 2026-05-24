@@ -1,0 +1,5 @@
+D:/Lab_4/build/CMakeFiles/Lab4.dir
+D:/Lab_4/build/CMakeFiles/edit_cache.dir
+D:/Lab_4/build/CMakeFiles/rebuild_cache.dir
+D:/Lab_4/build/CMakeFiles/Lab4_autogen_timestamp_deps.dir
+D:/Lab_4/build/CMakeFiles/Lab4_autogen.dir

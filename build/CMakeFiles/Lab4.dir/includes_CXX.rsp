@@ -1,0 +1,1 @@
+-ID:/Lab_4/build/Lab4_autogen/include -ID:/Lab_4/app_gui/include -ID:/Lab_4/src -ID:/Lab_4/third_party/Lab_2/library/include -isystem C:/Qt/6.11.0/mingw_64/include/QtCore -isystem C:/Qt/6.11.0/mingw_64/include -isystem "C:/Qt/6.11.0/mingw_64/mkspecs/win32-g++" -isystem C:/Qt/6.11.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.11.0/mingw_64/include/QtGui
