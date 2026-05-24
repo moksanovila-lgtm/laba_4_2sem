@@ -5,8 +5,9 @@
 #include "..\third_party\Lab_2\library\include\DynamicArray.hpp"
 #include "..\third_party\Lab_2\library\include\exceptions.hpp"
 #include "ReadOnlyStream.hpp"
+#include <sstream>
+#include <string>
 #include <cmath>
-#include <limits>
 
 template <typename T>
 class OnlineStatistics {
@@ -16,7 +17,6 @@ private:
     double currentSum;
     double currentSumSquares;
     size_t count;
-    
     DynamicArray<T> allValues;
     bool isSorted;
     
@@ -39,7 +39,18 @@ public:
     size_t GetCount() const;
     
     void Reset();
-    void Print() const;
+    
+    struct StatsData {
+        T min;
+        T max;
+        double average;
+        double variance;
+        double stdDeviation;
+        T median;
+        size_t count;
+    };
+    
+    StatsData GetStatsData();
     
     struct PartialStats {
         T min;
@@ -50,6 +61,9 @@ public:
     };
     
     PartialStats GetPartialStats(size_t elementsProcessed) const;
+    
+    std::string ToString() const;
+    operator std::string() const;
 };
 
 #include "OnlineStatistics.tpp"

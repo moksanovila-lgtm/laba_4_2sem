@@ -145,6 +145,98 @@ Optional<T> LazySequence<T>::WhereGenerator::TryGetNext() {
 }
 
 template <typename T>
+LazySequence<T>::ConcatGenerator::ConcatGenerator(
+    std::unique_ptr<IGenerator> first,
+    Sequence<T>* second,
+    bool firstInfinite)
+    : firstGen(std::move(first))
+    , secondSeq(std::make_unique<ArraySequence<T>>())
+    , secondIndex(0)
+    , firstIsInfinite(firstInfinite)
+    , firstFinished(false) {
+    
+    for (size_t i = 0; i < second->GetCount(); ++i) {
+        secondSeq->Append(second->Get(i));
+    }
+}
+
+template <typename T>
+T LazySequence<T>::ConcatGenerator::GetNext() {
+    if (!firstFinished) {
+        try {
+            if (firstGen && firstGen->HasNext()) {
+                return firstGen->GetNext();
+            }
+            firstFinished = true;
+        } catch (const IndexOutOfRangeException&) {
+            firstFinished = true;
+        }
+    }
+    
+    if (firstIsInfinite) {
+        throw IndexOutOfRangeException("Infinite sequence never ends");
+    }
+    
+    if (secondIndex < secondSeq->GetCount()) {
+        return secondSeq->Get(secondIndex++);
+    }
+    
+    throw IndexOutOfRangeException("No more elements");
+}
+
+template <typename T>
+bool LazySequence<T>::ConcatGenerator::HasNext() const {
+    if (!firstFinished && firstGen && firstGen->HasNext()) {
+        return true;
+    }
+    if (firstIsInfinite) {
+        return true;
+    }
+    return secondIndex < secondSeq->GetCount();
+}
+
+template <typename T>
+Optional<T> LazySequence<T>::ConcatGenerator::TryGetNext() {
+    try {
+        return Optional<T>(GetNext());
+    } catch (...) {
+        return Optional<T>();
+    }
+}
+
+template <typename T>
+IEnumerator<T>* LazySequence<T>::GetEnumerator() const {
+    class LazyEnumerator : public IEnumerator<T> {
+    private:
+        const LazySequence* seq;
+        size_t currentIndex;
+        mutable T currentValue;
+        
+    public:
+        LazyEnumerator(const LazySequence* sequence) 
+            : seq(sequence), currentIndex(0) {}
+        
+        bool MoveNext() override {
+            if (seq->IsInfinite()) {
+                currentValue = seq->Get(currentIndex);
+                currentIndex++;
+                return true;
+            }
+            if (currentIndex < seq->GetCount()) {
+                currentValue = seq->Get(currentIndex);
+                currentIndex++;
+                return true;
+            }
+            return false;
+        }
+        T& Current() override { return currentValue; }
+        const T& Current() const override { return currentValue; }
+        void Reset() override { currentIndex = 0; }
+    };
+    return new LazyEnumerator(this);
+}
+
+template <typename T>
 LazySequence<T>::LazySequence()
     : materialized(std::make_unique<ArraySequence<T>>())
     , generator(nullptr)
@@ -310,6 +402,21 @@ LazySequence<T>* LazySequence<T>::Concat(LazySequence<T>* list) const {
     }
     result->isFinite = isFinite && list->isFinite;
     result->finiteSize = (isFinite ? finiteSize : 0) + (list->isFinite ? list->finiteSize : 0);
+    return result;
+}
+
+template <typename T>
+Sequence<T>* LazySequence<T>::Concat(Sequence<T>* other) const {
+    LazySequence<T>* result = new LazySequence<T>();
+    for (size_t i = 0; i < materializedCount; ++i) {
+        result->materialized->Append(materialized->Get(i));
+    }
+    result->generator = std::make_unique<ConcatGenerator>(
+        generator ? std::unique_ptr<IGenerator>(generator.get()) : nullptr,
+        other,
+        IsInfinite()
+    );
+    result->isFinite = !IsInfinite();  
     return result;
 }
 

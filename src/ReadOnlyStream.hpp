@@ -34,7 +34,8 @@ private:
     std::function<T(const std::string&)> deserializer;
     
 
-    size_t position;         
+    size_t position;
+    bool isOpen;           
     bool canSeek;            
     bool canGoBack;          
     

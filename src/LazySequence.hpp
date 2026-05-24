@@ -77,6 +77,23 @@ private:
         bool HasNext() const override;
         Optional<T> TryGetNext() override;
     };
+
+    class ConcatGenerator : public IGenerator {
+    private:
+        std::unique_ptr<IGenerator> firstGen;
+        std::unique_ptr<Sequence<T>> secondSeq;
+        size_t secondIndex;
+        bool firstIsInfinite;
+        bool firstFinished;
+        
+    public:
+        ConcatGenerator(std::unique_ptr<IGenerator> first, 
+                        Sequence<T>* second, 
+                        bool firstInfinite);
+        T GetNext() override;
+        bool HasNext() const override;
+        Optional<T> TryGetNext() override;
+    };
     
 private:
     std::unique_ptr<Sequence<T>> materialized;  
@@ -105,6 +122,8 @@ public:
     LazySequence<T>* Prepend(const T& item) override;
     LazySequence<T>* InsertAt(const T& item, size_t index) override;
     LazySequence<T>* Concat(LazySequence<T>* list) const;
+    Sequence<T>* Concat(Sequence<T>* other) const override;
+    IEnumerator<T>* GetEnumerator() const override;
     
     LazySequence<T>* Map(std::function<T(const T&)> func) const;
     T Reduce(std::function<T(const T&, const T&)> func, const T& initial) const override;

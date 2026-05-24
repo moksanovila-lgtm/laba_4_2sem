@@ -1,6 +1,7 @@
 #pragma once
 
 #include "OnlineStatistics.hpp"
+#include <algorithm>
 
 template <typename T>
 OnlineStatistics<T>::OnlineStatistics()
@@ -16,14 +17,14 @@ OnlineStatistics<T>::OnlineStatistics()
 template <typename T>
 void OnlineStatistics<T>::EnsureSorted() {
     if (!isSorted && allValues.GetCount() > 0) {
-        for (size_t i = 1; i < allValues.GetCount(); ++i) {
-            T key = allValues.Get(i);
-            int j = static_cast<int>(i) - 1;
-            while (j >= 0 && allValues.Get(j) > key) {
-                allValues.Set(j + 1, allValues.Get(j));
-                j--;
+        for (size_t i = 0; i < allValues.GetCount() - 1; ++i) {
+            for (size_t j = 0; j < allValues.GetCount() - i - 1; ++j) {
+                if (allValues.Get(j) > allValues.Get(j + 1)) {
+                    T temp = allValues.Get(j);
+                    allValues.Set(j, allValues.Get(j + 1));
+                    allValues.Set(j + 1, temp);
+                }
             }
-            allValues.Set(j + 1, key);
         }
         isSorted = true;
     }
@@ -31,7 +32,7 @@ void OnlineStatistics<T>::EnsureSorted() {
 
 template <typename T>
 void OnlineStatistics<T>::UpdateSorted(const T& value) {
-    (void)value; 
+    (void)value;
     isSorted = false;
 }
 
@@ -47,7 +48,10 @@ void OnlineStatistics<T>::Update(const T& value) {
     
     currentSum += static_cast<double>(value);
     currentSumSquares += static_cast<double>(value * value);
-    allValues.Append(value);
+    
+    allValues.Resize(count + 1);
+    allValues.Set(count, value);
+    
     UpdateSorted(value);
     count++;
 }
@@ -108,6 +112,7 @@ template <typename T>
 T OnlineStatistics<T>::GetMedian() {
     if (count == 0) throw EmptySequenceException("No data");
     EnsureSorted();
+    
     if (count % 2 == 1) {
         return allValues.Get(count / 2);
     } else {
@@ -134,20 +139,17 @@ void OnlineStatistics<T>::Reset() {
 }
 
 template <typename T>
-void OnlineStatistics<T>::Print() const {
-    std::cout << "Total elements: " << count << std::endl;
-    if (count == 0) {
-        std::cout << "No data collected.\n";
-        return;
-    }
-    std::cout << "Minimum: " << currentMin << std::endl;
-    std::cout << "Maximum: " << currentMax << std::endl;
-    std::cout << "Average: " << GetAverage() << std::endl;
-    std::cout << "Variance: " << GetVariance() << std::endl;
-    std::cout << "Std Deviation: " << GetStdDeviation() << std::endl;
-    std::cout << "Median: " << const_cast<OnlineStatistics<T>*>(this)->GetMedian() << std::endl;
+typename OnlineStatistics<T>::StatsData OnlineStatistics<T>::GetStatsData() {
+    StatsData data;
+    data.min = GetMin();
+    data.max = GetMax();
+    data.average = GetAverage();
+    data.variance = GetVariance();
+    data.stdDeviation = GetStdDeviation();
+    data.median = GetMedian();
+    data.count = count;
+    return data;
 }
-
 
 template <typename T>
 typename OnlineStatistics<T>::PartialStats OnlineStatistics<T>::GetPartialStats(size_t elementsProcessed) const {
@@ -157,27 +159,54 @@ typename OnlineStatistics<T>::PartialStats OnlineStatistics<T>::GetPartialStats(
     stats.average = GetAverage();
     stats.processedCount = count;
     
-    if (count > 0 && elementsProcessed <= count) {
-        DynamicArray<T> temp;
+    if (count > 0 && elementsProcessed <= count && elementsProcessed > 0) {
+        T* temp = new T[elementsProcessed];
         for (size_t i = 0; i < elementsProcessed; ++i) {
-            temp.Append(allValues.Get(i));
+            temp[i] = allValues.Get(i);
         }
-        for (size_t i = 1; i < temp.GetCount(); ++i) {
-            T key = temp.Get(i);
-            int j = static_cast<int>(i) - 1;
-            while (j >= 0 && temp.Get(j) > key) {
-                temp.Set(j + 1, temp.Get(j));
-                j--;
+        
+        for (size_t i = 0; i < elementsProcessed - 1; ++i) {
+            for (size_t j = 0; j < elementsProcessed - i - 1; ++j) {
+                if (temp[j] > temp[j + 1]) {
+                    T t = temp[j];
+                    temp[j] = temp[j + 1];
+                    temp[j + 1] = t;
+                }
             }
-            temp.Set(j + 1, key);
         }
+        
         if (elementsProcessed % 2 == 1) {
-            stats.median = temp.Get(elementsProcessed / 2);
+            stats.median = temp[elementsProcessed / 2];
         } else {
-            T left = temp.Get(elementsProcessed / 2 - 1);
-            T right = temp.Get(elementsProcessed / 2);
-            stats.median = (left + right) / 2;
+            stats.median = (temp[elementsProcessed / 2 - 1] + temp[elementsProcessed / 2]) / 2;
         }
+        
+        delete[] temp;
     }
+    
     return stats;
+}
+
+template <typename T>
+std::string OnlineStatistics<T>::ToString() const {
+    if (count == 0) {
+        return "No data collected";
+    }
+    
+    std::ostringstream oss;
+    oss << "Statistics {\n"
+        << "  count: " << count << "\n"
+        << "  min: " << currentMin << "\n"
+        << "  max: " << currentMax << "\n"
+        << "  average: " << GetAverage() << "\n"
+        << "  variance: " << GetVariance() << "\n"
+        << "  stdDeviation: " << GetStdDeviation() << "\n"
+        << "  median: " << const_cast<OnlineStatistics<T>*>(this)->GetMedian() << "\n"
+        << "}";
+    return oss.str();
+}
+
+template <typename T>
+OnlineStatistics<T>::operator std::string() const {
+    return ToString();
 }
