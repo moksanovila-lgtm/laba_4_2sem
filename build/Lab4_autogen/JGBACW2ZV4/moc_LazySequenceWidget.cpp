@@ -48,7 +48,9 @@ template <> constexpr inline auto LazySequenceWidget::qt_create_metaobjectdata<q
         "size_t",
         "count",
         "onError",
-        "msg"
+        "msg",
+        "onGeneratorTypeChanged",
+        "index"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -65,6 +67,10 @@ template <> constexpr inline auto LazySequenceWidget::qt_create_metaobjectdata<q
         // Slot 'onError'
         QtMocHelpers::SlotData<void(const QString &)>(8, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { QMetaType::QString, 9 },
+        }}),
+        // Slot 'onGeneratorTypeChanged'
+        QtMocHelpers::SlotData<void(int)>(10, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 11 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -94,6 +100,7 @@ void LazySequenceWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         case 2: _t->onSequenceChanged(); break;
         case 3: _t->onMaterializedCountChanged((*reinterpret_cast<std::add_pointer_t<size_t>>(_a[1]))); break;
         case 4: _t->onError((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 5: _t->onGeneratorTypeChanged((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -118,14 +125,14 @@ int LazySequenceWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 6;
     }
     return _id;
 }
