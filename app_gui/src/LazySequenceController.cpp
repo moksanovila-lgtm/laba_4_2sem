@@ -1,6 +1,8 @@
 #include "LazySequenceController.hpp"
 #include <random>
 #include <chrono>
+#include <QDebug>
+#include <iostream>
 
 LazySequenceController::LazySequenceController(QObject* parent)
     : QObject(parent)
@@ -109,18 +111,47 @@ void LazySequenceController::rebuildSequence() {
     stream = std::make_unique<ReadOnlyStream<long long>>(lazySeq.get());
 }
 
+// void LazySequenceController::generateFirstNElements(int n) {
+//     for (int i = 0; i < n; ++i) {
+//         try {
+//             lazySeq->Get(i);
+//         } catch (const std::overflow_error& e) {
+//             emit error(QString("Переполнение: %1").arg(e.what()));
+//             emit materializedCountChanged(lazySeq->GetMaterializedCount());
+//             return;
+//         }
+//     }
+//     emit materializedCountChanged(lazySeq->GetMaterializedCount());
+// }
+
 void LazySequenceController::generateFirstNElements(int n) {
+    // Тест 1: только вызовы getElement
+    auto t1 = std::chrono::high_resolution_clock::now();
     for (int i = 0; i < n; ++i) {
-        try {
-            lazySeq->Get(i);
-        } catch (const std::overflow_error& e) {
-            emit error(QString("Переполнение: %1").arg(e.what()));
-            emit materializedCountChanged(lazySeq->GetMaterializedCount());
-            return;
-        }
+        lazySeq->Get(i);
     }
-    emit materializedCountChanged(lazySeq->GetMaterializedCount());
+    auto t2 = std::chrono::high_resolution_clock::now();
+    double time1 = std::chrono::duration<double, std::milli>(t2 - t1).count();
+    
+    // Тест 2: прямой вызов rule для арифметической прогрессии
+    auto t3 = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < n; ++i) {
+        volatile long long x = 1 + i * 1;  // арифметическая прогрессия
+    }
+    auto t4 = std::chrono::high_resolution_clock::now();
+    double time2 = std::chrono::duration<double, std::milli>(t4 - t3).count();
+    
+    emit error(QString("Get(i): %1 ms\nDirect: %2 ms").arg(time1).arg(time2));
 }
+
+
+
+
+
+
+
+
+
 
 long long LazySequenceController::getElement(size_t index) {
     try {

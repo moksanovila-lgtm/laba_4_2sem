@@ -373,9 +373,6 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qbitmap.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtabwidget.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTabWidget \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSplitter \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsplitter.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h \
  D:/Lab_4/app_gui/include/LazySequenceWidget.hpp \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QWidget \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QComboBox \
@@ -391,6 +388,7 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qstyle.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtabbar.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qrubberband.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qabstractitemmodel.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSpinBox \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qspinbox.h \
@@ -409,6 +407,10 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractitemview.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qitemselectionmodel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QRadioButton \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qradiobutton.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QButtonGroup \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qbuttongroup.h \
  D:/Lab_4/app_gui/include/LazySequenceController.hpp \
  C:/Qt/6.11.0/mingw_64/include/QtCore/QObject \
  D:/Lab_4/src/LazySequence.hpp \
@@ -437,18 +439,15 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
  D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp \
  D:/Lab_4/src/Optional.hpp D:/Lab_4/src/Optional.tpp \
- D:/Lab_4/src/LazySequence.tpp D:/Lab_4/src/ReadOnlyStream.hpp \
+ D:/Lab_4/src/LazySequence.tpp \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream \
+ D:/Lab_4/src/ReadOnlyStream.hpp \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc \
  D:/Lab_4/src/ReadOnlyStream.tpp \
- D:/Lab_4/app_gui/include/StatisticsWidget.hpp \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QProgressBar \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qprogressbar.h \
- D:/Lab_4/app_gui/include/StatisticsController.hpp \
- D:/Lab_4/src/OnlineStatistics.hpp D:/Lab_4/src/OnlineStatistics.tpp \
  D:/Lab_4/app_gui/include/TestingWidget.hpp \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTableWidget \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtablewidget.h \
@@ -459,6 +458,8 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qtextcursor.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qtextformat.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qpen.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QProgressBar \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qprogressbar.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QVBoxLayout \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qboxlayout.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlayout.h \

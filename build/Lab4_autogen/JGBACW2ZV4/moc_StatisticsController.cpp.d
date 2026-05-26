@@ -163,7 +163,6 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_StatisticsController.cpp: D:/Lab_4/ap
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/concept_check.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cpp_type_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cxxabi_forced.h \
@@ -173,7 +172,6 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_StatisticsController.cpp: D:/Lab_4/ap
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functexcept.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h \
@@ -269,7 +267,6 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_StatisticsController.cpp: D:/Lab_4/ap
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/numeric_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/type_traits.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/functional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
@@ -316,10 +313,8 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_StatisticsController.cpp: D:/Lab_4/ap
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/vector \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/version \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -334,19 +329,6 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_StatisticsController.cpp: D:/Lab_4/ap
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
-  D:/Lab_4/src/LazySequence.hpp \
-  D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
   D:/Lab_4/src/OnlineStatistics.tpp \
-  D:/Lab_4/src/Optional.hpp \
-  D:/Lab_4/src/Optional.tpp \
-  D:/Lab_4/src/ReadOnlyStream.hpp \
-  D:/Lab_4/src/ReadOnlyStream.tpp \
-  D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
-  D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp \
-  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.hpp \
-  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
-  D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
-  D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
-  D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp

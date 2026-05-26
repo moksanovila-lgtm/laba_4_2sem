@@ -334,7 +334,9 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
  D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp \
  D:/Lab_4/src/Optional.hpp D:/Lab_4/src/Optional.tpp \
- D:/Lab_4/src/LazySequence.tpp D:/Lab_4/src/ReadOnlyStream.hpp \
+ D:/Lab_4/src/LazySequence.tpp \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream \
+ D:/Lab_4/src/ReadOnlyStream.hpp \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
@@ -344,4 +346,23 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/random \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
- C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.tcc
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.tcc \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QDebug \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qdebug.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qtextstream.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcontiguouscache.h \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/climits \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qsharedpointer.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qshareddata.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qsharedpointer_impl.h \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/set \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_set.h \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_multiset.h \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/unordered_set \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unordered_set.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qmap.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qshareddata_impl.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qset.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qhash.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qvarlengtharray.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qalloc.h

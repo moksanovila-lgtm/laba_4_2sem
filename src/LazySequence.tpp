@@ -1,6 +1,7 @@
 #include "LazySequence.hpp"
 #include "Optional.hpp"
 #include <stdexcept>
+#include <iostream>
 
 template <typename T>
 LazySequence<T>::DefaultGenerator::DefaultGenerator(
@@ -9,8 +10,104 @@ LazySequence<T>::DefaultGenerator::DefaultGenerator(
     size_t arity)
     : owner(owner), rule(rule), arity(arity) {}
 
+// template <typename T>
+// T LazySequence<T>::DefaultGenerator::GetNext() {
+//     auto* prev = new ArraySequence<T>();
+//     size_t count = owner->materialized->GetCount();
+//     size_t start = count > arity ? count - arity : 0;
+    
+//     for (size_t i = start; i < count; ++i) {
+//         prev->Append(owner->materialized->Get(i));
+//     }
+    
+//     T result = rule(prev);
+//     delete prev;
+//     return result;
+// }
+
+// template <typename T>
+// T LazySequence<T>::DefaultGenerator::GetNext() {
+//     if (arity == 0) {
+//         return rule(nullptr);
+//     }
+    
+//     auto* prev = new ArraySequence<T>();
+//     size_t count = owner->materialized->GetCount();
+//     size_t start = count > arity ? count - arity : 0;
+    
+//     for (size_t i = start; i < count; ++i) {
+//         prev->Append(owner->materialized->Get(i));
+//     }
+    
+//     T result = rule(prev);
+//     delete prev;
+//     return result;
+// }
+
+// template <typename T>
+// T LazySequence<T>::DefaultGenerator::GetNext() {
+//     static int callCount = 0;
+//     callCount++;
+    
+//     if (callCount % 10000 == 0) {
+//         std::cout << "GetNext called " << callCount << " times, arity=" << arity << std::endl;
+//     }
+    
+//     if (arity == 0) {
+//         if (callCount % 10000 == 0) {
+//             std::cout << "  arity==0, calling rule(nullptr)" << std::endl;
+//         }
+//         return rule(nullptr);
+//     }
+    
+//     if (callCount % 10000 == 0) {
+//         std::cout << "  arity>0, creating prev array..." << std::endl;
+//     }
+    
+//     auto* prev = new ArraySequence<T>();
+//     size_t count = owner->materialized->GetCount();
+//     size_t start = count > arity ? count - arity : 0;
+    
+//     if (callCount % 10000 == 0) {
+//         std::cout << "    count=" << count << ", start=" << start << ", arity=" << arity << std::endl;
+//     }
+    
+//     for (size_t i = start; i < count; ++i) {
+//         prev->Append(owner->materialized->Get(i));
+//     }
+    
+//     T result = rule(prev);
+//     delete prev;
+    
+//     if (callCount % 10000 == 0) {
+//         std::cout << "    result=" << result << std::endl;
+//     }
+    
+//     return result;
+// }
+
 template <typename T>
 T LazySequence<T>::DefaultGenerator::GetNext() {
+    static int callCount = 0;
+    callCount++;
+    
+    auto start_total = std::chrono::high_resolution_clock::now();
+    
+    if (arity == 0) {
+        auto start_rule = std::chrono::high_resolution_clock::now();
+        T result = rule(nullptr);
+        auto end_rule = std::chrono::high_resolution_clock::now();
+        auto rule_us = std::chrono::duration_cast<std::chrono::microseconds>(end_rule - start_rule).count();
+        
+        if (callCount % 10000 == 0) {
+            std::cout << "GetNext #" << callCount << " [arity=0] rule took " << rule_us << " us, result=" << result << std::endl;
+        }
+        return result;
+    }
+    
+    // Для рекуррентных генераторов (arity > 0)
+    auto start_prev = std::chrono::high_resolution_clock::now();
+    
     auto* prev = new ArraySequence<T>();
     size_t count = owner->materialized->GetCount();
     size_t start = count > arity ? count - arity : 0;
@@ -19,10 +116,51 @@ T LazySequence<T>::DefaultGenerator::GetNext() {
         prev->Append(owner->materialized->Get(i));
     }
     
+    auto end_prev = std::chrono::high_resolution_clock::now();
+    auto prev_us = std::chrono::duration_cast<std::chrono::microseconds>(end_prev - start_prev).count();
+    
+    auto start_rule = std::chrono::high_resolution_clock::now();
     T result = rule(prev);
+    auto end_rule = std::chrono::high_resolution_clock::now();
+    auto rule_us = std::chrono::duration_cast<std::chrono::microseconds>(end_rule - start_rule).count();
+    
     delete prev;
+    
+    auto end_total = std::chrono::high_resolution_clock::now();
+    auto total_us = std::chrono::duration_cast<std::chrono::microseconds>(end_total - start_total).count();
+    
+    if (callCount % 10000 == 0) {
+        std::cout << "GetNext #" << callCount << " [arity=" << arity << "] prev=" << prev_us << " us, rule=" << rule_us << " us, total=" << total_us << " us" << std::endl;
+    }
+    
     return result;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 template <typename T>
 bool LazySequence<T>::DefaultGenerator::HasNext() const {
@@ -184,6 +322,20 @@ T LazySequence<T>::ConcatGenerator::GetNext() {
     throw IndexOutOfRangeException("No more elements");
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 template <typename T>
 bool LazySequence<T>::ConcatGenerator::HasNext() const {
     if (!firstFinished && firstGen && firstGen->HasNext()) {
@@ -295,20 +447,80 @@ LazySequence<T>::LazySequence(const LazySequence& other)
     }
 }
 
+// template <typename T>
+// void LazySequence<T>::Materialize(size_t index) {
+//     while (materialized->GetCount() <= index && generator && generator->HasNext()) {
+//         materialized->Append(generator->GetNext());
+//         materializedCount++;
+//     }
+// }
+
 template <typename T>
 void LazySequence<T>::Materialize(size_t index) {
+    static long long totalTime = 0;
+    static int callCount = 0;
+    auto start = std::chrono::high_resolution_clock::now();
+    
     while (materialized->GetCount() <= index && generator && generator->HasNext()) {
         materialized->Append(generator->GetNext());
         materializedCount++;
     }
+    
+    auto end = std::chrono::high_resolution_clock::now();
+    totalTime += std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+    callCount++;
+    
+    if (callCount % 10000 == 0) {
+        std::cout << "Materialize called " << callCount << " times, total time: " << totalTime << " us" << std::endl;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// template <typename T>
+// T LazySequence<T>::Get(size_t index) const {
+//     if (isFinite && index >= finiteSize) {
+//         throw IndexOutOfRangeException("Index out of range");
+//     }
+//     const_cast<LazySequence*>(this)->Materialize(index);
+//     if (index >= materialized->GetCount()) {
+//         throw IndexOutOfRangeException("Index out of range");
+//     }
+//     return materialized->Get(index);
+// }
 
 template <typename T>
 T LazySequence<T>::Get(size_t index) const {
     if (isFinite && index >= finiteSize) {
         throw IndexOutOfRangeException("Index out of range");
     }
+    
+    auto start = std::chrono::high_resolution_clock::now();
     const_cast<LazySequence*>(this)->Materialize(index);
+    auto end = std::chrono::high_resolution_clock::now();
+    auto us = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+    
+    static int callCount = 0;
+    callCount++;
+    if (callCount % 10000 == 0) {
+        std::cout << "Get(" << index << ") Materialize took " << us << " us" << std::endl;
+    }
+    
     if (index >= materialized->GetCount()) {
         throw IndexOutOfRangeException("Index out of range");
     }

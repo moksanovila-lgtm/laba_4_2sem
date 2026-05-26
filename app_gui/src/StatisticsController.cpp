@@ -1,12 +1,11 @@
 #include "StatisticsController.hpp"
 
 StatisticsController::StatisticsController(QObject* parent)
-    : QObject(parent)
-    , isProcessing(false) {}
+    : QObject(parent) {}
 
 StatisticsController::~StatisticsController() {}
 
-void StatisticsController::updateFromValue(int value) {
+void StatisticsController::updateFromValue(long long value) {
     stats.Update(value);
     emit statsUpdated();
 }
@@ -16,7 +15,7 @@ void StatisticsController::reset() {
     emit statsUpdated();
 }
 
-int StatisticsController::getMin() const {
+long long StatisticsController::getMin() const {
     try {
         return stats.GetMin();
     } catch (const std::exception& e) {
@@ -25,12 +24,21 @@ int StatisticsController::getMin() const {
     }
 }
 
-int StatisticsController::getMax() const {
+long long StatisticsController::getMax() const {
     try {
         return stats.GetMax();
     } catch (const std::exception& e) {
         const_cast<StatisticsController*>(this)->emit error(e.what());
         return 0;
+    }
+}
+
+double StatisticsController::getRange() const {
+    try {
+        return stats.GetRange();
+    } catch (const std::exception& e) {
+        const_cast<StatisticsController*>(this)->emit error(e.what());
+        return 0.0;
     }
 }
 
@@ -61,33 +69,24 @@ double StatisticsController::getStdDeviation() const {
     }
 }
 
-double StatisticsController::getMedian() {
+double StatisticsController::getRMS() const {
     try {
-        return stats.GetMedian();
+        return stats.GetRMS();
     } catch (const std::exception& e) {
-        emit error(e.what());
+        const_cast<StatisticsController*>(this)->emit error(e.what());
+        return 0.0;
+    }
+}
+
+double StatisticsController::getCoefficientOfVariation() const {
+    try {
+        return stats.GetCoefficientOfVariation();
+    } catch (const std::exception& e) {
+        const_cast<StatisticsController*>(this)->emit error(e.what());
         return 0.0;
     }
 }
 
 size_t StatisticsController::getCount() const {
     return stats.GetCount();
-}
-
-QString StatisticsController::getStatsAsString() const {
-    if (stats.GetCount() == 0) {
-        return "Нет данных";
-    }
-    
-    try {
-        return QString("Min: %1, Max: %2, Avg: %3, Median: %4, Count: %5")
-            .arg(stats.GetMin())
-            .arg(stats.GetMax())
-            .arg(stats.GetAverage(), 0, 'f', 2)
-            .arg(const_cast<StatisticsController*>(this)->getMedian(), 0, 'f', 2)
-            .arg(stats.GetCount());
-    } catch (const std::exception& e) {
-        const_cast<StatisticsController*>(this)->emit error(e.what());
-        return "Ошибка получения статистики";
-    }
 }

@@ -155,12 +155,9 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_MainWindow.cpp: D:/Lab_4/app_gui/incl
   C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QMainWindow \
-  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSplitter \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTabWidget \
-  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsizepolicy.h \
-  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsplitter.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \

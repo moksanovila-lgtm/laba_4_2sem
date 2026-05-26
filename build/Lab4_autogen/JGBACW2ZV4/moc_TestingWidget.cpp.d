@@ -52,6 +52,7 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_TestingWidget.cpp: D:/Lab_4/app_gui/i
   C:/Qt/6.11.0/mingw_64/include/QtCore/qglobalstatic.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qhash.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qhashfunctions.h \
+  C:/Qt/6.11.0/mingw_64/include/QtCore/qiodevice.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qiodevicebase.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qitemselectionmodel.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qiterable.h \
@@ -148,6 +149,7 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_TestingWidget.cpp: D:/Lab_4/app_gui/i
   C:/Qt/6.11.0/mingw_64/include/QtGui/qpaintdevice.h \
   C:/Qt/6.11.0/mingw_64/include/QtGui/qpalette.h \
   C:/Qt/6.11.0/mingw_64/include/QtGui/qpen.h \
+  C:/Qt/6.11.0/mingw_64/include/QtGui/qpicture.h \
   C:/Qt/6.11.0/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.11.0/mingw_64/include/QtGui/qpixmap.h \
   C:/Qt/6.11.0/mingw_64/include/QtGui/qpolygon.h \
@@ -165,7 +167,11 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_TestingWidget.cpp: D:/Lab_4/app_gui/i
   C:/Qt/6.11.0/mingw_64/include/QtGui/qvalidator.h \
   C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QComboBox \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QLabel \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QProgressBar \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QPushButton \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSpinBox \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTableWidget \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTextEdit \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QWidget \
@@ -175,11 +181,15 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_TestingWidget.cpp: D:/Lab_4/app_gui/i
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractslider.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qcombobox.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlabel.h \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qprogressbar.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qrubberband.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qslider.h \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qspinbox.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qstyle.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qstyleoption.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtabbar.h \

@@ -164,7 +164,6 @@ D:/Lab_4/app_gui/include/StatisticsController.hpp
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono.h
- mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/concept_check.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cpp_type_traits.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cxxabi_forced.h
@@ -174,7 +173,6 @@ D:/Lab_4/app_gui/include/StatisticsController.hpp
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h
- mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functexcept.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h
@@ -270,7 +268,6 @@ D:/Lab_4/app_gui/include/StatisticsController.hpp
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/numeric_traits.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/type_traits.h
- mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/functional
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios
@@ -317,10 +314,8 @@ D:/Lab_4/app_gui/include/StatisticsController.hpp
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/vector
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/version
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h
- mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h
- mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h
@@ -337,21 +332,8 @@ D:/Lab_4/app_gui/include/StatisticsController.hpp
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h
  mdp:D:/Lab_4/app_gui/include/StatisticsController.hpp
  mdp:D:/Lab_4/build/Lab4_autogen/moc_predefs.h
- mdp:D:/Lab_4/src/LazySequence.hpp
- mdp:D:/Lab_4/src/LazySequence.tpp
  mdp:D:/Lab_4/src/OnlineStatistics.hpp
  mdp:D:/Lab_4/src/OnlineStatistics.tpp
- mdp:D:/Lab_4/src/Optional.hpp
- mdp:D:/Lab_4/src/Optional.tpp
- mdp:D:/Lab_4/src/ReadOnlyStream.hpp
- mdp:D:/Lab_4/src/ReadOnlyStream.tpp
- mdp:D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp
- mdp:D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp
- mdp:D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.hpp
- mdp:D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp
- mdp:D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp
- mdp:D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp
- mdp:D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp
  mdp:D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp
 D:/Lab_4/app_gui/include/LazySequenceController.hpp
  mmc:Q_OBJECT
@@ -707,7 +689,6 @@ D:/Lab_4/app_gui/include/LazySequenceController.hpp
  mdp:D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp
 D:/Lab_4/app_gui/include/StatisticsWidget.hpp
  mmc:Q_OBJECT
- mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/QObject
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/q17memory.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/q20bit.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/q20functional.h
@@ -766,7 +747,6 @@ D:/Lab_4/app_gui/include/StatisticsWidget.hpp
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qlatin1stringview.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qline.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qlist.h
- mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qlocale.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qlogging.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qmalloc.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qmap.h
@@ -787,7 +767,6 @@ D:/Lab_4/app_gui/include/StatisticsWidget.hpp
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qprocessordetection.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qrect.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qrefcount.h
- mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qregularexpression.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qscopedpointer.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qscopeguard.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qset.h
@@ -866,22 +845,13 @@ D:/Lab_4/app_gui/include/StatisticsWidget.hpp
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qtguiexports.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qtguiglobal.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qtransform.h
- mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qvalidator.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs_win.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QLabel
- mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QProgressBar
- mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QPushButton
- mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSpinBox
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QWidget
- mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractbutton.h
- mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractspinbox.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlabel.h
- mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qprogressbar.h
- mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qpushbutton.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsizepolicy.h
- mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qspinbox.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgets-config.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h
@@ -1122,13 +1092,10 @@ D:/Lab_4/app_gui/include/StatisticsWidget.hpp
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h
- mdp:D:/Lab_4/app_gui/include/StatisticsController.hpp
  mdp:D:/Lab_4/app_gui/include/StatisticsWidget.hpp
  mdp:D:/Lab_4/build/Lab4_autogen/moc_predefs.h
  mdp:D:/Lab_4/src/LazySequence.hpp
  mdp:D:/Lab_4/src/LazySequence.tpp
- mdp:D:/Lab_4/src/OnlineStatistics.hpp
- mdp:D:/Lab_4/src/OnlineStatistics.tpp
  mdp:D:/Lab_4/src/Optional.hpp
  mdp:D:/Lab_4/src/Optional.tpp
  mdp:D:/Lab_4/src/ReadOnlyStream.hpp
@@ -1308,11 +1275,14 @@ D:/Lab_4/app_gui/include/LazySequenceWidget.hpp
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qvalidator.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QButtonGroup
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QComboBox
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QLabel
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QListWidget
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QPushButton
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QRadioButton
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSpinBox
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTabWidget
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QWidget
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractbutton.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h
@@ -1320,12 +1290,14 @@ D:/Lab_4/app_gui/include/LazySequenceWidget.hpp
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractscrollarea.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractslider.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractspinbox.h
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qbuttongroup.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qcombobox.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlabel.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlistview.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlistwidget.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qpushbutton.h
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qradiobutton.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qrubberband.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qslider.h
@@ -1748,12 +1720,9 @@ D:/Lab_4/app_gui/include/MainWindow.hpp
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs_win.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QMainWindow
- mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSplitter
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTabWidget
- mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qmainwindow.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsizepolicy.h
- mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsplitter.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtabwidget.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgets-config.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsexports.h
@@ -2031,6 +2000,7 @@ D:/Lab_4/app_gui/include/TestingWidget.hpp
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qglobalstatic.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qhash.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qhashfunctions.h
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qiodevice.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qiodevicebase.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qitemselectionmodel.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/qiterable.h
@@ -2127,6 +2097,7 @@ D:/Lab_4/app_gui/include/TestingWidget.hpp
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qpaintdevice.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qpalette.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qpen.h
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qpicture.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qpixelformat.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qpixmap.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qpolygon.h
@@ -2144,7 +2115,11 @@ D:/Lab_4/app_gui/include/TestingWidget.hpp
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qvalidator.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QComboBox
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QLabel
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QProgressBar
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QPushButton
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSpinBox
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTableWidget
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTextEdit
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/QWidget
@@ -2154,11 +2129,15 @@ D:/Lab_4/app_gui/include/TestingWidget.hpp
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractscrollarea.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractslider.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractspinbox.h
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qcombobox.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlabel.h
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qprogressbar.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qpushbutton.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qrubberband.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qslider.h
+ mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qspinbox.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qstyle.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qstyleoption.h
  mdp:C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtabbar.h

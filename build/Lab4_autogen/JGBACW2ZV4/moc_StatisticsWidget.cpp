@@ -39,32 +39,10 @@ template <> constexpr inline auto StatisticsWidget::qt_create_metaobjectdata<qt_
 {
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
-        "StatisticsWidget",
-        "onCollect",
-        "",
-        "onReset",
-        "onStatsUpdated",
-        "onProgress",
-        "percent",
-        "onError",
-        "msg"
+        "StatisticsWidget"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Slot 'onCollect'
-        QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onReset'
-        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onStatsUpdated'
-        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onProgress'
-        QtMocHelpers::SlotData<void(int)>(5, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 6 },
-        }}),
-        // Slot 'onError'
-        QtMocHelpers::SlotData<void(const QString &)>(7, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::QString, 8 },
-        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -86,16 +64,10 @@ Q_CONSTINIT const QMetaObject StatisticsWidget::staticMetaObject = { {
 void StatisticsWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<StatisticsWidget *>(_o);
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        switch (_id) {
-        case 0: _t->onCollect(); break;
-        case 1: _t->onReset(); break;
-        case 2: _t->onStatsUpdated(); break;
-        case 3: _t->onProgress((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
-        case 4: _t->onError((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        default: ;
-        }
-    }
+    (void)_t;
+    (void)_c;
+    (void)_id;
+    (void)_a;
 }
 
 const QMetaObject *StatisticsWidget::metaObject() const
@@ -114,18 +86,6 @@ void *StatisticsWidget::qt_metacast(const char *_clname)
 int StatisticsWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
-    if (_id < 0)
-        return _id;
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
-            qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
-    }
-    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
-    }
     return _id;
 }
 QT_WARNING_POP

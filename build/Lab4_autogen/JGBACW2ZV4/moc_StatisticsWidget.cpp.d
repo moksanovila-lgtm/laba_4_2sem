@@ -1,6 +1,5 @@
 D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_StatisticsWidget.cpp: D:/Lab_4/app_gui/include/StatisticsWidget.hpp \
   D:/Lab_4/build/Lab4_autogen/moc_predefs.h \
-  C:/Qt/6.11.0/mingw_64/include/QtCore/QObject \
   C:/Qt/6.11.0/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/q20bit.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/q20functional.h \
@@ -59,7 +58,6 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_StatisticsWidget.cpp: D:/Lab_4/app_gu
   C:/Qt/6.11.0/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qline.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qlist.h \
-  C:/Qt/6.11.0/mingw_64/include/QtCore/qlocale.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qlogging.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qmalloc.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qmap.h \
@@ -80,7 +78,6 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_StatisticsWidget.cpp: D:/Lab_4/app_gu
   C:/Qt/6.11.0/mingw_64/include/QtCore/qprocessordetection.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qrect.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qrefcount.h \
-  C:/Qt/6.11.0/mingw_64/include/QtCore/qregularexpression.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qscopedpointer.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qscopeguard.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/qset.h \
@@ -159,22 +156,13 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_StatisticsWidget.cpp: D:/Lab_4/app_gu
   C:/Qt/6.11.0/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.11.0/mingw_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.11.0/mingw_64/include/QtGui/qtransform.h \
-  C:/Qt/6.11.0/mingw_64/include/QtGui/qvalidator.h \
   C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QLabel \
-  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QProgressBar \
-  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QPushButton \
-  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSpinBox \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QWidget \
-  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlabel.h \
-  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qprogressbar.h \
-  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsizepolicy.h \
-  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qspinbox.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -353,6 +341,7 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_StatisticsWidget.cpp: D:/Lab_4/app_gu
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iterator \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \
@@ -415,11 +404,8 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_StatisticsWidget.cpp: D:/Lab_4/app_gu
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
-  D:/Lab_4/app_gui/include/StatisticsController.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
-  D:/Lab_4/src/OnlineStatistics.hpp \
-  D:/Lab_4/src/OnlineStatistics.tpp \
   D:/Lab_4/src/Optional.hpp \
   D:/Lab_4/src/Optional.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \

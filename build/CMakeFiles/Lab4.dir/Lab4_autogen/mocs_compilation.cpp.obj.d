@@ -335,7 +335,9 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
  D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp \
  D:/Lab_4/src/Optional.hpp D:/Lab_4/src/Optional.tpp \
- D:/Lab_4/src/LazySequence.tpp D:/Lab_4/src/ReadOnlyStream.hpp \
+ D:/Lab_4/src/LazySequence.tpp \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream \
+ D:/Lab_4/src/ReadOnlyStream.hpp \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
@@ -443,6 +445,11 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractitemview.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qitemselectionmodel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTabWidget \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QRadioButton \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qradiobutton.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QButtonGroup \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qbuttongroup.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qtextcursor.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qtextformat.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qpen.h \
@@ -451,20 +458,17 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: \
  D:/Lab_4/app_gui/include/MainWindow.hpp \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QMainWindow \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qmainwindow.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTabWidget \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSplitter \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsplitter.h \
  D:\Lab_4\build\Lab4_autogen\JGBACW2ZV4/moc_StatisticsController.cpp \
  D:/Lab_4/app_gui/include/StatisticsController.hpp \
  D:/Lab_4/src/OnlineStatistics.hpp D:/Lab_4/src/OnlineStatistics.tpp \
  D:\Lab_4\build\Lab4_autogen\JGBACW2ZV4/moc_StatisticsWidget.cpp \
  D:/Lab_4/app_gui/include/StatisticsWidget.hpp \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QProgressBar \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qprogressbar.h \
  D:\Lab_4\build\Lab4_autogen\JGBACW2ZV4/moc_TestingWidget.cpp \
  D:/Lab_4/app_gui/include/TestingWidget.hpp \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTableWidget \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtablewidget.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtableview.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTextEdit \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtextedit.h
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtextedit.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QProgressBar \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qprogressbar.h

@@ -1,6 +1,5 @@
 #include "TestingWidget.hpp"
 #include "LazySequenceController.hpp"
-#include "StatisticsController.hpp"
 #include "OnlineStatistics.hpp"
 #include "ReadOnlyStream.hpp"
 #include "..\third_party\Lab_2\library\include\ArraySequence.hpp"
@@ -13,216 +12,49 @@
 #include <QHeaderView>
 #include <QMessageBox>
 #include <QRegularExpression>
-#include <QVBoxLayout>
 #include <QLabel>
-#include <QString>
+#include <QComboBox>
+#include <QSpinBox>
 #include <QCoreApplication>
+#include <chrono>
+#include <QCoreApplication>
+#include <QFile>
+#include <QDataStream>
 
-// TestingWidget::TestingWidget(QWidget* parent)
-//     : QWidget(parent) {
-//     setupUI();
-// }
+void TestingWidget::createDataFile() {
+    QString filename = QCoreApplication::applicationDirPath() + "/large_data.txt";
+    
+    QFile file(filename);
+    if (file.exists()) {
+        std::cout << "Файл уже существует: " << filename.toStdString() << std::endl;
+        return;
+    }
+    
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        std::cout << "Не удалось создать файл" << std::endl;
+        return;
+    }
+    
+    std::cout << "Создание файла с 1 000 000 чисел..." << std::endl;
+    
+    QTextStream out(&file);
+    for (int i = 0; i < 1000000; ++i) {
+        out << (i + 1) << "\n";
+    }
+    
+    file.close();
+    std::cout << "Файл создан: " << filename.toStdString() << std::endl;
+}
 
-// TestingWidget::~TestingWidget() {}
 
-// void TestingWidget::setupUI() {
-//     QVBoxLayout* mainLayout = new QVBoxLayout(this);
-    
-//     QHBoxLayout* btnLayout = new QHBoxLayout();
-//     autoTestsBtn = new QPushButton("Автоматические тесты");
-//     largeDataBtn = new QPushButton("Тест больших данных (100000)");
-//     manualBtn = new QPushButton("Ручной ввод");
-//     btnLayout->addWidget(autoTestsBtn);
-//     btnLayout->addWidget(largeDataBtn);
-//     btnLayout->addWidget(manualBtn);
-//     btnLayout->addStretch();
-//     mainLayout->addLayout(btnLayout);
-    
-//     QGroupBox* manualGroup = new QGroupBox("Ручной ввод данных");
-//     QVBoxLayout* manualLayout = new QVBoxLayout(manualGroup);
-    
-//     manualInput = new QTextEdit();
-//     manualInput->setPlaceholderText("Введите числа, разделенные пробелом, запятой или переводом строки\nПример: 5 8 3 9 1 7 4 6 2 10");
-//     manualInput->setMaximumHeight(100);
-//     manualLayout->addWidget(manualInput);
-    
-//     QPushButton* calcBtn = new QPushButton("Рассчитать");
-//     manualLayout->addWidget(calcBtn);
-    
-//     manualResult = new QTextEdit();
-//     manualResult->setReadOnly(true);
-//     manualResult->setMaximumHeight(150);
-//     manualLayout->addWidget(manualResult);
-//     mainLayout->addWidget(manualGroup);
-    
-//     testTable = new QTableWidget();
-//     testTable->setColumnCount(5);
-//     testTable->setHorizontalHeaderLabels({"Тест", "Статус", "Результат", "Ожидалось", "Время"});
-//     testTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);
-//     mainLayout->addWidget(testTable);
-    
-//     connect(autoTestsBtn, &QPushButton::clicked, this, &TestingWidget::onRunAutoTests);
-//     connect(largeDataBtn, &QPushButton::clicked, this, &TestingWidget::onRunLargeData);
-//     connect(calcBtn, &QPushButton::clicked, this, &TestingWidget::onRunManual);
-// }
 
-// void TestingWidget::onRunLargeData() {
-//     const int LARGE_SIZE = 100000;
-    
-//     QMessageBox::information(this, "Тест больших данных", 
-//         QString("Запуск теста на %1 элементах...").arg(LARGE_SIZE));
-    
-//     auto start = std::chrono::high_resolution_clock::now();
-    
-//     LazySequenceController controller;
-//     controller.setGenerator(LazySequenceController::GEN_RANDOM, 0, 1000);
-//     ReadOnlyStream<long long>* stream = controller.getStream();
-    
-//     OnlineStatistics<long long> stats;
-//     stats.ProcessStream(*stream, LARGE_SIZE);
-    
-//     auto end = std::chrono::high_resolution_clock::now();
-//     double timeSec = std::chrono::duration<double>(end - start).count();
-    
-//     QString result = QString::fromUtf8("Обработано %1 элементов\n"
-//         "Время: %2 сек\n"
-//         "Min: %3\n"
-//         "Max: %4\n"
-//         "Avg: %5\n"
-//         "Median: %6\n"
-//         "StdDev: %7")
-//         .arg(LARGE_SIZE)
-//         .arg(QString::number(timeSec, 'f', 2))
-//         .arg(stats.GetMin())
-//         .arg(stats.GetMax())
-//         .arg(QString::number(stats.GetAverage(), 'f', 2))
-//         .arg(QString::number(stats.GetMedian(), 'f', 2))
-//         .arg(QString::number(stats.GetStdDeviation(), 'f', 2));
-    
-//     QMessageBox::information(this, "Результат теста больших данных", result);
-// }
 
-// void TestingWidget::onRunAutoTests() {
-//     testTable->setRowCount(0);
-    
-//     struct TestResult {
-//         QString name;
-//         bool passed;
-//         double actual;
-//         double expected;
-//         double timeMs;
-//     };
-    
-//     QVector<TestResult> results;
-    
-//     {
-//         TestResult r;
-//         r.name = "Арифметическая 1..100";
-//         auto start = std::chrono::high_resolution_clock::now();
-        
-//         LazySequenceController controller;
-//         controller.setGenerator(LazySequenceController::GEN_ARITHMETIC, 1, 1);
-//         ReadOnlyStream<long long>* stream = controller.getStream();
-        
-//         OnlineStatistics<long long> stats;
-//         stats.ProcessStream(*stream, 100);
-        
-//         r.actual = stats.GetAverage();
-//         r.expected = 50.5;
-//         r.passed = (std::abs(r.actual - r.expected) < 0.1);
-        
-//         auto end = std::chrono::high_resolution_clock::now();
-//         r.timeMs = std::chrono::duration<double, std::milli>(end - start).count();
-//         results.append(r);
-//     }
-    
-//     {
-//         TestResult r;
-//         r.name = "Чётные числа 2..100";
-//         auto start = std::chrono::high_resolution_clock::now();
-        
-//         LazySequenceController controller;
-//         controller.setGenerator(LazySequenceController::GEN_ARITHMETIC, 2, 2);
-//         ReadOnlyStream<long long>* stream = controller.getStream();
-        
-//         OnlineStatistics<long long> stats;
-//         stats.ProcessStream(*stream, 50);
-        
-//         r.actual = stats.GetMedian();
-//         r.expected = 51;
-//         r.passed = (r.actual == r.expected);
-        
-//         auto end = std::chrono::high_resolution_clock::now();
-//         r.timeMs = std::chrono::duration<double, std::milli>(end - start).count();
-//         results.append(r);
-//     }
-    
-//     testTable->setRowCount(results.size());
-//     for (int i = 0; i < results.size(); ++i) {
-//         const TestResult& r = results[i];
-//         testTable->setItem(i, 0, new QTableWidgetItem(r.name));
-//         testTable->setItem(i, 1, new QTableWidgetItem(r.passed ? " Пройден" : " Провален"));
-//         testTable->setItem(i, 2, new QTableWidgetItem(QString::number(r.actual, 'f', 2)));
-//         testTable->setItem(i, 3, new QTableWidgetItem(QString::number(r.expected, 'f', 2)));
-//         testTable->setItem(i, 4, new QTableWidgetItem(QString::number(r.timeMs, 'f', 2) + " ms"));
-        
-//         if (!r.passed) {
-//             testTable->item(i, 1)->setBackground(Qt::red);
-//             testTable->item(i, 1)->setForeground(Qt::white);
-//         }
-//     }
-//     testTable->resizeColumnsToContents();
-// }
 
-// void TestingWidget::onRunManual() {
-//     QString input = manualInput->toPlainText().trimmed();
-//     if (input.isEmpty()) {
-//         QMessageBox::warning(this, "Ошибка", "Введите данные");
-//         return;
-//     }
-    
-//     QStringList parts = input.split(QRegularExpression("[\\s,]+"), Qt::SkipEmptyParts);
-//     ArraySequence<int> data;
-    
-//     for (const QString& part : parts) {
-//         bool ok;
-//         int val = part.toInt(&ok);
-//         if (ok) {
-//             data.Append(val);
-//         }
-//     }
-    
-//     if (data.GetCount() == 0) {
-//         QMessageBox::warning(this, "Ошибка", "Не найдено чисел");
-//         return;
-//     }
-    
-//     LazySequence<long long> lazySeq(&data);
-//     ReadOnlyStream<long long> stream(&lazySeq);
-    
-//     OnlineStatistics<long long> stats;
-//     stats.ProcessStream(stream);
-    
-//     manualResult->setText(
-//         QString::fromUtf8("Результаты обработки (%1 элементов):\n"
-//         "Минимум: %2\n"
-//         "Максимум: %3\n"
-//         "Среднее: %4\n"
-//         "Медиана: %5\n"
-//         "Дисперсия: %6\n"
-//         "Стандартное отклонение: %7")
-//         .arg(stats.GetCount())
-//         .arg(stats.GetMin())
-//         .arg(stats.GetMax())
-//         .arg(QString::number(stats.GetAverage(), 'f', 2))
-//         .arg(QString::number(stats.GetMedian(), 'f', 2))
-//         .arg(QString::number(stats.GetVariance(), 'f', 2))
-//         .arg(QString::number(stats.GetStdDeviation(), 'f', 2)));
-// }
 
 TestingWidget::TestingWidget(QWidget* parent)
     : QWidget(parent) {
     setupUI();
+    createDataFile();
 }
 
 TestingWidget::~TestingWidget() {}
@@ -232,15 +64,37 @@ void TestingWidget::setupUI() {
     
     QHBoxLayout* btnLayout = new QHBoxLayout();
     autoTestsBtn = new QPushButton("Автоматические тесты");
-    largeDataBtn = new QPushButton("Тест больших данных (100000)");
-    manualBtn = new QPushButton("Ручной ввод");
+    largeDataBtn = new QPushButton("Тест больших данных");
     btnLayout->addWidget(autoTestsBtn);
     btnLayout->addWidget(largeDataBtn);
-    btnLayout->addWidget(manualBtn);
     btnLayout->addStretch();
     mainLayout->addLayout(btnLayout);
     
+    QGroupBox* largeDataGroup = new QGroupBox("Настройка теста больших данных");
+    QHBoxLayout* largeDataLayout = new QHBoxLayout(largeDataGroup);
+    
+    largeDataLayout->addWidget(new QLabel("Тип последовательности:"));
+    largeDataTypeCombo = new QComboBox();
+    largeDataTypeCombo->addItem("Арифметическая (1, 2, 3, ...)");
+    largeDataTypeCombo->addItem("Случайные числа");
+    largeDataTypeCombo->addItem("Постоянные числа");
+    largeDataLayout->addWidget(largeDataTypeCombo);
+    
+    largeDataLayout->addWidget(new QLabel("Количество элементов:"));
+    largeDataSizeSpin = new QSpinBox();
+    largeDataSizeSpin->setRange(1, 1000000);
+    largeDataSizeSpin->setValue(1000000);
+    largeDataLayout->addWidget(largeDataSizeSpin);
+    
+    largeDataLayout->addStretch();
+    mainLayout->addWidget(largeDataGroup);
+    
+    progressBar = new QProgressBar();
+    progressBar->setVisible(false);
+    mainLayout->addWidget(progressBar);
+    
     QGroupBox* manualGroup = new QGroupBox("Ручной ввод данных");
+    manualGroup->setMaximumHeight(250);
     QVBoxLayout* manualLayout = new QVBoxLayout(manualGroup);
     
     manualInput = new QTextEdit();
@@ -258,9 +112,16 @@ void TestingWidget::setupUI() {
     mainLayout->addWidget(manualGroup);
     
     testTable = new QTableWidget();
-    testTable->setColumnCount(5);
-    testTable->setHorizontalHeaderLabels({"Тест", "Статус", "Результат", "Ожидалось", "Время"});
+    testTable->setColumnCount(11);
+    testTable->setHorizontalHeaderLabels({
+        "Тест", "Статус",
+        "Min", "Max", "Range",
+        "Среднее", "Дисперсия", "Ст. откл.",
+        "RMS", "CV", "Время"
+    });
     testTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);
+    testTable->setEditTriggers(QAbstractItemView::NoEditTriggers);  
+    testTable->setSelectionBehavior(QAbstractItemView::SelectRows);  
     mainLayout->addWidget(testTable);
     
     connect(autoTestsBtn, &QPushButton::clicked, this, &TestingWidget::onRunAutoTests);
@@ -268,41 +129,384 @@ void TestingWidget::setupUI() {
     connect(calcBtn, &QPushButton::clicked, this, &TestingWidget::onRunManual);
 }
 
+// void TestingWidget::onRunLargeData() {
+//     int dataType = largeDataTypeCombo->currentIndex();
+//     int dataSize = largeDataSizeSpin->value();
+    
+//     if (dataType == 2) {  
+//         QMessageBox::information(this, "Информация", 
+//             "Для теста больших данных доступны только:\n"
+//             "- Арифметическая\n"
+//             "- Случайные числа\n"
+//             "- Постоянные числа");
+//         return;
+//     }
+    
+//     QString typeName;
+//     switch (dataType) {
+//         case 0: typeName = "Арифметическая"; break;
+//         case 1: typeName = "Случайные числа"; break;
+//         case 3: typeName = "Постоянные числа"; break;
+//         default: return;
+//     }
+    
+//     if (dataSize > 100000) {
+//         dataSize = 100000;
+//         largeDataSizeSpin->setValue(100000);
+//         int answer = QMessageBox::question(this, "Предупреждение", 
+//             QString("Обработка %1 элементов может занять время.\nПродолжить?").arg(dataSize),
+//             QMessageBox::Yes | QMessageBox::No);
+//         if (answer != QMessageBox::Yes) {
+//             return;
+//         }
+//     }
+    
+//     QMessageBox::information(this, "Тест больших данных", 
+//         QString("Запуск теста на %1 элементов (%2)...").arg(dataSize).arg(typeName));
+    
+//     auto start = std::chrono::high_resolution_clock::now();
+    
+//     try {
+//         LazySequenceController testController;
+        
+//         switch (dataType) {
+//             case 0:
+//                 testController.setGenerator(LazySequenceController::GEN_ARITHMETIC, 1, 1);
+//                 break;
+//             case 1:
+//                 testController.setGenerator(LazySequenceController::GEN_RANDOM, 0, 1000);
+//                 break;
+//             case 3:
+//                 testController.setGenerator(LazySequenceController::GEN_CONSTANT, 42);
+//                 break;
+//         }
+        
+//         OnlineStatistics<long long> stats;
+        
+//         for (int i = 0; i < dataSize; ++i) {
+//             stats.Update(testController.getElement(i));
+//         }
+        
+//         auto end = std::chrono::high_resolution_clock::now();
+//         double timeSec = std::chrono::duration<double>(end - start).count();
+        
+//         QString result = QString(
+//             "Тип: %1\n"
+//             "Размер: %2 элементов\n"
+//             "Время: %3 сек\n"
+//             "Минимум: %4\n"
+//             "Максимум: %5\n"
+//             "Размах: %6\n"
+//             "Среднее: %7\n"
+//             "Дисперсия: %8\n"
+//             "Ст. отклонение: %9\n"
+//             "Среднеквадратическое: %10\n"
+//             "Коэф. вариации: %11\n")
+//             .arg(typeName)
+//             .arg(stats.GetCount())
+//             .arg(QString::number(timeSec, 'f', 2))
+//             .arg(stats.GetMin())
+//             .arg(stats.GetMax())
+//             .arg(QString::number(stats.GetRange(), 'f', 2))
+//             .arg(QString::number(stats.GetAverage(), 'f', 2))
+//             .arg(QString::number(stats.GetVariance(), 'f', 2))
+//             .arg(QString::number(stats.GetStdDeviation(), 'f', 2))
+//             .arg(QString::number(stats.GetRMS(), 'f', 2))
+//             .arg(QString::number(stats.GetCoefficientOfVariation(), 'f', 4));
+        
+//         QMessageBox::information(this, "Результат теста больших данных", result);
+        
+//     } catch (const std::exception& e) {
+//         QMessageBox::warning(this, "Ошибка", e.what());
+//     }
+// }
+
+// void TestingWidget::onRunLargeData() {
+//     int dataType = largeDataTypeCombo->currentIndex();
+//     int dataSize = largeDataSizeSpin->value();
+    
+//     // Ограничиваем только 3 типа для теста больших данных
+//     if (dataType == 2) {
+//         QMessageBox::information(this, "Информация", 
+//             "Для теста больших данных доступны только:\n"
+//             "- Арифметическая\n"
+//             "- Случайные числа\n"
+//             "- Постоянные числа");
+//         return;
+//     }
+    
+//     if (dataSize > 100000) {
+//         dataSize = 100000;
+//         largeDataSizeSpin->setValue(100000);
+//         int answer = QMessageBox::question(this, "Предупреждение", 
+//             QString("Обработка %1 элементов может занять время.\nПродолжить?").arg(dataSize),
+//             QMessageBox::Yes | QMessageBox::No);
+//         if (answer != QMessageBox::Yes) {
+//             return;
+//         }
+//     }
+    
+//     try {
+//         LazySequenceController testController;
+//         testController.setGenerator(LazySequenceController::GEN_ARITHMETIC, 1, 1);
+        
+//         // ========== ЗАМЕР 1: только getElement ==========
+//         auto t1 = std::chrono::high_resolution_clock::now();
+//         for (int i = 0; i < dataSize; ++i) {
+//             testController.getElement(i);
+//         }
+//         auto t2 = std::chrono::high_resolution_clock::now();
+//         double getElement_time = std::chrono::duration<double, std::milli>(t2 - t1).count();
+        
+//         // ========== ЗАМЕР 2: только Update с простыми числами ==========
+//         OnlineStatistics<long long> stats2;
+//         auto t3 = std::chrono::high_resolution_clock::now();
+//         for (int i = 0; i < dataSize; ++i) {
+//             stats2.Update(i + 1);
+//         }
+//         auto t4 = std::chrono::high_resolution_clock::now();
+//         double update_time = std::chrono::duration<double, std::milli>(t4 - t3).count();
+        
+//         // ========== ЗАМЕР 3: вместе (как было) ==========
+//         LazySequenceController testController2;
+//         testController2.setGenerator(LazySequenceController::GEN_ARITHMETIC, 1, 1);
+//         OnlineStatistics<long long> stats3;
+        
+//         auto t5 = std::chrono::high_resolution_clock::now();
+//         for (int i = 0; i < dataSize; ++i) {
+//             stats3.Update(testController2.getElement(i));
+//         }
+//         auto t6 = std::chrono::high_resolution_clock::now();
+//         double together_time = std::chrono::duration<double, std::milli>(t6 - t5).count();
+        
+//         QString result = QString(
+//             "═══════════════════════════════════════════════════════════════════\n"
+//             "Размер: %1 элементов\n"
+//             "═══════════════════════════════════════════════════════════════════\n"
+//             "getElement() только: %2 мс\n"
+//             "Update() только (простые числа): %3 мс\n"
+//             "Вместе (getElement + Update): %4 мс\n"
+//             "═══════════════════════════════════════════════════════════════════\n"
+//             "Если getElement ~17 сек, проблема в LazySequence\n"
+//             "Если Update ~17 сек, проблема в OnlineStatistics\n"
+//             "Если вместе ~17 сек, а по отдельности мало - проблема в их совместной работе")
+//             .arg(dataSize)
+//             .arg(getElement_time, 0, 'f', 2)
+//             .arg(update_time, 0, 'f', 2)
+//             .arg(together_time, 0, 'f', 2);
+        
+//         QMessageBox::information(this, "Результаты замеров", result);
+        
+//     } catch (const std::exception& e) {
+//         QMessageBox::warning(this, "Ошибка", e.what());
+//     }
+// }
+
+
+
+
+
+// void TestingWidget::onRunLargeData() {
+//     int dataType = largeDataTypeCombo->currentIndex();
+//     int dataSize = largeDataSizeSpin->value();
+    
+//     // Только для арифметической прогрессии
+//     if (dataType != 0) {
+//         QMessageBox::information(this, "Информация", 
+//             "Тест больших данных работает с арифметической прогрессией.\n"
+//             "Данные читаются из файла large_data.txt (1 000 000 чисел).");
+//         return;
+//     }
+    
+//     QString filename = QCoreApplication::applicationDirPath() + "/large_data.txt";
+//     QFile file(filename);
+    
+//     if (!file.exists()) {
+//         QMessageBox::warning(this, "Ошибка", 
+//             "Файл large_data.txt не найден.\n"
+//             "Он будет создан при следующем запуске.");
+//         createDataFile();
+//         return;
+//     }
+    
+//     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+//         QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл");
+//         return;
+//     }
+    
+//     QMessageBox::information(this, "Тест больших данных", 
+//         QString("Чтение %1 элементов из файла large_data.txt...").arg(dataSize));
+    
+//     auto start = std::chrono::high_resolution_clock::now();
+    
+//     try {
+//         OnlineStatistics<long long> stats;
+//         QTextStream in(&file);
+//         long long value;
+//         int count = 0;
+        
+//         while (count < dataSize && !in.atEnd()) {
+//             in >> value;
+//             stats.Update(value);
+//             count++;
+//         }
+        
+//         file.close();
+        
+//         auto end = std::chrono::high_resolution_clock::now();
+//         double timeSec = std::chrono::duration<double>(end - start).count();
+        
+//         QString result = QString(
+//             "═══════════════════════════════════════════════════════════════════\n"
+//             "Тест чтения из файла (large_data.txt)\n"
+//             "Размер: %1 элементов\n"
+//             "Время: %2 сек\n"
+//             "═══════════════════════════════════════════════════════════════════\n"
+//             "Минимум: %3\n"
+//             "Максимум: %4\n"
+//             "Размах: %5\n"
+//             "Среднее: %6\n"
+//             "Дисперсия: %7\n"
+//             "Ст. отклонение: %8\n"
+//             "Среднеквадратическое: %9\n"
+//             "Коэф. вариации: %10\n"
+//             "═══════════════════════════════════════════════════════════════════")
+//             .arg(stats.GetCount())
+//             .arg(QString::number(timeSec, 'f', 2))
+//             .arg(stats.GetMin())
+//             .arg(stats.GetMax())
+//             .arg(QString::number(stats.GetRange(), 'f', 2))
+//             .arg(QString::number(stats.GetAverage(), 'f', 2))
+//             .arg(QString::number(stats.GetVariance(), 'f', 2))
+//             .arg(QString::number(stats.GetStdDeviation(), 'f', 2))
+//             .arg(QString::number(stats.GetRMS(), 'f', 2))
+//             .arg(QString::number(stats.GetCoefficientOfVariation(), 'f', 4));
+        
+//         QMessageBox::information(this, "Результат теста больших данных", result);
+        
+//     } catch (const std::exception& e) {
+//         QMessageBox::warning(this, "Ошибка", e.what());
+//         file.close();
+//     }
+// }
+
+
 void TestingWidget::onRunLargeData() {
-    const int LARGE_SIZE = 100000;
+    int dataType = largeDataTypeCombo->currentIndex();
+    int dataSize = largeDataSizeSpin->value();
+    
+    if (dataType != 0) {
+        QMessageBox::information(this, "Информация", 
+            "Тест больших данных работает с арифметической прогрессией.\n"
+            "Данные читаются из файла large_data.txt");
+        return;
+    }
+    
+    QString filename = QCoreApplication::applicationDirPath() + "/large_data.txt";
+    QFile file(filename);
+    
+    if (!file.exists()) {
+        QMessageBox::warning(this, "Ошибка", 
+            "Файл large_data.txt не найден.\n"
+            "Он будет создан при следующем запуске.");
+        createDataFile();
+        return;
+    }
+    
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл");
+        return;
+    }
     
     QMessageBox::information(this, "Тест больших данных", 
-        QString("Запуск теста на %1 элементах...").arg(LARGE_SIZE));
+        QString("Чтение %1 элементов из файла large_data.txt...").arg(dataSize));
     
     auto start = std::chrono::high_resolution_clock::now();
     
-    LazySequenceController controller;
-    controller.setGenerator(LazySequenceController::GEN_RANDOM, 0, 1000);
-    ReadOnlyStream<long long>* stream = controller.getStream();
-    
-    OnlineStatistics<long long> stats;
-    stats.ProcessStream(*stream, LARGE_SIZE);
-    
-    auto end = std::chrono::high_resolution_clock::now();
-    double timeSec = std::chrono::duration<double>(end - start).count();
-    
-    QString result = QString("Обработано %1 элементов\n"
-        "Время: %2 сек\n"
-        "Min: %3\n"
-        "Max: %4\n"
-        "Avg: %5\n"
-        "Median: %6\n"
-        "StdDev: %7")
-        .arg(LARGE_SIZE)
-        .arg(QString::number(timeSec, 'f', 2))
-        .arg(stats.GetMin())
-        .arg(stats.GetMax())
-        .arg(QString::number(stats.GetAverage(), 'f', 2))
-        .arg(QString::number(stats.GetMedian(), 'f', 2))
-        .arg(QString::number(stats.GetStdDeviation(), 'f', 2));
-    
-    QMessageBox::information(this, "Результат теста больших данных", result);
+    try {
+        OnlineStatistics<long long> stats;
+        QTextStream in(&file);
+        long long value;
+        int count = 0;
+        int errorLine = 0;
+        QString errorToken;
+        
+        while (count < dataSize && !in.atEnd()) {
+            errorLine = count + 1;
+            in >> value;
+            
+           
+            if (in.status() != QTextStream::Ok) {
+                in >> errorToken;  
+                file.close();
+                QMessageBox::warning(this, "Ошибка в файле", 
+                    QString("Ошибка чтения на строке %1\n"
+                            "Найдено: '%2'\n"
+                            "Ожидалось: число")
+                    .arg(errorLine).arg(errorToken));
+                return;
+            }
+            
+            stats.Update(value);
+            count++;
+        }
+        
+        file.close();
+        
+        if (count == 0) {
+            QMessageBox::warning(this, "Ошибка", "Файл пуст или не содержит чисел");
+            return;
+        }
+        
+        auto end = std::chrono::high_resolution_clock::now();
+        double timeSec = std::chrono::duration<double>(end - start).count();
+        
+        QString result = QString(
+            "Тест чтения из файла (large_data.txt)\n"
+            "Обработано: %1 элементов\n"
+            "Время: %2 сек\n"
+            "Минимум: %3\n"
+            "Максимум: %4\n"
+            "Размах: %5\n"
+            "Среднее: %6\n"
+            "Дисперсия: %7\n"
+            "Ст. отклонение: %8\n"
+            "Среднеквадратическое: %9\n"
+            "Коэф. вариации: %10\n")
+            .arg(stats.GetCount())
+            .arg(QString::number(timeSec, 'f', 2))
+            .arg(stats.GetMin())
+            .arg(stats.GetMax())
+            .arg(QString::number(stats.GetRange(), 'f', 2))
+            .arg(QString::number(stats.GetAverage(), 'f', 2))
+            .arg(QString::number(stats.GetVariance(), 'f', 2))
+            .arg(QString::number(stats.GetStdDeviation(), 'f', 2))
+            .arg(QString::number(stats.GetRMS(), 'f', 2))
+            .arg(QString::number(stats.GetCoefficientOfVariation(), 'f', 4));
+        
+        QMessageBox::information(this, "Результат теста больших данных", result);
+        
+    } catch (const std::exception& e) {
+        QMessageBox::warning(this, "Ошибка", e.what());
+        file.close();
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void TestingWidget::onRunAutoTests() {
     testTable->setRowCount(0);
@@ -310,9 +514,24 @@ void TestingWidget::onRunAutoTests() {
     struct TestResult {
         QString name;
         bool passed;
-        double actual;
-        double expected;
+        long long actualMin;
+        long long actualMax;
+        double actualRange;
+        double actualAvg;
+        double actualVariance;
+        double actualStdDev;
+        double actualRMS;
+        double actualCV;
+        long long expectedMin;
+        long long expectedMax;
+        double expectedRange;
+        double expectedAvg;
+        double expectedVariance;
+        double expectedStdDev;
+        double expectedRMS;
+        double expectedCV;
         double timeMs;
+        QString errorMsg;
     };
     
     QVector<TestResult> results;
@@ -320,59 +539,258 @@ void TestingWidget::onRunAutoTests() {
     {
         TestResult r;
         r.name = "Арифметическая 1..100";
-        auto start = std::chrono::high_resolution_clock::now();
+        r.expectedMin = 1;
+        r.expectedMax = 100;
+        r.expectedRange = 99;
+        r.expectedAvg = 50.5;
+        r.expectedVariance = 833.25;
+        r.expectedStdDev = 28.87;
+        r.expectedRMS = 57.74;
+        r.expectedCV = 0.5716;
         
-        LazySequenceController controller;
-        controller.setGenerator(LazySequenceController::GEN_ARITHMETIC, 1, 1);
-        ReadOnlyStream<long long>* stream = controller.getStream();
+        try {
+            auto start = std::chrono::high_resolution_clock::now();
+            
+            LazySequenceController controller;
+            controller.setGenerator(LazySequenceController::GEN_ARITHMETIC, 1, 1);
+            
+            ArraySequence<long long> dataCopy;
+            for (int i = 0; i < 100; ++i) {
+                dataCopy.Append(controller.getElement(i));
+            }
+            
+            LazySequence<long long> tempSeq(&dataCopy);
+            ReadOnlyStream<long long> stream(&tempSeq);
+            
+            OnlineStatistics<long long> stats;
+            stream.Open();
+            for (int i = 0; i < 100 && !stream.IsEndOfStream(); ++i) {
+                stats.Update(stream.Read());
+            }
+            stream.Close();
+            
+            r.actualMin = stats.GetMin();
+            r.actualMax = stats.GetMax();
+            r.actualRange = stats.GetRange();
+            r.actualAvg = stats.GetAverage();
+            r.actualVariance = stats.GetVariance();
+            r.actualStdDev = stats.GetStdDeviation();
+            r.actualRMS = stats.GetRMS();
+            r.actualCV = stats.GetCoefficientOfVariation();
+            
+            r.passed = (r.actualMin == r.expectedMin &&
+                        r.actualMax == r.expectedMax &&
+                        std::abs(r.actualRange - r.expectedRange) < 0.1 &&
+                        std::abs(r.actualAvg - r.expectedAvg) < 0.1 &&
+                        std::abs(r.actualVariance - r.expectedVariance) < 1.0 &&
+                        std::abs(r.actualStdDev - r.expectedStdDev) < 0.5 &&
+                        std::abs(r.actualRMS - r.expectedRMS) < 0.5 &&
+                        std::abs(r.actualCV - r.expectedCV) < 0.01);
+            
+            auto end = std::chrono::high_resolution_clock::now();
+            r.timeMs = std::chrono::duration<double, std::milli>(end - start).count();
+            
+        } catch (const std::exception& e) {
+            r.passed = false;
+            r.errorMsg = e.what();
+        }
         
-        OnlineStatistics<long long> stats;
-        stats.ProcessStream(*stream, 100);
-        
-        r.actual = stats.GetAverage();
-        r.expected = 50.5;
-        r.passed = (std::abs(r.actual - r.expected) < 0.1);
-        
-        auto end = std::chrono::high_resolution_clock::now();
-        r.timeMs = std::chrono::duration<double, std::milli>(end - start).count();
         results.append(r);
     }
     
     {
         TestResult r;
-        r.name = "Чётные числа 2..100";
+        r.name = "Постоянные числа (42)";
+        r.expectedMin = 42;
+        r.expectedMax = 42;
+        r.expectedRange = 0;
+        r.expectedAvg = 42;
+        r.expectedVariance = 0;
+        r.expectedStdDev = 0;
+        r.expectedRMS = 42;
+        r.expectedCV = 0;
+        
+        try {
+            auto start = std::chrono::high_resolution_clock::now();
+            
+            LazySequenceController controller;
+            controller.setGenerator(LazySequenceController::GEN_CONSTANT, 42);
+            
+            ArraySequence<long long> dataCopy;
+            for (int i = 0; i < 50; ++i) {
+                dataCopy.Append(controller.getElement(i));
+            }
+            
+            LazySequence<long long> tempSeq(&dataCopy);
+            ReadOnlyStream<long long> stream(&tempSeq);
+            
+            OnlineStatistics<long long> stats;
+            stream.Open();
+            for (int i = 0; i < 50 && !stream.IsEndOfStream(); ++i) {
+                stats.Update(stream.Read());
+            }
+            stream.Close();
+            
+            r.actualMin = stats.GetMin();
+            r.actualMax = stats.GetMax();
+            r.actualRange = stats.GetRange();
+            r.actualAvg = stats.GetAverage();
+            r.actualVariance = stats.GetVariance();
+            r.actualStdDev = stats.GetStdDeviation();
+            r.actualRMS = stats.GetRMS();
+            r.actualCV = stats.GetCoefficientOfVariation();
+            
+            r.passed = (r.actualMin == r.expectedMin &&
+                        r.actualMax == r.expectedMax &&
+                        std::abs(r.actualRange - r.expectedRange) < 0.1 &&
+                        std::abs(r.actualAvg - r.expectedAvg) < 0.1 &&
+                        std::abs(r.actualVariance - r.expectedVariance) < 0.1 &&
+                        std::abs(r.actualStdDev - r.expectedStdDev) < 0.1 &&
+                        std::abs(r.actualRMS - r.expectedRMS) < 0.1 &&
+                        std::abs(r.actualCV - r.expectedCV) < 0.01);
+            
+            auto end = std::chrono::high_resolution_clock::now();
+            r.timeMs = std::chrono::duration<double, std::milli>(end - start).count();
+            
+        } catch (const std::exception& e) {
+            r.passed = false;
+            r.errorMsg = e.what();
+        }
+        
+        results.append(r);
+    }
+    
+    {
+        TestResult r;
+        r.name = "Случайные числа (0..1000)";
+        r.expectedMin = 0;
+        r.expectedMax = 1000;
+        
+        try {
+            auto start = std::chrono::high_resolution_clock::now();
+            
+            LazySequenceController controller;
+            controller.setGenerator(LazySequenceController::GEN_RANDOM, 0, 1000);
+            
+            ArraySequence<long long> dataCopy;
+            for (int i = 0; i < 1000; ++i) {
+                dataCopy.Append(controller.getElement(i));
+            }
+            
+            LazySequence<long long> tempSeq(&dataCopy);
+            ReadOnlyStream<long long> stream(&tempSeq);
+            
+            OnlineStatistics<long long> stats;
+            stream.Open();
+            for (int i = 0; i < 1000 && !stream.IsEndOfStream(); ++i) {
+                stats.Update(stream.Read());
+            }
+            stream.Close();
+            
+            r.actualMin = stats.GetMin();
+            r.actualMax = stats.GetMax();
+            
+            r.passed = (r.actualMin >= r.expectedMin && r.actualMax <= r.expectedMax);
+            
+            auto end = std::chrono::high_resolution_clock::now();
+            r.timeMs = std::chrono::duration<double, std::milli>(end - start).count();
+            
+        } catch (const std::exception& e) {
+            r.passed = false;
+            r.errorMsg = e.what();
+        }
+        
+        results.append(r);
+    }
+    
+    {
+    TestResult r;
+    r.name = "Фибоначчи (первые 10)";
+    r.expectedMin = 0;
+    r.expectedMax = 34;
+    r.expectedRange = 34;
+    r.expectedAvg = 8.8;
+    r.expectedVariance = 109.56;  
+    r.expectedStdDev = 10.47;      
+    r.expectedRMS = 14.05;
+    r.expectedCV = 1.19;          
+    
+    try {
         auto start = std::chrono::high_resolution_clock::now();
         
         LazySequenceController controller;
-        controller.setGenerator(LazySequenceController::GEN_ARITHMETIC, 2, 2);
-        ReadOnlyStream<long long>* stream = controller.getStream();
+        controller.setGenerator(LazySequenceController::GEN_FIBONACCI);
+        
+        ArraySequence<long long> dataCopy;
+        for (int i = 0; i < 10; ++i) {
+            dataCopy.Append(controller.getElement(i));
+        }
+        
+        LazySequence<long long> tempSeq(&dataCopy);
+        ReadOnlyStream<long long> stream(&tempSeq);
         
         OnlineStatistics<long long> stats;
-        stats.ProcessStream(*stream, 50);
+        stream.Open();
+        for (int i = 0; i < 10 && !stream.IsEndOfStream(); ++i) {
+            stats.Update(stream.Read());
+        }
+        stream.Close();
         
-        r.actual = stats.GetMedian();
-        r.expected = 51;
-        r.passed = (r.actual == r.expected);
+        r.actualMin = stats.GetMin();
+        r.actualMax = stats.GetMax();
+        r.actualRange = stats.GetRange();
+        r.actualAvg = stats.GetAverage();
+        r.actualVariance = stats.GetVariance();
+        r.actualStdDev = stats.GetStdDeviation();
+        r.actualRMS = stats.GetRMS();
+        r.actualCV = stats.GetCoefficientOfVariation();
+        
+        r.passed = (r.actualMin == r.expectedMin &&
+                    r.actualMax == r.expectedMax &&
+                    std::abs(r.actualRange - r.expectedRange) < 1.0 &&
+                    std::abs(r.actualAvg - r.expectedAvg) < 0.5 &&
+                    std::abs(r.actualVariance - r.expectedVariance) < 5.0 &&
+                    std::abs(r.actualStdDev - r.expectedStdDev) < 1.0 &&
+                    std::abs(r.actualRMS - r.expectedRMS) < 1.0 &&
+                    std::abs(r.actualCV - r.expectedCV) < 0.5);
         
         auto end = std::chrono::high_resolution_clock::now();
         r.timeMs = std::chrono::duration<double, std::milli>(end - start).count();
-        results.append(r);
+        
+    } catch (const std::exception& e) {
+        r.passed = false;
+        r.errorMsg = e.what();
     }
+    
+    results.append(r);
+}
     
     testTable->setRowCount(results.size());
     for (int i = 0; i < results.size(); ++i) {
         const TestResult& r = results[i];
-        testTable->setItem(i, 0, new QTableWidgetItem(r.name));
-        testTable->setItem(i, 1, new QTableWidgetItem(r.passed ? " Пройден" : " Провален"));
-        testTable->setItem(i, 2, new QTableWidgetItem(QString::number(r.actual, 'f', 2)));
-        testTable->setItem(i, 3, new QTableWidgetItem(QString::number(r.expected, 'f', 2)));
-        testTable->setItem(i, 4, new QTableWidgetItem(QString::number(r.timeMs, 'f', 2) + " ms"));
         
+        testTable->setItem(i, 0, new QTableWidgetItem(r.name));
+        
+        QString status = r.passed ? " Пройден" : " Провален";
+        if (!r.errorMsg.isEmpty()) status += " (" + r.errorMsg + ")";
+        QTableWidgetItem* statusItem = new QTableWidgetItem(status);
         if (!r.passed) {
-            testTable->item(i, 1)->setBackground(Qt::red);
-            testTable->item(i, 1)->setForeground(Qt::white);
+            statusItem->setBackground(Qt::red);
+            statusItem->setForeground(Qt::white);
         }
+    testTable->setItem(i, 0, new QTableWidgetItem(r.name));
+    testTable->setItem(i, 1, new QTableWidgetItem(status));
+    testTable->setItem(i, 2, new QTableWidgetItem(QString::number(r.actualMin)));
+    testTable->setItem(i, 3, new QTableWidgetItem(QString::number(r.actualMax)));
+    testTable->setItem(i, 4, new QTableWidgetItem(QString::number(r.actualRange, 'f', 2)));
+    testTable->setItem(i, 5, new QTableWidgetItem(QString::number(r.actualAvg, 'f', 2)));
+    testTable->setItem(i, 6, new QTableWidgetItem(QString::number(r.actualVariance, 'f', 2)));
+    testTable->setItem(i, 7, new QTableWidgetItem(QString::number(r.actualStdDev, 'f', 2)));
+    testTable->setItem(i, 8, new QTableWidgetItem(QString::number(r.actualRMS, 'f', 2)));
+    testTable->setItem(i, 9, new QTableWidgetItem(QString::number(r.actualCV, 'f', 4)));
+    testTable->setItem(i, 10, new QTableWidgetItem(QString::number(r.timeMs, 'f', 2) + " ms"));
     }
+    
     testTable->resizeColumnsToContents();
 }
 
@@ -384,7 +802,7 @@ void TestingWidget::onRunManual() {
     }
     
     QStringList parts = input.split(QRegularExpression("[\\s,]+"), Qt::SkipEmptyParts);
-    ArraySequence<long long> data;  
+    ArraySequence<long long> data;
     
     for (const QString& part : parts) {
         bool ok;
@@ -403,21 +821,26 @@ void TestingWidget::onRunManual() {
     ReadOnlyStream<long long> stream(&lazySeq);
     
     OnlineStatistics<long long> stats;
-    stats.ProcessStream(stream);
+    stream.Open();
+    while (!stream.IsEndOfStream()) {
+        stats.Update(stream.Read());
+    }
+    stream.Close();
     
     manualResult->setText(
         QString("Результаты обработки (%1 элементов):\n"
         "Минимум: %2\n"
         "Максимум: %3\n"
         "Среднее: %4\n"
-        "Медиана: %5\n"
-        "Дисперсия: %6\n"
-        "Стандартное отклонение: %7")
+        "Дисперсия: %5\n"
+        "Стандартное отклонение: %6\n")
         .arg(stats.GetCount())
         .arg(stats.GetMin())
         .arg(stats.GetMax())
         .arg(QString::number(stats.GetAverage(), 'f', 2))
-        .arg(QString::number(stats.GetMedian(), 'f', 2))
         .arg(QString::number(stats.GetVariance(), 'f', 2))
         .arg(QString::number(stats.GetStdDeviation(), 'f', 2)));
 }
+
+
+

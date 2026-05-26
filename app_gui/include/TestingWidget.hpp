@@ -4,6 +4,10 @@
 #include <QTableWidget>
 #include <QPushButton>
 #include <QTextEdit>
+#include <QComboBox>
+#include <QSpinBox>
+#include <QProgressBar>
+#include <QLabel>
 
 class TestingWidget : public QWidget {
     Q_OBJECT
@@ -13,9 +17,13 @@ private:
     QPushButton* autoTestsBtn;
     QPushButton* largeDataBtn;
     QPushButton* manualBtn;
+    QComboBox* largeDataTypeCombo;
+    QSpinBox* largeDataSizeSpin;
     QTextEdit* manualInput;
     QTextEdit* manualResult;
-    
+    QProgressBar* progressBar;
+     
+    void createDataFile();
     void setupUI();
 
 private slots:

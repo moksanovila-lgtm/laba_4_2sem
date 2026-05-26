@@ -164,11 +164,14 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_LazySequenceWidget.cpp: D:/Lab_4/app_
   C:/Qt/6.11.0/mingw_64/include/QtGui/qvalidator.h \
   C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QButtonGroup \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QComboBox \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QPushButton \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QRadioButton \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSpinBox \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTabWidget \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -176,12 +179,14 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_LazySequenceWidget.cpp: D:/Lab_4/app_
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractslider.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qbuttongroup.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qcombobox.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlabel.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlistview.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlistwidget.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qpushbutton.h \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qradiobutton.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qrubberband.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qslider.h \
@@ -368,6 +373,7 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_LazySequenceWidget.cpp: D:/Lab_4/app_
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iterator \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \

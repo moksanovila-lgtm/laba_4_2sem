@@ -356,13 +356,13 @@ void ReadOnlyStream<T>::Close() {
     isOpen = false;
 }
 
-template <typename T>
-void ReadOnlyStream<T>::Reset() {
-    if (!canSeek) {
-        throw std::runtime_error("Cannot reset this stream");
-    }
-    Seek(0);
-}
+// template <typename T>
+// void ReadOnlyStream<T>::Reset() {
+//     if (!canSeek) {
+//         throw std::runtime_error("Cannot reset this stream");
+//     }
+//     Seek(0);
+// }
 
 template <typename T>
 T ReadOnlyStream<T>::Peek() {
@@ -380,4 +380,21 @@ T ReadOnlyStream<T>::Peek() {
         position = oldPosition;
     }
     return value;
+}
+
+// template <typename T>
+// void ReadOnlyStream<T>::Reset() {
+//     if (!canSeek) {
+//         throw std::runtime_error("Cannot reset this stream");
+//     }
+//     buffer.Clear();
+//     bufferStart = 0;
+//     Seek(0);
+// }
+
+template <typename T>
+void ReadOnlyStream<T>::Reset() {
+    position = 0;
+    buffer.Clear();
+    bufferStart = 0;
 }

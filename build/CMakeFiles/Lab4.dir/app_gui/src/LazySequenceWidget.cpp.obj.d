@@ -403,6 +403,11 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractitemview.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qitemselectionmodel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTabWidget \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QRadioButton \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qradiobutton.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QButtonGroup \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qbuttongroup.h \
  D:/Lab_4/app_gui/include/LazySequenceController.hpp \
  C:/Qt/6.11.0/mingw_64/include/QtCore/QObject \
  D:/Lab_4/src/LazySequence.hpp \
@@ -431,13 +436,16 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
  D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp \
  D:/Lab_4/src/Optional.hpp D:/Lab_4/src/Optional.tpp \
- D:/Lab_4/src/LazySequence.tpp D:/Lab_4/src/ReadOnlyStream.hpp \
+ D:/Lab_4/src/LazySequence.tpp \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream \
+ D:/Lab_4/src/ReadOnlyStream.hpp \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc \
  D:/Lab_4/src/ReadOnlyStream.tpp \
+ D:/Lab_4/app_gui/include/StatisticsWidget.hpp \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QVBoxLayout \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qboxlayout.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlayout.h \
@@ -449,4 +457,5 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QMessageBox \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qmessagebox.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qdialog.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QDebug

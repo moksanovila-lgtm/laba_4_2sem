@@ -388,7 +388,4 @@ CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qfontvariableaxis.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsizepolicy.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtabwidget.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTabWidget \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSplitter \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qsplitter.h \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTabWidget

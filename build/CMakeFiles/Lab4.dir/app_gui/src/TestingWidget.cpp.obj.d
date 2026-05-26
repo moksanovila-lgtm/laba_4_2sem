@@ -401,6 +401,16 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qtextcursor.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qtextformat.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qpen.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QComboBox \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qcombobox.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSpinBox \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qspinbox.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QProgressBar \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qprogressbar.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QLabel \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlabel.h \
+ C:/Qt/6.11.0/mingw_64/include/QtGui/qpicture.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qiodevice.h \
  D:/Lab_4/app_gui/include/LazySequenceController.hpp \
  C:/Qt/6.11.0/mingw_64/include/QtCore/QObject \
  D:/Lab_4/src/LazySequence.hpp \
@@ -429,15 +439,16 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
  D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp \
  D:/Lab_4/src/Optional.hpp D:/Lab_4/src/Optional.tpp \
- D:/Lab_4/src/LazySequence.tpp D:/Lab_4/src/ReadOnlyStream.hpp \
+ D:/Lab_4/src/LazySequence.tpp \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream \
+ D:/Lab_4/src/ReadOnlyStream.hpp \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc \
- D:/Lab_4/src/ReadOnlyStream.tpp \
- D:/Lab_4/app_gui/include/StatisticsController.hpp \
- D:/Lab_4/src/OnlineStatistics.hpp D:/Lab_4/src/OnlineStatistics.tpp \
+ D:/Lab_4/src/ReadOnlyStream.tpp D:/Lab_4/src/OnlineStatistics.hpp \
+ D:/Lab_4/src/OnlineStatistics.tpp \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QVBoxLayout \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qboxlayout.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlayout.h \
@@ -453,11 +464,6 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qdialog.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/QRegularExpression \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/QLabel \
- C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlabel.h \
- C:/Qt/6.11.0/mingw_64/include/QtGui/qpicture.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qiodevice.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/QString \
  C:/Qt/6.11.0/mingw_64/include/QtCore/QCoreApplication \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qcoreapplication.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qcoreevent.h \
@@ -466,4 +472,22 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qeventloop.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qdeadlinetimer.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qnativeinterface.h \
- C:/Qt/6.11.0/mingw_64/include/QtCore/qcoreapplication_platform.h
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QFile \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qfile.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/qfiledevice.h \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/filesystem \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_fwd.h \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_path.h \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/codecvt \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_dir.h \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_ops.h \
+ C:/Qt/6.11.0/mingw_64/include/QtCore/QDataStream
