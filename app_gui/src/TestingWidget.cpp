@@ -3,6 +3,7 @@
 #include "OnlineStatistics.hpp"
 #include "ReadOnlyStream.hpp"
 #include "..\third_party\Lab_2\library\include\ArraySequence.hpp"
+#include <random>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QGroupBox>
@@ -21,30 +22,119 @@
 #include <QFile>
 #include <QDataStream>
 
+// void TestingWidget::createDataFile() {
+//     QString filename = QCoreApplication::applicationDirPath() + "/large_data.txt";
+    
+//     QFile file(filename);
+//     if (file.exists()) {
+//         std::cout << "Файл уже существует: " << filename.toStdString() << std::endl;
+//         return;
+//     }
+    
+//     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+//         std::cout << "Не удалось создать файл" << std::endl;
+//         return;
+//     }
+    
+//     std::cout << "Создание файла с 1 000 000 чисел..." << std::endl;
+    
+//     QTextStream out(&file);
+//     for (int i = 0; i < 1000000; ++i) {
+//         out << (i + 1) << "\n";
+//     }
+    
+//     file.close();
+//     std::cout << "Файл создан: " << filename.toStdString() << std::endl;
+// }
+
 void TestingWidget::createDataFile() {
-    QString filename = QCoreApplication::applicationDirPath() + "/large_data.txt";
+    QString appDir = QCoreApplication::applicationDirPath();
     
-    QFile file(filename);
-    if (file.exists()) {
-        std::cout << "Файл уже существует: " << filename.toStdString() << std::endl;
-        return;
+    // ========== Файл 1: Арифметическая прогрессия (1 млн) ==========
+    QString filename1 = appDir + "/large_data_arithmetic.txt";
+    QFile file1(filename1);
+    if (!file1.exists()) {
+        if (!file1.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            std::cout << "Не удалось создать файл: " << filename1.toStdString() << std::endl;
+        } else {
+            std::cout << "Создание файла: " << filename1.toStdString() << " (1 млн чисел)..." << std::endl;
+            QTextStream out(&file1);
+            for (int i = 0; i < 1000000; ++i) {
+                out << (i + 1) << "\n";
+            }
+            file1.close();
+            std::cout << "Файл создан" << std::endl;
+        }
     }
     
-    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-        std::cout << "Не удалось создать файл" << std::endl;
-        return;
+    // ========== Файл 2: Чётные числа (1 млн) ==========
+    QString filename2 = appDir + "/large_data_even.txt";
+    QFile file2(filename2);
+    if (!file2.exists()) {
+        if (!file2.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            std::cout << "Не удалось создать файл: " << filename2.toStdString() << std::endl;
+        } else {
+            std::cout << "Создание файла: " << filename2.toStdString() << " (1 млн чётных чисел)..." << std::endl;
+            QTextStream out(&file2);
+            for (int i = 0; i < 1000000; ++i) {
+                out << ((i + 1) * 2) << "\n";
+            }
+            file2.close();
+            std::cout << "Файл создан" << std::endl;
+        }
     }
     
-    std::cout << "Создание файла с 1 000 000 чисел..." << std::endl;
-    
-    QTextStream out(&file);
-    for (int i = 0; i < 1000000; ++i) {
-        out << (i + 1) << "\n";
+    // ========== Файл 3: Случайные числа (5 млн) ==========
+    QString filename3 = appDir + "/large_data_random_5m.txt";
+    QFile file3(filename3);
+    if (!file3.exists()) {
+        if (!file3.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            std::cout << "Не удалось создать файл: " << filename3.toStdString() << std::endl;
+        } else {
+            std::cout << "Создание файла: " << filename3.toStdString() << " (5 млн случайных чисел 1-50000)..." << std::endl;
+            QTextStream out(&file3);
+            
+            std::random_device rd;
+            std::mt19937 gen(rd());
+            std::uniform_int_distribution<long long> dis(1, 50000);
+            
+            for (int i = 0; i < 5000000; ++i) {
+                out << dis(gen) << "\n";
+            }
+            file3.close();
+            std::cout << "Файл создан" << std::endl;
+        }
     }
-    
-    file.close();
-    std::cout << "Файл создан: " << filename.toStdString() << std::endl;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -58,6 +148,82 @@ TestingWidget::TestingWidget(QWidget* parent)
 }
 
 TestingWidget::~TestingWidget() {}
+
+// void TestingWidget::setupUI() {
+//     QVBoxLayout* mainLayout = new QVBoxLayout(this);
+    
+//     QHBoxLayout* btnLayout = new QHBoxLayout();
+//     autoTestsBtn = new QPushButton("Автоматические тесты");
+//     largeDataBtn = new QPushButton("Тест больших данных");
+//     btnLayout->addWidget(autoTestsBtn);
+//     btnLayout->addWidget(largeDataBtn);
+//     btnLayout->addStretch();
+//     mainLayout->addLayout(btnLayout);
+    
+//     QGroupBox* largeDataGroup = new QGroupBox("Настройка теста больших данных");
+//     QHBoxLayout* largeDataLayout = new QHBoxLayout(largeDataGroup);
+
+//     largeDataTypeCombo = new QComboBox();
+//     largeDataTypeCombo->addItem("Арифметическая (1, 2, 3, ...)");
+//     largeDataTypeCombo->addItem("Чётные числа (2, 4, 6, ...)");
+//     largeDataTypeCombo->addItem("Случайные числа (1-50000)");
+    
+//     largeDataLayout->addWidget(new QLabel("Тип последовательности:"));
+//     largeDataTypeCombo = new QComboBox();
+//     // largeDataTypeCombo->addItem("Арифметическая (1, 2, 3, ...)");
+//     // largeDataTypeCombo->addItem("Случайные числа");
+//     // largeDataTypeCombo->addItem("Постоянные числа");
+//     largeDataLayout->addWidget(largeDataTypeCombo);
+    
+//     largeDataLayout->addWidget(new QLabel("Количество элементов:"));
+//     largeDataSizeSpin = new QSpinBox();
+//     largeDataSizeSpin->setRange(1, 1000000);
+//     largeDataSizeSpin->setValue(1000000);
+//     largeDataLayout->addWidget(largeDataSizeSpin);
+    
+//     largeDataLayout->addStretch();
+//     mainLayout->addWidget(largeDataGroup);
+    
+//     progressBar = new QProgressBar();
+//     progressBar->setVisible(false);
+//     mainLayout->addWidget(progressBar);
+    
+//     QGroupBox* manualGroup = new QGroupBox("Ручной ввод данных");
+//     manualGroup->setMaximumHeight(250);
+//     QVBoxLayout* manualLayout = new QVBoxLayout(manualGroup);
+    
+//     manualInput = new QTextEdit();
+//     manualInput->setPlaceholderText("Введите числа, разделенные пробелом, запятой или переводом строки\nПример: 5 8 3 9 1 7 4 6 2 10");
+//     manualInput->setMaximumHeight(100);
+//     manualLayout->addWidget(manualInput);
+    
+//     QPushButton* calcBtn = new QPushButton("Рассчитать");
+//     manualLayout->addWidget(calcBtn);
+    
+//     manualResult = new QTextEdit();
+//     manualResult->setReadOnly(true);
+//     manualResult->setMaximumHeight(150);
+//     manualLayout->addWidget(manualResult);
+//     mainLayout->addWidget(manualGroup);
+    
+//     testTable = new QTableWidget();
+//     testTable->setColumnCount(11);
+//     testTable->setHorizontalHeaderLabels({
+//         "Тест", "Статус",
+//         "Min", "Max", "Range",
+//         "Среднее", "Дисперсия", "Ст. откл.",
+//         "RMS", "CV", "Время"
+//     });
+//     testTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);
+//     testTable->setEditTriggers(QAbstractItemView::NoEditTriggers);  
+//     testTable->setSelectionBehavior(QAbstractItemView::SelectRows);  
+//     mainLayout->addWidget(testTable);
+    
+//     connect(autoTestsBtn, &QPushButton::clicked, this, &TestingWidget::onRunAutoTests);
+//     connect(largeDataBtn, &QPushButton::clicked, this, &TestingWidget::onRunLargeData);
+//     connect(calcBtn, &QPushButton::clicked, this, &TestingWidget::onRunManual);
+// }
+
 
 void TestingWidget::setupUI() {
     QVBoxLayout* mainLayout = new QVBoxLayout(this);
@@ -76,14 +242,14 @@ void TestingWidget::setupUI() {
     largeDataLayout->addWidget(new QLabel("Тип последовательности:"));
     largeDataTypeCombo = new QComboBox();
     largeDataTypeCombo->addItem("Арифметическая (1, 2, 3, ...)");
-    largeDataTypeCombo->addItem("Случайные числа");
-    largeDataTypeCombo->addItem("Постоянные числа");
+    largeDataTypeCombo->addItem("Чётные числа (2, 4, 6, ...)");
+    largeDataTypeCombo->addItem("Случайные числа (1-50000)");
     largeDataLayout->addWidget(largeDataTypeCombo);
     
     largeDataLayout->addWidget(new QLabel("Количество элементов:"));
     largeDataSizeSpin = new QSpinBox();
-    largeDataSizeSpin->setRange(1, 1000000);
-    largeDataSizeSpin->setValue(1000000);
+    largeDataSizeSpin->setRange(1, 5000000);
+    largeDataSizeSpin->setValue(100000);
     largeDataLayout->addWidget(largeDataSizeSpin);
     
     largeDataLayout->addStretch();
@@ -127,7 +293,124 @@ void TestingWidget::setupUI() {
     connect(autoTestsBtn, &QPushButton::clicked, this, &TestingWidget::onRunAutoTests);
     connect(largeDataBtn, &QPushButton::clicked, this, &TestingWidget::onRunLargeData);
     connect(calcBtn, &QPushButton::clicked, this, &TestingWidget::onRunManual);
+     connect(largeDataTypeCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &TestingWidget::onDataTypeChanged);
 }
+
+// void TestingWidget::onDataTypeChanged(int index) {
+//     int maxElements = 0;
+    
+//     switch (index) {
+//         case 0:  // Арифметическая
+//             maxElements = 1000000;  // 1 млн
+//             break;
+//         case 1:  // Чётные числа
+//             maxElements = 1000000;  // 1 млн
+//             break;
+//         case 2:  // Случайные числа
+//             maxElements = 5000000;  // 5 млн
+//             break;
+//         default:
+//             maxElements = 1000000;
+//     }
+    
+//     largeDataSizeSpin->setMaximum(maxElements);
+    
+//     // Если текущее значение больше нового максимума, уменьшаем
+//     if (largeDataSizeSpin->value() > maxElements) {
+//         largeDataSizeSpin->setValue(maxElements);
+//     }
+// }
+
+
+void TestingWidget::onDataTypeChanged(int index) {
+    int maxElements = 0;
+    int defaultValue = 0;
+    
+    switch (index) {
+        case 0:  // Арифметическая
+            maxElements = 1000000;
+            defaultValue = 1000000;  // по умолчанию 1 млн
+            break;
+        case 1:  // Чётные числа
+            maxElements = 1000000;
+            defaultValue = 1000000;  // по умолчанию 1 млн
+            break;
+        case 2:  // Случайные числа
+            maxElements = 5000000;
+            defaultValue = 5000000;  // по умолчанию 5 млн
+            break;
+        default:
+            maxElements = 1000000;
+            defaultValue = 1000000;
+    }
+    
+    largeDataSizeSpin->setMaximum(maxElements);
+    largeDataSizeSpin->setValue(defaultValue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // void TestingWidget::onRunLargeData() {
 //     int dataType = largeDataTypeCombo->currentIndex();
@@ -391,88 +674,307 @@ void TestingWidget::setupUI() {
 // }
 
 
+// void TestingWidget::onRunLargeData() {
+//     int dataType = largeDataTypeCombo->currentIndex();
+//     int dataSize = largeDataSizeSpin->value();
+    
+//     if (dataType != 0) {
+//         QMessageBox::information(this, "Информация", 
+//             "Тест больших данных работает с арифметической прогрессией.\n"
+//             "Данные читаются из файла large_data.txt");
+//         return;
+//     }
+    
+//     QString filename = QCoreApplication::applicationDirPath() + "/large_data.txt";
+//     QFile file(filename);
+    
+//     if (!file.exists()) {
+//         QMessageBox::warning(this, "Ошибка", 
+//             "Файл large_data.txt не найден.\n"
+//             "Он будет создан при следующем запуске.");
+//         createDataFile();
+//         return;
+//     }
+    
+//     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+//         QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл");
+//         return;
+//     }
+    
+//     QMessageBox::information(this, "Тест больших данных", 
+//         QString("Чтение %1 элементов из файла large_data.txt...").arg(dataSize));
+    
+//     auto start = std::chrono::high_resolution_clock::now();
+    
+//     try {
+//         OnlineStatistics<long long> stats;
+//         QTextStream in(&file);
+//         long long value;
+//         int count = 0;
+//         int errorLine = 0;
+//         QString errorToken;
+        
+//         while (count < dataSize && !in.atEnd()) {
+//             errorLine = count + 1;
+//             in >> value;
+            
+           
+//             if (in.status() != QTextStream::Ok) {
+//                 in >> errorToken;  
+//                 file.close();
+//                 QMessageBox::warning(this, "Ошибка в файле", 
+//                     QString("Ошибка чтения на строке %1\n"
+//                             "Найдено: '%2'\n"
+//                             "Ожидалось: число")
+//                     .arg(errorLine).arg(errorToken));
+//                 return;
+//             }
+            
+//             stats.Update(value);
+//             count++;
+//         }
+        
+//         file.close();
+        
+//         if (count == 0) {
+//             QMessageBox::warning(this, "Ошибка", "Файл пуст или не содержит чисел");
+//             return;
+//         }
+        
+//         auto end = std::chrono::high_resolution_clock::now();
+//         double timeSec = std::chrono::duration<double>(end - start).count();
+        
+//         QString result = QString(
+//             "Тест чтения из файла (large_data.txt)\n"
+//             "Обработано: %1 элементов\n"
+//             "Время: %2 сек\n"
+//             "Минимум: %3\n"
+//             "Максимум: %4\n"
+//             "Размах: %5\n"
+//             "Среднее: %6\n"
+//             "Дисперсия: %7\n"
+//             "Ст. отклонение: %8\n"
+//             "Среднеквадратическое: %9\n"
+//             "Коэф. вариации: %10\n")
+//             .arg(stats.GetCount())
+//             .arg(QString::number(timeSec, 'f', 2))
+//             .arg(stats.GetMin())
+//             .arg(stats.GetMax())
+//             .arg(QString::number(stats.GetRange(), 'f', 2))
+//             .arg(QString::number(stats.GetAverage(), 'f', 2))
+//             .arg(QString::number(stats.GetVariance(), 'f', 2))
+//             .arg(QString::number(stats.GetStdDeviation(), 'f', 2))
+//             .arg(QString::number(stats.GetRMS(), 'f', 2))
+//             .arg(QString::number(stats.GetCoefficientOfVariation(), 'f', 4));
+        
+//         QMessageBox::information(this, "Результат теста больших данных", result);
+        
+//     } catch (const std::exception& e) {
+//         QMessageBox::warning(this, "Ошибка", e.what());
+//         file.close();
+//     }
+// }
+
+// void TestingWidget::onRunLargeData() {
+//     int dataType = largeDataTypeCombo->currentIndex();
+//     int dataSize = largeDataSizeSpin->value();
+    
+//     QString typeName;
+//     QString filename;
+    
+//     switch (dataType) {
+//         case 0:
+//             typeName = "Арифметическая (1, 2, 3, ...)";
+//             filename = QCoreApplication::applicationDirPath() + "/large_data_arithmetic.txt";
+//             break;
+//         case 1:
+//             typeName = "Чётные числа (2, 4, 6, ...)";
+//             filename = QCoreApplication::applicationDirPath() + "/large_data_even.txt";
+//             break;
+//         case 2:
+//             typeName = "Случайные числа (1-50000)";
+//             filename = QCoreApplication::applicationDirPath() + "/large_data_random_5m.txt";
+//             break;
+//         default:
+//             QMessageBox::warning(this, "Ошибка", "Неизвестный тип данных");
+//             return;
+//     }
+    
+//     QFile file(filename);
+    
+//     if (!file.exists()) {
+//         QMessageBox::warning(this, "Ошибка", 
+//             QString("Файл %1 не найден.\n"
+//                     "Он будет создан при следующем запуске программы.\n"
+//                     "Нажмите OK и перезапустите программу.").arg(filename));
+//         createDataFile();
+//         return;
+//     }
+    
+//     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+//         QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл");
+//         return;
+//     }
+    
+//     QMessageBox::information(this, "Тест больших данных", 
+//         QString("Тип: %1\n"
+//                 "Файл: %2\n"
+//                 "Чтение %3 элементов...")
+//         .arg(typeName)
+//         .arg(filename)
+//         .arg(dataSize));
+    
+//     auto start = std::chrono::high_resolution_clock::now();
+    
+//     try {
+//         OnlineStatistics<long long> stats;
+//         QTextStream in(&file);
+//         long long value;
+//         int count = 0;
+//         int errorLine = 0;
+//         QString errorToken;
+        
+//         while (count < dataSize && !in.atEnd()) {
+//             errorLine = count + 1;
+//             in >> value;
+            
+//             if (in.status() != QTextStream::Ok) {
+//                 in >> errorToken;
+//                 file.close();
+//                 QMessageBox::warning(this, "Ошибка в файле", 
+//                     QString("Ошибка чтения на строке %1\n"
+//                             "Найдено: '%2'\n"
+//                             "Ожидалось: число")
+//                     .arg(errorLine).arg(errorToken));
+//                 return;
+//             }
+            
+//             stats.Update(value);
+//             count++;
+//         }
+        
+//         file.close();
+        
+//         if (count == 0) {
+//             QMessageBox::warning(this, "Ошибка", "Файл пуст или не содержит чисел");
+//             return;
+//         }
+        
+//         auto end = std::chrono::high_resolution_clock::now();
+//         double timeSec = std::chrono::duration<double>(end - start).count();
+        
+//         QString result = QString(
+//             "Тип: %1\n"
+//             "Файл: %2\n"
+//             "Обработано: %3 элементов\n"
+//             "Время: %4 сек\n"
+//             "Минимум: %5\n"
+//             "Максимум: %6\n"
+//             "Размах: %7\n"
+//             "Среднее: %8\n"
+//             "Дисперсия: %9\n"
+//             "Ст. отклонение: %10\n"
+//             "Среднеквадратическое: %11\n"
+//             "Коэф. вариации: %12\n")
+//             .arg(typeName)
+//             .arg(filename)
+//             .arg(stats.GetCount())
+//             .arg(QString::number(timeSec, 'f', 2))
+//             .arg(stats.GetMin())
+//             .arg(stats.GetMax())
+//             .arg(QString::number(stats.GetRange(), 'f', 2))
+//             .arg(QString::number(stats.GetAverage(), 'f', 2))
+//             .arg(QString::number(stats.GetVariance(), 'f', 2))
+//             .arg(QString::number(stats.GetStdDeviation(), 'f', 2))
+//             .arg(QString::number(stats.GetRMS(), 'f', 2))
+//             .arg(QString::number(stats.GetCoefficientOfVariation(), 'f', 4));
+        
+//         QMessageBox::information(this, "Результат теста больших данных", result);
+        
+//     } catch (const std::exception& e) {
+//         QMessageBox::warning(this, "Ошибка", e.what());
+//         file.close();
+//     }
+// }
+
 void TestingWidget::onRunLargeData() {
     int dataType = largeDataTypeCombo->currentIndex();
     int dataSize = largeDataSizeSpin->value();
     
-    if (dataType != 0) {
-        QMessageBox::information(this, "Информация", 
-            "Тест больших данных работает с арифметической прогрессией.\n"
-            "Данные читаются из файла large_data.txt");
-        return;
+    QString typeName;
+    QString filename;
+    
+    switch (dataType) {
+        case 0:
+            typeName = "Арифметическая (1, 2, 3, ...) 1 млн";
+            filename = QCoreApplication::applicationDirPath() + "/large_data_arithmetic.txt";
+            break;
+        case 1:
+            typeName = "Чётные числа (2, 4, 6, ...) 1 млн";
+            filename = QCoreApplication::applicationDirPath() + "/large_data_even.txt";
+            break;
+        case 2:
+            typeName = "Случайные числа (1-50000) 5 млн";
+            filename = QCoreApplication::applicationDirPath() + "/large_data_random_5m.txt";
+            break;
+        default:
+            QMessageBox::warning(this, "Ошибка", "Неизвестный тип данных");
+            return;
     }
     
-    QString filename = QCoreApplication::applicationDirPath() + "/large_data.txt";
     QFile file(filename);
-    
     if (!file.exists()) {
         QMessageBox::warning(this, "Ошибка", 
-            "Файл large_data.txt не найден.\n"
-            "Он будет создан при следующем запуске.");
+            QString("Файл %1 не найден.\n"
+                    "Он будет создан при следующем запуске.").arg(filename));
         createDataFile();
         return;
     }
-    
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл");
-        return;
-    }
+    file.close();
     
     QMessageBox::information(this, "Тест больших данных", 
-        QString("Чтение %1 элементов из файла large_data.txt...").arg(dataSize));
+        QString("Тип: %1\nЧтение %2 элементов через ReadOnlyStream...")
+        .arg(typeName).arg(dataSize));
     
     auto start = std::chrono::high_resolution_clock::now();
     
     try {
+        std::function<long long(const std::string&)> deserializer = [](const std::string& s) -> long long {
+            return std::stoll(s);
+        };
+        
+        ReadOnlyStream<long long> stream(filename.toStdString(), deserializer);
+        stream.Open();
+        
         OnlineStatistics<long long> stats;
-        QTextStream in(&file);
-        long long value;
-        int count = 0;
-        int errorLine = 0;
-        QString errorToken;
         
-        while (count < dataSize && !in.atEnd()) {
-            errorLine = count + 1;
-            in >> value;
-            
-           
-            if (in.status() != QTextStream::Ok) {
-                in >> errorToken;  
-                file.close();
-                QMessageBox::warning(this, "Ошибка в файле", 
-                    QString("Ошибка чтения на строке %1\n"
-                            "Найдено: '%2'\n"
-                            "Ожидалось: число")
-                    .arg(errorLine).arg(errorToken));
-                return;
-            }
-            
-            stats.Update(value);
-            count++;
+        for (int i = 0; i < dataSize && !stream.IsEndOfStream(); ++i) {
+            stats.Update(stream.Read());
         }
         
-        file.close();
-        
-        if (count == 0) {
-            QMessageBox::warning(this, "Ошибка", "Файл пуст или не содержит чисел");
-            return;
-        }
+        stream.Close();
         
         auto end = std::chrono::high_resolution_clock::now();
         double timeSec = std::chrono::duration<double>(end - start).count();
         
         QString result = QString(
-            "Тест чтения из файла (large_data.txt)\n"
-            "Обработано: %1 элементов\n"
-            "Время: %2 сек\n"
-            "Минимум: %3\n"
-            "Максимум: %4\n"
-            "Размах: %5\n"
-            "Среднее: %6\n"
-            "Дисперсия: %7\n"
-            "Ст. отклонение: %8\n"
-            "Среднеквадратическое: %9\n"
-            "Коэф. вариации: %10\n")
+            "═══════════════════════════════════════════════════════════════════\n"
+            "Тест ReadOnlyStream (чтение из файла)\n"
+            "Тип: %1\n"
+            "═══════════════════════════════════════════════════════════════════\n"
+            "Обработано: %2 элементов\n"
+            "Время: %3 сек\n"
+            "═══════════════════════════════════════════════════════════════════\n"
+            "Минимум: %4\n"
+            "Максимум: %5\n"
+            "Размах: %6\n"
+            "Среднее: %7\n"
+            "Дисперсия: %8\n"
+            "Ст. отклонение: %9\n"
+            "Среднеквадратическое: %10\n"
+            "Коэф. вариации: %11\n"
+            "═══════════════════════════════════════════════════════════════════")
+            .arg(typeName)
             .arg(stats.GetCount())
             .arg(QString::number(timeSec, 'f', 2))
             .arg(stats.GetMin())
@@ -488,7 +990,6 @@ void TestingWidget::onRunLargeData() {
         
     } catch (const std::exception& e) {
         QMessageBox::warning(this, "Ошибка", e.what());
-        file.close();
     }
 }
 

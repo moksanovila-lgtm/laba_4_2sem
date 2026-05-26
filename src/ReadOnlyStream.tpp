@@ -48,7 +48,7 @@ ReadOnlyStream<T>::ReadOnlyStream(const std::string& filename, std::function<T(c
 }
 
 template <typename T>
-ReadOnlyStream<T>::ReadOnlyStream(const std::string& data, std::function<T(const std::string&)> deserializer, char delimiter)
+ReadOnlyStream<T>::ReadOnlyStream(char delimiter, const std::string& data, std::function<T(const std::string&)> deserializer)
     : sourceType(SourceType::STRING)
     , stringSource(data)
     , stringPosition(0)

@@ -689,6 +689,7 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iterator \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \
@@ -2270,6 +2271,10 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd:
 
+D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream:
+
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/map:
@@ -2355,5 +2360,3 @@ D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp:
 D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp:
 
 D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp:
-
-D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp:

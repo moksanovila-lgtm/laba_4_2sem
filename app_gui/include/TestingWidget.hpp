@@ -30,6 +30,7 @@ private slots:
     void onRunAutoTests();
     void onRunLargeData();
     void onRunManual();
+    void onDataTypeChanged(int index);
 
 public:
     explicit TestingWidget(QWidget* parent = nullptr);
