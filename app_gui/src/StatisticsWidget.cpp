@@ -60,11 +60,11 @@ void StatisticsWidget::setupUI() {
     stdDevLabel = new QLabel("-");
     resultLayout->addWidget(stdDevLabel, 2, 3);
     
-    resultLayout->addWidget(new QLabel("Среднеквадратическое (RMS):"), 3, 2);
+    resultLayout->addWidget(new QLabel("Среднеквадратическое:"), 3, 2);
     rmsLabel = new QLabel("-");
     resultLayout->addWidget(rmsLabel, 3, 3);
     
-    resultLayout->addWidget(new QLabel("Коэф. вариации (CV):"), 4, 2);
+    resultLayout->addWidget(new QLabel("Коэф. вариации:"), 4, 2);
     cvLabel = new QLabel("-");
     resultLayout->addWidget(cvLabel, 4, 3);
     

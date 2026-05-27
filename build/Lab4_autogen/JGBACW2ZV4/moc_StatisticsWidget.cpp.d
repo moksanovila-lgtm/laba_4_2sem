@@ -341,7 +341,6 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_StatisticsWidget.cpp: D:/Lab_4/app_gu
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iterator \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \

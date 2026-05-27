@@ -40,24 +40,30 @@ template <> constexpr inline auto TestingWidget::qt_create_metaobjectdata<qt_met
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "TestingWidget",
-        "onRunAutoTests",
+        "onAddNumber",
         "",
+        "onClearNumbers",
+        "onCalculateFromList",
+        "onRunAutoTests",
         "onRunLargeData",
-        "onRunManual",
         "onDataTypeChanged",
         "index"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Slot 'onRunAutoTests'
+        // Slot 'onAddNumber'
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onRunLargeData'
+        // Slot 'onClearNumbers'
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onRunManual'
+        // Slot 'onCalculateFromList'
         QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onRunAutoTests'
+        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onRunLargeData'
+        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onDataTypeChanged'
-        QtMocHelpers::SlotData<void(int)>(5, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 6 },
+        QtMocHelpers::SlotData<void(int)>(7, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 8 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -82,10 +88,12 @@ void TestingWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
     auto *_t = static_cast<TestingWidget *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->onRunAutoTests(); break;
-        case 1: _t->onRunLargeData(); break;
-        case 2: _t->onRunManual(); break;
-        case 3: _t->onDataTypeChanged((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 0: _t->onAddNumber(); break;
+        case 1: _t->onClearNumbers(); break;
+        case 2: _t->onCalculateFromList(); break;
+        case 3: _t->onRunAutoTests(); break;
+        case 4: _t->onRunLargeData(); break;
+        case 5: _t->onDataTypeChanged((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -110,14 +118,14 @@ int TestingWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 6;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 6;
     }
     return _id;
 }

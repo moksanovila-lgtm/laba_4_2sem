@@ -53,10 +53,6 @@ private:
 public:
     ReadOnlyStream(Sequence<T>* seq);
     ReadOnlyStream(LazySequence<T>* lazySeq);
-    // ReadOnlyStream(const std::string& filename, std::function<T(const std::string&)> deserializer);
-    // ReadOnlyStream(const std::string& data, std::function<T(const std::string&)> deserializer, char delimiter = ' ');
-    // ReadOnlyStream(const std::string& filename, std::function<T(const std::string&)> deserializer);   
-    // ReadOnlyStream(const std::string& data, std::function<T(const std::string&)> deserializer, char delimiter = ' '); 
     ReadOnlyStream(const std::string& filename, std::function<T(const std::string&)> deserializer);   
     ReadOnlyStream(char delimiter, const std::string& data, std::function<T(const std::string&)> deserializer);  
     ReadOnlyStream(ReadOnlyStream<T>* stream);

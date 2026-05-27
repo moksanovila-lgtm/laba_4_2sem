@@ -1,5 +1,3 @@
-#pragma once
-
 #include "ReadOnlyStream.hpp"
 #include <sstream>
 #include <algorithm>
@@ -43,7 +41,7 @@ ReadOnlyStream<T>::ReadOnlyStream(const std::string& filename, std::function<T(c
 {
     fileSource.open(filename);
     if (!fileSource.is_open()) {
-        throw std::runtime_error("Cannot open file: " + filename);
+        throw InvalidArgumentException("Cannot open file: " + filename);
     }
 }
 
@@ -146,7 +144,7 @@ T ReadOnlyStream<T>::ReadFromLazySequence() {
 template <typename T>
 T ReadOnlyStream<T>::ReadFromFile() {
     if (!fileSource.is_open()) {
-        throw std::runtime_error("File not open");
+    throw StreamNotOpenException("File not open");
     }
     
     std::string token;
@@ -177,7 +175,7 @@ T ReadOnlyStream<T>::ReadFromString() {
 template <typename T>
 T ReadOnlyStream<T>::ReadFromStream() {
     if (!streamSource) {
-        throw std::runtime_error("Stream source is null");
+        throw InvalidArgumentException("Stream source is null");
     }
     T value = streamSource->Read();
     position++;
@@ -234,10 +232,10 @@ bool ReadOnlyStream<T>::IsEndOfStream() const {
 template <typename T>
 T ReadOnlyStream<T>::Read() {
     if (!isOpen) {
-        throw std::runtime_error("Stream is not open");
+        throw StreamNotOpenException("Read() called on closed stream");
     }
     if (IsEndOfStream()) {
-        throw EndOfStreamException();
+        throw EndOfStreamException("Read() called at end of stream");
     }
     switch (sourceType) {
         case SourceType::SEQUENCE:
@@ -251,17 +249,17 @@ T ReadOnlyStream<T>::Read() {
         case SourceType::STREAM:
             return ReadFromStream();
         default:
-            throw std::runtime_error("Unknown source type");
+        throw InvalidArgumentException("Unknown source type: " + std::to_string(static_cast<int>(sourceType)));
     }
 }
 
 template <typename T>
 size_t ReadOnlyStream<T>::Seek(size_t index) {
     if (!canSeek) {
-        throw std::runtime_error("Seek not supported for this stream");
+        throw CannotSeekException("Seek() called on stream that does not support seeking");
     }
     if (!isOpen) {
-        throw std::runtime_error("Stream is not open");
+        throw StreamNotOpenException("Seek() called on closed stream");
     }
     switch (sourceType) {
         case SourceType::SEQUENCE:
@@ -356,21 +354,13 @@ void ReadOnlyStream<T>::Close() {
     isOpen = false;
 }
 
-// template <typename T>
-// void ReadOnlyStream<T>::Reset() {
-//     if (!canSeek) {
-//         throw std::runtime_error("Cannot reset this stream");
-//     }
-//     Seek(0);
-// }
-
 template <typename T>
 T ReadOnlyStream<T>::Peek() {
     if (!isOpen) {
-        throw std::runtime_error("Stream is not open");
+        throw StreamNotOpenException("Peek() called on closed stream");
     }
     if (IsEndOfStream()) {
-        throw EndOfStreamException();
+        throw EndOfStreamException("Peek() called at end of stream");
     }
     size_t oldPosition = position;
     T value = Read();
@@ -381,16 +371,6 @@ T ReadOnlyStream<T>::Peek() {
     }
     return value;
 }
-
-// template <typename T>
-// void ReadOnlyStream<T>::Reset() {
-//     if (!canSeek) {
-//         throw std::runtime_error("Cannot reset this stream");
-//     }
-//     buffer.Clear();
-//     bufferStart = 0;
-//     Seek(0);
-// }
 
 template <typename T>
 void ReadOnlyStream<T>::Reset() {

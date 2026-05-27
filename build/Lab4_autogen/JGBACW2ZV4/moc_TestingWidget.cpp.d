@@ -169,6 +169,8 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_TestingWidget.cpp: D:/Lab_4/app_gui/i
   C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QComboBox \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QLabel \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QLineEdit \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QProgressBar \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSpinBox \
@@ -184,6 +186,9 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_TestingWidget.cpp: D:/Lab_4/app_gui/i
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qcombobox.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlabel.h \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlineedit.h \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlistview.h \
+  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlistwidget.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qprogressbar.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/6.11.0/mingw_64/include/QtWidgets/qrubberband.h \

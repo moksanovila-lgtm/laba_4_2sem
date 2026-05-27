@@ -1,5 +1,3 @@
-#pragma once
-
 #include "Optional.hpp"
 
 template <typename T>
@@ -37,7 +35,7 @@ bool Optional<T>::HasValue() const {
 template <typename T>
 T Optional<T>::GetValue() const {
     if (!hasValue) {
-        throw std::runtime_error("Optional has no value");
+        throw IteratorStateException("Optional has no value");
     }
     return value;
 }
@@ -66,7 +64,7 @@ Optional<T>::operator bool() const {
 template <typename T>
 T& Optional<T>::operator*() {
     if (!hasValue) {
-        throw std::runtime_error("Optional has no value");
+        throw IteratorStateException("Optional has no value");
     }
     return value;
 }
@@ -74,7 +72,7 @@ T& Optional<T>::operator*() {
 template <typename T>
 const T& Optional<T>::operator*() const {
     if (!hasValue) {
-        throw std::runtime_error("Optional has no value");
+        throw IteratorStateException("Optional has no value");
     }
     return value;
 }
@@ -82,7 +80,7 @@ const T& Optional<T>::operator*() const {
 template <typename T>
 T* Optional<T>::operator->() {
     if (!hasValue) {
-        throw std::runtime_error("Optional has no value");
+        throw IteratorStateException("Optional has no value");
     }
     return &value;
 }
@@ -90,7 +88,7 @@ T* Optional<T>::operator->() {
 template <typename T>
 const T* Optional<T>::operator->() const {
     if (!hasValue) {
-        throw std::runtime_error("Optional has no value");
+        throw IteratorStateException("Optional has no value");
     }
     return &value;
 }

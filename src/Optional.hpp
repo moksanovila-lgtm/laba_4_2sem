@@ -1,6 +1,7 @@
 #pragma once
 
-#include <stdexcept>
+// #include <stdexcept>
+#include "..\third_party\Lab_2\library\include\exceptions.hpp"
 
 template <typename T>
 class Optional {

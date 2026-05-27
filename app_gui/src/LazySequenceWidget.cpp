@@ -4,7 +4,6 @@
 #include <QHBoxLayout>
 #include <QGroupBox>
 #include <QMessageBox>
-#include <QDebug>
 
 LazySequenceWidget::LazySequenceWidget(QTabWidget* tabWidget, QWidget* parent)
     : QWidget(parent)
@@ -33,21 +32,20 @@ void LazySequenceWidget::setupUI() {
     
     genLayout->addWidget(new QLabel("Тип:"));
     generatorCombo = new QComboBox();
-    generatorCombo->addItem("Арифметическая (первый элемент, шаг)");
-    generatorCombo->addItem("Случайные числа (min, max)");
-    generatorCombo->addItem("Числа Фибоначчи");
-    generatorCombo->addItem("Постоянные числа");
+    generatorCombo->addItem("Арифметическая (1 парам - первый элемент, 2 парам - шаг)");
+    generatorCombo->addItem("Случайные числа (1 парам - min, 2 парам - max)");
+    generatorCombo->addItem("Постоянные числа (1 парам - число)");
     genLayout->addWidget(generatorCombo);
     
     genLayout->addWidget(new QLabel("Параметр 1:"));
     param1Spin = new QSpinBox();
-    param1Spin->setRange(-1000000, 1000000);
+    param1Spin->setRange(-100000, 100000);
     param1Spin->setValue(1);
     genLayout->addWidget(param1Spin);
     
     genLayout->addWidget(new QLabel("Параметр 2:"));
     param2Spin = new QSpinBox();
-    param2Spin->setRange(-1000000, 1000000);
+    param2Spin->setRange(-100000, 100000);
     param2Spin->setValue(1);
     genLayout->addWidget(param2Spin);
     
@@ -61,11 +59,11 @@ void LazySequenceWidget::setupUI() {
     
     matLayout->addWidget(new QLabel("Сгенерировать:"));
     generateCountSpin = new QSpinBox();
-    generateCountSpin->setRange(1, 100000);
+    generateCountSpin->setRange(1, 20000);
     generateCountSpin->setValue(100);
     matLayout->addWidget(generateCountSpin);
     matLayout->addWidget(new QLabel("элементов"));
-    
+
     generateBtn = new QPushButton("Сгенерировать");
     matLayout->addWidget(generateBtn);
     matLayout->addStretch();
@@ -143,8 +141,7 @@ void LazySequenceWidget::setupUI() {
     hintLabel->setStyleSheet("color: gray; font-size: 11px;");
     mainLayout->addWidget(hintLabel);
     
-    connect(generatorCombo, QOverload<int>::of(&QComboBox::currentIndexChanged),
-            this, &LazySequenceWidget::onGeneratorTypeChanged);
+    connect(generatorCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &LazySequenceWidget::onGeneratorTypeChanged);
     connect(applyGenBtn, &QPushButton::clicked, this, &LazySequenceWidget::onApplyGenerator);
     connect(generateBtn, &QPushButton::clicked, this, &LazySequenceWidget::onGenerateElements);
     connect(collectStatsBtn, &QPushButton::clicked, this, &LazySequenceWidget::onCollectStatistics);
@@ -188,9 +185,6 @@ void LazySequenceWidget::onStatsModeChanged() {
 
 void LazySequenceWidget::onGeneratorTypeChanged(int index) {
     int maxVal = 100000;
-    if (index == 2) {  
-        maxVal = 93;
-    }
     
     generateCountSpin->setMaximum(maxVal);
     firstCountSpin->setMaximum(maxVal);
@@ -211,7 +205,18 @@ void LazySequenceWidget::onGeneratorTypeChanged(int index) {
 
 void LazySequenceWidget::onApplyGenerator() {
     int type = generatorCombo->currentIndex();
-    
+    if (type == 1) {
+        int minVal = param1Spin->value();
+        int maxVal = param2Spin->value();
+        
+        if (minVal >= maxVal) {
+            QMessageBox::warning(this, "Ошибка", 
+                "Для случайных чисел максимальное значение (Параметр 2)\n"
+                "должно быть больше минимального (Параметр 1).\n\n"
+                "Пожалуйста, исправьте значения и нажмите 'Применить' снова.");
+            return;  
+        }
+    }
     switch (type) {
         case 0:
             controller->setGenerator(LazySequenceController::GEN_ARITHMETIC, 
@@ -222,9 +227,6 @@ void LazySequenceWidget::onApplyGenerator() {
                                      param1Spin->value(), param2Spin->value());
             break;
         case 2:
-            controller->setGenerator(LazySequenceController::GEN_FIBONACCI);
-            break;
-        case 3:
             controller->setGenerator(LazySequenceController::GEN_CONSTANT,
                                      param1Spin->value());
             break;

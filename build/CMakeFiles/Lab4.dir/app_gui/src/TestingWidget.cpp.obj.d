@@ -411,6 +411,11 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlabel.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qpicture.h \
  C:/Qt/6.11.0/mingw_64/include/QtCore/qiodevice.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QLineEdit \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlineedit.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QListWidget \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlistwidget.h \
+ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlistview.h \
  D:/Lab_4/app_gui/include/LazySequenceController.hpp \
  C:/Qt/6.11.0/mingw_64/include/QtCore/QObject \
  D:/Lab_4/src/LazySequence.hpp \
@@ -439,9 +444,7 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
  D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp \
  D:/Lab_4/src/Optional.hpp D:/Lab_4/src/Optional.tpp \
- D:/Lab_4/src/LazySequence.tpp \
- C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream \
- D:/Lab_4/src/ReadOnlyStream.hpp \
+ D:/Lab_4/src/LazySequence.tpp D:/Lab_4/src/ReadOnlyStream.hpp \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \

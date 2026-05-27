@@ -1,7 +1,6 @@
 #include "LazySequenceController.hpp"
 #include <random>
 #include <chrono>
-#include <QDebug>
 #include <iostream>
 
 LazySequenceController::LazySequenceController(QObject* parent)
@@ -24,7 +23,7 @@ void LazySequenceController::setGenerator(GeneratorType type, long long p1, long
 
 void LazySequenceController::rebuildSequence() {
     ArraySequence<long long> empty;
-    
+
     switch (currentType) {
         case GEN_ARITHMETIC: {
             struct ArithmeticFunctor {
@@ -92,11 +91,11 @@ void LazySequenceController::rebuildSequence() {
             auto lambda = [func](Sequence<long long>* prev) mutable -> long long {
                 return func(prev);
             };
-            
             ArraySequence<long long> fibStart = {0, 1};
             lazySeq = std::make_unique<LazySequence<long long>>(lambda, &fibStart, 2);
             break;
         }
+
         case GEN_CONSTANT: {
             long long value = param1;
             auto lambda = [value](Sequence<long long>* prev) -> long long {
@@ -107,51 +106,21 @@ void LazySequenceController::rebuildSequence() {
             break;
         }
     }
-    
     stream = std::make_unique<ReadOnlyStream<long long>>(lazySeq.get());
 }
 
-// void LazySequenceController::generateFirstNElements(int n) {
-//     for (int i = 0; i < n; ++i) {
-//         try {
-//             lazySeq->Get(i);
-//         } catch (const std::overflow_error& e) {
-//             emit error(QString("Переполнение: %1").arg(e.what()));
-//             emit materializedCountChanged(lazySeq->GetMaterializedCount());
-//             return;
-//         }
-//     }
-//     emit materializedCountChanged(lazySeq->GetMaterializedCount());
-// }
-
 void LazySequenceController::generateFirstNElements(int n) {
-    // Тест 1: только вызовы getElement
-    auto t1 = std::chrono::high_resolution_clock::now();
     for (int i = 0; i < n; ++i) {
-        lazySeq->Get(i);
+        try {
+            lazySeq->Get(i);
+        } catch (const std::overflow_error& e) {
+            emit error(QString("Переполнение: %1").arg(e.what()));
+            emit materializedCountChanged(lazySeq->GetMaterializedCount());
+            return;
+        }
     }
-    auto t2 = std::chrono::high_resolution_clock::now();
-    double time1 = std::chrono::duration<double, std::milli>(t2 - t1).count();
-    
-    // Тест 2: прямой вызов rule для арифметической прогрессии
-    auto t3 = std::chrono::high_resolution_clock::now();
-    for (int i = 0; i < n; ++i) {
-        volatile long long x = 1 + i * 1;  // арифметическая прогрессия
-    }
-    auto t4 = std::chrono::high_resolution_clock::now();
-    double time2 = std::chrono::duration<double, std::milli>(t4 - t3).count();
-    
-    emit error(QString("Get(i): %1 ms\nDirect: %2 ms").arg(time1).arg(time2));
+    emit materializedCountChanged(lazySeq->GetMaterializedCount());
 }
-
-
-
-
-
-
-
-
-
 
 long long LazySequenceController::getElement(size_t index) {
     try {
