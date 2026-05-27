@@ -1,0 +1,94 @@
+{
+	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
+	"BUILD_DIR" : "D:/Lab_4/build/_deps/googletest-build/googletest/gtest_autogen",
+	"CMAKE_BINARY_DIR" : "D:/Lab_4/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/Lab_4/build/_deps/googletest-build/googletest",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/Lab_4/build/_deps/googletest-src/googletest",
+	"CMAKE_EXECUTABLE" : "C:/Program Files/CMake/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"D:/Lab_4/build/_deps/googletest-src/googletest/CMakeLists.txt",
+		"D:/Lab_4/build/_deps/googletest-src/googletest/cmake/internal_utils.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakePackageConfigHelpers.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/WriteBasicConfigVersionFile.cmake",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in",
+		"D:/Lab_4/build/_deps/googletest-src/googletest/cmake/Config.cmake.in",
+		"D:/Lab_4/build/_deps/googletest-src/googletest/cmake/gtest.pc.in",
+		"D:/Lab_4/build/_deps/googletest-src/googletest/cmake/gtest_main.pc.in"
+	],
+	"CMAKE_SOURCE_DIR" : "D:/Lab_4",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "D:/Lab_4/build/_deps/googletest-build/googletest/gtest_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "gtest_autogen/timestamp",
+	"HEADERS" : [],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "D:/Lab_4/build/_deps/googletest-build/googletest/gtest_autogen/include",
+	"MOC_COMPILATION_FILE" : "D:/Lab_4/build/_deps/googletest-build/googletest/gtest_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"D:/Lab_4/app_gui/include",
+		"D:/Lab_4/src",
+		"D:/Lab_4/third_party/Lab_2/library/include",
+		"D:/Lab_4/build/_deps/googletest-src/googletest/include",
+		"D:/Lab_4/build/_deps/googletest-src/googletest",
+		"C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++",
+		"C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32",
+		"C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/backward",
+		"C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include",
+		"C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed",
+		"C:/w64devkit/include"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT",
+		"Q_GADGET_EXPORT",
+		"Q_ENUM_NS"
+	],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"C:/w64devkit/bin/c++.exe",
+		"-std=c++17",
+		"-w",
+		"-dM",
+		"-E",
+		"C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "D:/Lab_4/build/_deps/googletest-build/googletest/gtest_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 8,
+	"PARSE_CACHE_FILE" : "D:/Lab_4/build/_deps/googletest-build/googletest/CMakeFiles/gtest_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "C:/Qt/6.11.0/mingw_64/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "C:/Qt/6.11.0/mingw_64/bin/uic.exe",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 11,
+	"SETTINGS_FILE" : "D:/Lab_4/build/_deps/googletest-build/googletest/CMakeFiles/gtest_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"D:/Lab_4/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

@@ -84,6 +84,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	"C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	"C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Lab_4\build\CMakeFiles D:\Lab_4\build\\CMakeFiles\progress.marks
@@ -153,6 +198,201 @@ Lab4_autogen: cmake_check_build_system
 Lab4_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab4_autogen.dir\build.make CMakeFiles/Lab4_autogen.dir/build
 .PHONY : Lab4_autogen/fast
+
+#=============================================================================
+# Target rules for targets named lab4_tests
+
+# Build rule for target.
+lab4_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 lab4_tests
+.PHONY : lab4_tests
+
+# fast build rule for target.
+lab4_tests/fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\lab4_tests.dir\build.make tests/CMakeFiles/lab4_tests.dir/build
+.PHONY : lab4_tests/fast
+
+#=============================================================================
+# Target rules for targets named lab4_tests_autogen_timestamp_deps
+
+# Build rule for target.
+lab4_tests_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 lab4_tests_autogen_timestamp_deps
+.PHONY : lab4_tests_autogen_timestamp_deps
+
+# fast build rule for target.
+lab4_tests_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\lab4_tests_autogen_timestamp_deps.dir\build.make tests/CMakeFiles/lab4_tests_autogen_timestamp_deps.dir/build
+.PHONY : lab4_tests_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named lab4_tests_autogen
+
+# Build rule for target.
+lab4_tests_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 lab4_tests_autogen
+.PHONY : lab4_tests_autogen
+
+# fast build rule for target.
+lab4_tests_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\lab4_tests_autogen.dir\build.make tests/CMakeFiles/lab4_tests_autogen.dir/build
+.PHONY : lab4_tests_autogen/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock_autogen_timestamp_deps
+
+# Build rule for target.
+gmock_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock_autogen_timestamp_deps
+.PHONY : gmock_autogen_timestamp_deps
+
+# fast build rule for target.
+gmock_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock_autogen_timestamp_deps.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_autogen_timestamp_deps.dir/build
+.PHONY : gmock_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named gmock_autogen
+
+# Build rule for target.
+gmock_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock_autogen
+.PHONY : gmock_autogen
+
+# fast build rule for target.
+gmock_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock_autogen.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_autogen.dir/build
+.PHONY : gmock_autogen/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main_autogen_timestamp_deps
+
+# Build rule for target.
+gmock_main_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock_main_autogen_timestamp_deps
+.PHONY : gmock_main_autogen_timestamp_deps
+
+# fast build rule for target.
+gmock_main_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock_main_autogen_timestamp_deps.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen_timestamp_deps.dir/build
+.PHONY : gmock_main_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main_autogen
+
+# Build rule for target.
+gmock_main_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock_main_autogen
+.PHONY : gmock_main_autogen
+
+# fast build rule for target.
+gmock_main_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock_main_autogen.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/build
+.PHONY : gmock_main_autogen/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest_autogen_timestamp_deps
+
+# Build rule for target.
+gtest_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest_autogen_timestamp_deps
+.PHONY : gtest_autogen_timestamp_deps
+
+# fast build rule for target.
+gtest_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest_autogen_timestamp_deps.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest_autogen_timestamp_deps.dir/build
+.PHONY : gtest_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named gtest_autogen
+
+# Build rule for target.
+gtest_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest_autogen
+.PHONY : gtest_autogen
+
+# fast build rule for target.
+gtest_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest_autogen.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest_autogen.dir/build
+.PHONY : gtest_autogen/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main_autogen_timestamp_deps
+
+# Build rule for target.
+gtest_main_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest_main_autogen_timestamp_deps
+.PHONY : gtest_main_autogen_timestamp_deps
+
+# fast build rule for target.
+gtest_main_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest_main_autogen_timestamp_deps.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen_timestamp_deps.dir/build
+.PHONY : gtest_main_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main_autogen
+
+# Build rule for target.
+gtest_main_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest_main_autogen
+.PHONY : gtest_main_autogen
+
+# fast build rule for target.
+gtest_main_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest_main_autogen.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen.dir/build
+.PHONY : gtest_main_autogen/fast
 
 Lab4_autogen/mocs_compilation.obj: Lab4_autogen/mocs_compilation.cpp.obj
 .PHONY : Lab4_autogen/mocs_compilation.obj
@@ -353,10 +593,29 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... install
+	@echo ... install/local
+	@echo ... install/strip
+	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... Lab4_autogen
 	@echo ... Lab4_autogen_timestamp_deps
+	@echo ... gmock_autogen
+	@echo ... gmock_autogen_timestamp_deps
+	@echo ... gmock_main_autogen
+	@echo ... gmock_main_autogen_timestamp_deps
+	@echo ... gtest_autogen
+	@echo ... gtest_autogen_timestamp_deps
+	@echo ... gtest_main_autogen
+	@echo ... gtest_main_autogen_timestamp_deps
+	@echo ... lab4_tests_autogen
+	@echo ... lab4_tests_autogen_timestamp_deps
 	@echo ... Lab4
+	@echo ... gmock
+	@echo ... gmock_main
+	@echo ... gtest
+	@echo ... gtest_main
+	@echo ... lab4_tests
 	@echo ... Lab4_autogen/mocs_compilation.obj
 	@echo ... Lab4_autogen/mocs_compilation.i
 	@echo ... Lab4_autogen/mocs_compilation.s

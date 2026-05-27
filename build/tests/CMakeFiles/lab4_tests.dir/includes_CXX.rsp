@@ -1,0 +1,1 @@
+-ID:/Lab_4/build/tests/lab4_tests_autogen/include -ID:/Lab_4/app_gui/include -ID:/Lab_4/src -ID:/Lab_4/third_party/Lab_2/library/include -ID:/Lab_4/tests/../src -ID:/Lab_4/tests/../third_party/Lab_2/library/include -isystem "D:/Lab_4/build/_deps/googletest-src/googletest/include" -isystem "D:/Lab_4/build/_deps/googletest-src/googletest"

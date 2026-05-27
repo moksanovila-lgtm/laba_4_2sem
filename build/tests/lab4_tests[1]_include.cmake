@@ -1,0 +1,5 @@
+if(EXISTS "D:/Lab_4/build/tests/lab4_tests[1]_tests.cmake")
+  include("D:/Lab_4/build/tests/lab4_tests[1]_tests.cmake")
+else()
+  add_test(lab4_tests_NOT_BUILT lab4_tests_NOT_BUILT)
+endif()

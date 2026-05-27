@@ -265,7 +265,7 @@ LazySequence<T>::LazySequence(Sequence<T>* seq)
     , generator(nullptr)
     , isFinite(true)
     , finiteSize(seq->GetCount())
-    , materializedCount(0) {
+    , materializedCount(seq->GetCount()) {  
     for (size_t i = 0; i < seq->GetCount(); ++i) {
         materialized->Append(seq->Get(i));
     }
@@ -306,18 +306,6 @@ void LazySequence<T>::Materialize(size_t index) {
     }
 }
 
-// template <typename T>
-// T LazySequence<T>::Get(size_t index) const {
-//     if (isFinite && index >= finiteSize) {
-//         throw IndexOutOfRangeException("Index out of range");
-//     }
-//     const_cast<LazySequence*>(this)->Materialize(index);
-//     if (index >= materialized->GetCount()) {
-//         throw IndexOutOfRangeException("Index out of range");
-//     }
-//     return materialized->Get(index);
-// }
-
 template <typename T>
 T LazySequence<T>::Get(size_t index) const {
     if (isFinite && index >= finiteSize) {
@@ -340,6 +328,9 @@ size_t LazySequence<T>::GetCount() const {
 
 template <typename T>
 T LazySequence<T>::GetFirst() const {
+    if (GetCount() == 0) {
+        throw EmptySequenceException("Sequence is empty");
+    }
     return Get(0);
 }
 
@@ -351,24 +342,6 @@ T LazySequence<T>::GetLast() const {
     throw EmptySequenceException("Cannot get last element of infinite sequence");
 }
 
-// template <typename T>
-// LazySequence<T>* LazySequence<T>::GetSubsequence(size_t startIndex, size_t endIndex) const {
-//     if (startIndex > endIndex) {
-//         throw IndexOutOfRangeException("startIndex > endIndex");
-//     }
-//     auto* result = new LazySequence<T>();
-//     for (size_t i = startIndex; i < endIndex && i < materialized->GetCount(); ++i) {
-//         result->materialized->Append(materialized->Get(i));
-//     }
-//     if (generator && endIndex > materialized->GetCount()) {
-//         result->generator = std::make_unique<SkipGenerator>(
-//             const_cast<LazySequence*>(this), startIndex, endIndex, const_cast<LazySequence*>(this));
-//         result->isFinite = true;
-//         result->finiteSize = endIndex - startIndex;
-//     }
-//     return result;
-// }
-
 template <typename T>
 LazySequence<T>* LazySequence<T>::GetSubsequence(size_t startIndex, size_t endIndex) const {
     if (startIndex > endIndex) {
@@ -376,20 +349,23 @@ LazySequence<T>* LazySequence<T>::GetSubsequence(size_t startIndex, size_t endIn
                           ") > endIndex (" + std::to_string(endIndex) + ")";
         throw IndexOutOfRangeException(msg);
     }
-    if (isFinite && endIndex > finiteSize) {
+    if (isFinite && endIndex >= finiteSize) {
         std::string msg = "GetSubsequence: endIndex (" + std::to_string(endIndex) + 
                           ") exceeds sequence size (" + std::to_string(finiteSize) + ")";
         throw IndexOutOfRangeException(msg);
     }
     auto* result = new LazySequence<T>();
-    for (size_t i = startIndex; i < endIndex && i < materialized->GetCount(); ++i) {
+    for (size_t i = startIndex; i <= endIndex && i < materialized->GetCount(); ++i) {
         result->materialized->Append(materialized->Get(i));
     }
-    if (generator && endIndex > materialized->GetCount()) {
+    if (generator && endIndex >= materialized->GetCount()) {
         result->generator = std::make_unique<SkipGenerator>(
             const_cast<LazySequence*>(this), startIndex, endIndex, const_cast<LazySequence*>(this));
         result->isFinite = true;
-        result->finiteSize = endIndex - startIndex;
+        result->finiteSize = endIndex - startIndex + 1; 
+    } else {
+        result->isFinite = true;
+        result->finiteSize = result->materialized->GetCount();
     }
     return result;
 }

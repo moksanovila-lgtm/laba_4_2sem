@@ -1,0 +1,244 @@
+{
+  "tests": 44,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "OnlineStatisticsTest",
+      "tests": 13,
+      "testsuite": [
+        {
+          "name": "Min",
+          "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
+          "line": 27
+        },
+        {
+          "name": "Max",
+          "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
+          "line": 38
+        },
+        {
+          "name": "Average",
+          "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
+          "line": 49
+        },
+        {
+          "name": "Count",
+          "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
+          "line": 60
+        },
+        {
+          "name": "Variance",
+          "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
+          "line": 71
+        },
+        {
+          "name": "StdDeviation",
+          "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
+          "line": 82
+        },
+        {
+          "name": "RMS",
+          "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
+          "line": 93
+        },
+        {
+          "name": "Range",
+          "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
+          "line": 102
+        },
+        {
+          "name": "CoefficientOfVariation",
+          "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
+          "line": 113
+        },
+        {
+          "name": "EmptySequenceThrows",
+          "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
+          "line": 122
+        },
+        {
+          "name": "Reset",
+          "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
+          "line": 160
+        },
+        {
+          "name": "ConstantSequence",
+          "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
+          "line": 177
+        },
+        {
+          "name": "SingleElement",
+          "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
+          "line": 192
+        }
+      ]
+    },
+    {
+      "name": "ReadOnlyStreamTest",
+      "tests": 14,
+      "testsuite": [
+        {
+          "name": "OpenAndClose",
+          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
+          "line": 27
+        },
+        {
+          "name": "Read",
+          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
+          "line": 32
+        },
+        {
+          "name": "ReadThrowsWhenClosed",
+          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
+          "line": 43
+        },
+        {
+          "name": "IsEndOfStream",
+          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
+          "line": 50
+        },
+        {
+          "name": "GetPosition",
+          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
+          "line": 60
+        },
+        {
+          "name": "Seek",
+          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
+          "line": 70
+        },
+        {
+          "name": "SeekThrowsOutOfRange",
+          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
+          "line": 80
+        },
+        {
+          "name": "SeekThrowsWhenClosed",
+          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
+          "line": 89
+        },
+        {
+          "name": "Reset",
+          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
+          "line": 96
+        },
+        {
+          "name": "Peek",
+          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
+          "line": 108
+        },
+        {
+          "name": "PeekThrowsWhenClosed",
+          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
+          "line": 118
+        },
+        {
+          "name": "PeekThrowsAtEnd",
+          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
+          "line": 125
+        },
+        {
+          "name": "IsCanSeek",
+          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
+          "line": 138
+        },
+        {
+          "name": "IsCanGoBack",
+          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
+          "line": 142
+        }
+      ]
+    },
+    {
+      "name": "LazySequenceTest",
+      "tests": 17,
+      "testsuite": [
+        {
+          "name": "GetFromArithmetic",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 229
+        },
+        {
+          "name": "GetFromConstant",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 238
+        },
+        {
+          "name": "GetFromArray",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 245
+        },
+        {
+          "name": "GetThrowsOutOfRange",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 252
+        },
+        {
+          "name": "GetFirst",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 259
+        },
+        {
+          "name": "GetFirstThrowsOnEmpty",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 264
+        },
+        {
+          "name": "GetLast",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 271
+        },
+        {
+          "name": "GetCount",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 276
+        },
+        {
+          "name": "IsInfinite",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 281
+        },
+        {
+          "name": "Append",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 286
+        },
+        {
+          "name": "Prepend",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 295
+        },
+        {
+          "name": "InsertAt",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 304
+        },
+        {
+          "name": "GetSubsequence",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 313
+        },
+        {
+          "name": "Concat",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 322
+        },
+        {
+          "name": "Map",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 333
+        },
+        {
+          "name": "Where",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 343
+        },
+        {
+          "name": "Reduce",
+          "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
+          "line": 353
+        }
+      ]
+    }
+  ]
+}
