@@ -3,10 +3,10 @@
 #include "..\third_party\Lab_2\library\include\Sequence.hpp"
 #include "..\third_party\Lab_2\library\include\ArraySequence.hpp"
 #include "..\third_party\Lab_2\library\include\exceptions.hpp"
-#include "Optional.hpp"
+#include "..\third_party\Lab_2\library\include\Optional.hpp"
+#include "Cardinal.hpp"
 #include <memory>
 #include <functional>
-#include <optional>
 
 template <typename T>
 class LazySequence : public Sequence<T> {
@@ -26,9 +26,7 @@ private:
         size_t arity;
         
     public:
-        DefaultGenerator(LazySequence<T>* owner, 
-                         std::function<T(Sequence<T>*)> rule, 
-                         size_t arity);
+        DefaultGenerator(LazySequence<T>* owner, std::function<T(Sequence<T>*)> rule, size_t arity);
         T GetNext() override;
         bool HasNext() const override;
         Optional<T> TryGetNext() override;
@@ -43,10 +41,7 @@ private:
         size_t currentPosition;
         
     public:
-        SkipGenerator(LazySequence<T>* owner, 
-                      size_t startSkip, 
-                      size_t endSkip, 
-                      LazySequence<T>* parentSeq);
+        SkipGenerator(LazySequence<T>* owner, size_t startSkip, size_t endSkip, LazySequence<T>* parentSeq);
         T GetNext() override;
         bool HasNext() const override;
         Optional<T> TryGetNext() override;
@@ -87,9 +82,7 @@ private:
         bool firstFinished;
         
     public:
-        ConcatGenerator(std::unique_ptr<IGenerator> first, 
-                        Sequence<T>* second, 
-                        bool firstInfinite);
+        ConcatGenerator(std::unique_ptr<IGenerator> first, Sequence<T>* second, bool firstInfinite);
         T GetNext() override;
         bool HasNext() const override;
         Optional<T> TryGetNext() override;
@@ -117,6 +110,7 @@ public:
     LazySequence<T>* GetSubsequence(size_t startIndex, size_t endIndex) const;
     size_t GetCount() const override;
     size_t GetMaterializedCount() const { return materializedCount; }
+    Cardinal GetLength() const;
     
     LazySequence<T>* Append(const T& item) override;
     LazySequence<T>* Prepend(const T& item) override;
@@ -128,7 +122,6 @@ public:
     LazySequence<T>* Map(std::function<T(const T&)> func) const;
     T Reduce(std::function<T(const T&, const T&)> func, const T& initial) const override;
     LazySequence<T>* Where(std::function<bool(const T&)> predicate) const;
-    LazySequence<T>* Skip(size_t start, size_t end) const;
     
     T operator[](size_t index) const { return Get(index); }
     bool IsEmpty() const { return GetCount() == 0; }

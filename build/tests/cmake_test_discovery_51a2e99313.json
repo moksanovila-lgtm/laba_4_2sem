@@ -156,87 +156,87 @@
         {
           "name": "GetFromArithmetic",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 229
+          "line": 47
         },
         {
           "name": "GetFromConstant",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 238
+          "line": 56
         },
         {
           "name": "GetFromArray",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 245
+          "line": 63
         },
         {
           "name": "GetThrowsOutOfRange",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 252
+          "line": 70
         },
         {
           "name": "GetFirst",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 259
+          "line": 77
         },
         {
           "name": "GetFirstThrowsOnEmpty",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 264
+          "line": 82
         },
         {
           "name": "GetLast",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 271
+          "line": 89
         },
         {
           "name": "GetCount",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 276
+          "line": 94
         },
         {
           "name": "IsInfinite",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 281
+          "line": 99
         },
         {
           "name": "Append",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 286
+          "line": 104
         },
         {
           "name": "Prepend",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 295
+          "line": 113
         },
         {
           "name": "InsertAt",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 304
+          "line": 122
         },
         {
           "name": "GetSubsequence",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 313
+          "line": 131
         },
         {
           "name": "Concat",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 322
+          "line": 140
         },
         {
           "name": "Map",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 333
+          "line": 151
         },
         {
           "name": "Where",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 343
+          "line": 161
         },
         {
           "name": "Reduce",
           "file": "D:\\Lab_4\\tests\\test_lazy_sequence.cpp",
-          "line": 353
+          "line": 171
         }
       ]
     }

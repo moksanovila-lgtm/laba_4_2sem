@@ -26,8 +26,7 @@ ReadOnlyStream<T>::ReadOnlyStream(LazySequence<T>* lazySeq)
     , canSeek(true)
     , canGoBack(true)
     , bufferStart(0)
-{
-}
+{}
 
 template <typename T>
 ReadOnlyStream<T>::ReadOnlyStream(const std::string& filename, std::function<T(const std::string&)> deserializer)
@@ -51,14 +50,13 @@ ReadOnlyStream<T>::ReadOnlyStream(char delimiter, const std::string& data, std::
     , stringSource(data)
     , stringPosition(0)
     , deserializer(deserializer)
+    , delimiter(delimiter)
     , position(0)
     , isOpen(false)
     , canSeek(true)
     , canGoBack(true)
     , bufferStart(0)
-{
-    (void)delimiter; 
-}
+{}
 
 template <typename T>
 ReadOnlyStream<T>::ReadOnlyStream(ReadOnlyStream<T>* stream)
@@ -69,8 +67,7 @@ ReadOnlyStream<T>::ReadOnlyStream(ReadOnlyStream<T>* stream)
     , canSeek(stream->IsCanSeek())
     , canGoBack(stream->IsCanGoBack())
     , bufferStart(0)
-{
-}
+{}
 
 template <typename T>
 ReadOnlyStream<T>::ReadOnlyStream(ReadOnlyStream&& other) noexcept
@@ -88,7 +85,6 @@ ReadOnlyStream<T>::ReadOnlyStream(ReadOnlyStream&& other) noexcept
     , bufferStart(other.bufferStart)
 {
     buffer = std::move(other.buffer);
-    
     if (other.fileSource.is_open()) {
         fileSource = std::move(other.fileSource);
     }
@@ -129,13 +125,16 @@ ReadOnlyStream<T>::~ReadOnlyStream() {
 template <typename T>
 T ReadOnlyStream<T>::ReadFromSequence() {
     if (position >= sequenceSource->GetCount()) {
-        throw EndOfStreamException();
+        throw EndOfStreamException("ReadFromSequence: end of sequence reached");
     }
     return sequenceSource->Get(position++);
 }
 
 template <typename T>
 T ReadOnlyStream<T>::ReadFromLazySequence() {
+    if (!lazySequenceSource->IsInfinite() && position >= lazySequenceSource->GetCount()) {
+        throw EndOfStreamException("ReadFromLazySequence: end of lazy sequence reached");
+    }
     T value = lazySequenceSource->Get(position);
     position++;
     return value;
@@ -146,29 +145,24 @@ T ReadOnlyStream<T>::ReadFromFile() {
     if (!fileSource.is_open()) {
     throw StreamNotOpenException("File not open");
     }
-    
     std::string token;
     if (fileSource >> token) {
         position++;
         return deserializer(token);
     }
-    
-    throw EndOfStreamException();
+    throw EndOfStreamException("ReadFromFile: end of file reached");
 }
 
 template <typename T>
 T ReadOnlyStream<T>::ReadFromString() {
     if (stringPosition >= stringSource.length()) {
-        throw EndOfStreamException();
+        throw EndOfStreamException("ReadFromString: end of string reached");
     }
-    
-    size_t end = stringSource.find(' ', stringPosition);
+    size_t end = stringSource.find(delimiter, stringPosition);
     if (end == std::string::npos) end = stringSource.length();
-    
     std::string token = stringSource.substr(stringPosition, end - stringPosition);
     stringPosition = end + 1;
     position++;
-    
     return deserializer(token);
 }
 
@@ -249,7 +243,7 @@ T ReadOnlyStream<T>::Read() {
         case SourceType::STREAM:
             return ReadFromStream();
         default:
-        throw InvalidArgumentException("Unknown source type: " + std::to_string(static_cast<int>(sourceType)));
+        throw InvalidArgumentException("Unknown source type");
     }
 }
 

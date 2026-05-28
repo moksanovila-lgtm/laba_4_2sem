@@ -242,8 +242,10 @@ tests/CMakeFiles/lab4_tests.dir/test_readonly_stream.cpp.obj: \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstring \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
  D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp \
- D:/Lab_4/src/LazySequence.hpp D:/Lab_4/src/Optional.hpp \
- D:/Lab_4/src/Optional.tpp D:/Lab_4/src/LazySequence.tpp \
+ D:/Lab_4/src/LazySequence.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
+ D:/Lab_4/src/Cardinal.hpp D:/Lab_4/src/LazySequence.tpp \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \

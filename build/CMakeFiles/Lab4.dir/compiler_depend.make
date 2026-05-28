@@ -474,12 +474,11 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   D:/Lab_4/app_gui/include/StatisticsController.hpp \
   D:/Lab_4/app_gui/include/StatisticsWidget.hpp \
   D:/Lab_4/app_gui/include/TestingWidget.hpp \
+  D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
   D:/Lab_4/src/OnlineStatistics.tpp \
-  D:/Lab_4/src/Optional.hpp \
-  D:/Lab_4/src/Optional.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \
   D:/Lab_4/src/ReadOnlyStream.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
@@ -488,6 +487,8 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp \
   Lab4_autogen/JGBACW2ZV4/moc_LazySequenceController.cpp \
@@ -851,10 +852,9 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
   D:/Lab_4/app_gui/include/LazySequenceController.hpp \
+  D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
-  D:/Lab_4/src/Optional.hpp \
-  D:/Lab_4/src/Optional.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \
   D:/Lab_4/src/ReadOnlyStream.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
@@ -863,6 +863,8 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp
 
@@ -1330,10 +1332,9 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   D:/Lab_4/app_gui/include/LazySequenceController.hpp \
   D:/Lab_4/app_gui/include/LazySequenceWidget.hpp \
   D:/Lab_4/app_gui/include/StatisticsWidget.hpp \
+  D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
-  D:/Lab_4/src/Optional.hpp \
-  D:/Lab_4/src/Optional.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \
   D:/Lab_4/src/ReadOnlyStream.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
@@ -1342,6 +1343,8 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp
 
@@ -1820,10 +1823,9 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   D:/Lab_4/app_gui/include/LazySequenceWidget.hpp \
   D:/Lab_4/app_gui/include/MainWindow.hpp \
   D:/Lab_4/app_gui/include/TestingWidget.hpp \
+  D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
-  D:/Lab_4/src/Optional.hpp \
-  D:/Lab_4/src/Optional.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \
   D:/Lab_4/src/ReadOnlyStream.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
@@ -1832,6 +1834,8 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp
 
@@ -2609,12 +2613,11 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
   D:/Lab_4/app_gui/include/StatisticsWidget.hpp \
+  D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
   D:/Lab_4/src/OnlineStatistics.tpp \
-  D:/Lab_4/src/Optional.hpp \
-  D:/Lab_4/src/Optional.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \
   D:/Lab_4/src/ReadOnlyStream.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
@@ -2623,6 +2626,8 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp
 
@@ -3131,12 +3136,11 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
   D:/Lab_4/app_gui/include/LazySequenceController.hpp \
   D:/Lab_4/app_gui/include/TestingWidget.hpp \
+  D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
   D:/Lab_4/src/OnlineStatistics.tpp \
-  D:/Lab_4/src/Optional.hpp \
-  D:/Lab_4/src/Optional.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \
   D:/Lab_4/src/ReadOnlyStream.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
@@ -3145,6 +3149,8 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp
 
@@ -3559,106 +3565,26 @@ CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj: D:/Lab_4/app_gui/src/main.cpp \
   D:/Lab_4/app_gui/include/MainWindow.hpp
 
 Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCCompiler.cmake.in \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCXXCompiler.cmake.in \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCXXInformation.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCompilerIdDetection.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerSupport.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineRCCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeFindDependencyMacro.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeGenericSystem.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeMinGWFindMake.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeParseImplicitIncludeInfo.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeParseImplicitLinkInfo.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeParseLibraryArchitecture.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeRCCompiler.cmake.in \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeRCInformation.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeSystem.cmake.in \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeTestCompilerCommon.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeTestRCCompiler.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CheckCSourceCompiles.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CheckCXXCompilerFlag.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CheckCXXSourceCompiles.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CheckIncludeFile.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CheckLibraryExists.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Borland-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Bruce-C-DetermineCompiler.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Compaq-C-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Cray-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Diab-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/GHS-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C-DetermineCompiler.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-CXX.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/HP-C-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/IAR-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Intel-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/LCC-C-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/PGI-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Renesas-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/SCO-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/SDCC-C-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/SunPro-C-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/TI-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/TIClang-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/XL-C-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/XLClang-C-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/zOS-C-DetermineCompiler.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/FindPackageMessage.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/FindThreads.cmake \
@@ -3667,13 +3593,9 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeInspectCLinker.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeInspectCXXLinker.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CheckCompilerFlag.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CheckFlagCommonConfig.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/FeatureTesting.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Linker/GNU-C.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Linker/GNU-CXX.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Linker/GNU.cmake \
@@ -3681,7 +3603,6 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU-C.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU-CXX.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU.cmake \
-  C:/Program\ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-Determine-CXX.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU-C-ABI.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU-C.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
@@ -4329,12 +4250,11 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   CMakeFiles/4.3.1/CMakeRCCompiler.cmake \
   CMakeFiles/4.3.1/CMakeSystem.cmake \
   Lab4_autogen/moc_predefs.h \
+  D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
   D:/Lab_4/src/OnlineStatistics.tpp \
-  D:/Lab_4/src/Optional.hpp \
-  D:/Lab_4/src/Optional.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \
   D:/Lab_4/src/ReadOnlyStream.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
@@ -4343,13 +4263,13 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp
 
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/q20memory.h:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerSupport.cmake:
 
 Lab4_autogen/mocs_compilation.cpp:
 
@@ -4383,9 +4303,9 @@ C:/Qt/6.11.0/mingw_64/include/QtCore/q17memory.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h:
 
-C:/Qt/6.11.0/mingw_64/include/QtGui/qbitmap.h:
+D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/PathScale-DetermineCompiler.cmake:
+C:/Qt/6.11.0/mingw_64/include/QtGui/qbitmap.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qtaggedpointer.h:
 
@@ -4399,15 +4319,11 @@ C:/Qt/6.11.0/mingw_64/include/QtCore/qfunctionpointer.h:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginTargetsPrecheck.cmake:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Tasking-DetermineCompiler.cmake:
-
 C:/Qt/6.11.0/mingw_64/include/QtCore/q23type_traits.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qbuttongroup.h:
 
 Lab4_autogen/moc_predefs.h:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/OrangeC-DetermineCompiler.cmake:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qalloc.h:
 
@@ -4422,8 +4338,6 @@ C:/w64devkit/include/malloc.h:
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CheckFlagCommonConfig.cmake:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qbytearrayview.h:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/CrayClang-DetermineCompiler.cmake:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/q20iterator.h:
 
@@ -4481,8 +4395,6 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qalgorithms.h:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/ARMCC-DetermineCompiler.cmake:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qanystringview.h:
@@ -4492,8 +4404,6 @@ C:/w64devkit/include/pthread_time.h:
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qstatusbar.h:
 
 C:/w64devkit/include/wchar.h:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeParseLibraryArchitecture.cmake:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qhashfunctions.h:
 
@@ -4565,8 +4475,6 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/requires_hosted.
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qdarwinhelpers.h:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Intel-DetermineCompiler.cmake:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/aligned_buffer.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qdatastream.h:
@@ -4595,8 +4503,6 @@ C:/Qt/6.11.0/mingw_64/include/QtGui/qvalidator.h:
 
 C:/w64devkit/include/signal.h:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:
-
 C:/Qt/6.11.0/mingw_64/include/QtCore/qforeach.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/hypergeometric.tcc:
@@ -4612,12 +4518,6 @@ C:/Qt/6.11.0/mingw_64/include/QtCore/qgenericatomic.h:
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/parse_numbers.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numeric:
-
-C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/FeatureTesting.cmake:
-
-D:/Lab_4/src/Optional.tpp:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:
 
@@ -4653,10 +4553,6 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qlatin1stringview.h:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeParseImplicitLinkInfo.cmake:
-
 C:/Qt/6.11.0/mingw_64/include/QtCore/qlocale.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtGui/qcursor.h:
@@ -4670,8 +4566,6 @@ C:/Qt/6.11.0/mingw_64/include/QtCore/qtextstream.h:
 C:/Qt/6.11.0/mingw_64/include/QtCore/qmalloc.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/QMessageBox:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qmap.h:
 
@@ -4703,8 +4597,6 @@ C:/Qt/6.11.0/mingw_64/include/QtCore/qobject_impl.h:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Bruce-C-DetermineCompiler.cmake:
-
 C:/Qt/6.11.0/mingw_64/include/QtCore/qobjectdefs.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qobjectdefs_impl.h:
@@ -4723,11 +4615,7 @@ C:/Qt/6.11.0/mingw_64/include/QtCore/qpair.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qpoint.h:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/SDCC-C-DetermineCompiler.cmake:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/move.h:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/SCO-DetermineCompiler.cmake:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qdeadlinetimer.h:
 
@@ -4805,8 +4693,6 @@ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QMainWindow:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qstringlist.h:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Embarcadero-DetermineCompiler.cmake:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qstringmatcher.h:
@@ -4833,11 +4719,7 @@ C:/Qt/6.11.0/mingw_64/include/QtCore/qsystemdetection.h:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake:
-
 C:/Qt/6.11.0/mingw_64/include/QtCore/qtclasshelpermacros.h:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qtconfiginclude.h:
 
@@ -4951,8 +4833,6 @@ C:/Qt/6.11.0/mingw_64/include/QtGui/qfont.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/refwrap.h:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/NVHPC-DetermineCompiler.cmake:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtGui/qfontinfo.h:
@@ -5023,8 +4903,6 @@ C:/Qt/6.11.0/mingw_64/include/QtGui/qtextoption.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtGui/qtransform.h:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c:
-
 C:/Qt/6.11.0/mingw_64/include/QtGui/qtgui-config.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtGui/qtguiexports.h:
@@ -5062,8 +4940,6 @@ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTabWidget:
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTextEdit:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unordered_set.h:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/AppleClang-DetermineCompiler.cmake:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream.tcc:
 
@@ -5107,15 +4983,11 @@ C:/w64devkit/include/_mingw_stdarg.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/SunPro-C-DetermineCompiler.cmake:
-
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qrubberband.h:
 
 D:/Lab_4/app_gui/src/StatisticsWidget.cpp:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qslider.h:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qstyle.h:
 
@@ -5133,8 +5005,6 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uniform_int_dist.h:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/TI-DetermineCompiler.cmake:
-
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtextedit.h:
 
 C:/w64devkit/include/sys/types.h:
@@ -5144,8 +5014,6 @@ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgets-config.h:
 C:/w64devkit/include/_mingw_mac.h:
 
 C:/w64devkit/include/sec_api/stdlib_s.h:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/TIClang-DetermineCompiler.cmake:
 
 C:/w64devkit/include/_mingw_off_t.h:
 
@@ -5189,13 +5057,9 @@ C:/w64devkit/include/ctype.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cwchar:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/HP-CXX-DetermineCompiler.cmake:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algobase.h:
 
 D:/Lab_4/src/LazySequence.hpp:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/LCC-C-DetermineCompiler.cmake:
 
 C:/w64devkit/include/errno.h:
 
@@ -5214,8 +5078,6 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/clocale:
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicSbomGenerationCycloneDXHelpers.cmake:
 
 C:/w64devkit/include/process.h:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Borland-DetermineCompiler.cmake:
 
 C:/w64devkit/include/pthread.h:
 
@@ -5245,8 +5107,6 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/modified_bessel_f
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-Determine-CXX.cmake:
-
 C:/w64devkit/include/stdint.h:
 
 C:/w64devkit/include/stdio.h:
@@ -5256,8 +5116,6 @@ C:/w64devkit/include/string.h:
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ios_base.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/MSVC-DetermineCompiler.cmake:
 
 C:/w64devkit/include/sys/timeb.h:
 
@@ -5283,8 +5141,6 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cxxabi_init_exce
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_iterator.h:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bit:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/algorithmfwd.h:
@@ -5292,8 +5148,6 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/algorithmfwd.h:
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_list.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/alloc_traits.h:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/IAR-DetermineCompiler.cmake:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qfiledevice.h:
 
@@ -5375,12 +5229,6 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/predefined_ops.h
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCCompiler.cmake.in:
-
-D:/Lab_4/src/Optional.hpp:
-
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicSbomCycloneDXHelpers.cmake:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc:
@@ -5406,8 +5254,6 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake:
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompiler.cmake:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream_insert.h:
 
@@ -5455,15 +5301,11 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_set.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_tempbuf.h:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeInspectCLinker.cmake:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_tree.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/system_error:
 
@@ -5541,8 +5383,6 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/bessel_function.t
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/gamma.tcc:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake:
@@ -5573,8 +5413,6 @@ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qdialog.h:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU-C-ABI.cmake:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Fujitsu-DetermineCompiler.cmake:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/variant:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/vector:
@@ -5595,8 +5433,6 @@ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Cray-DetermineCompiler.cmake:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h:
@@ -5605,13 +5441,9 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicSbomCommonGenerationHelpers.cmake:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/zOS-C-DetermineCompiler.cmake:
 
 D:/Lab_4/app_gui/include/LazySequenceWidget.hpp:
 
@@ -5619,7 +5451,15 @@ D:/Lab_4/app_gui/include/MainWindow.hpp:
 
 D:/Lab_4/app_gui/include/TestingWidget.hpp:
 
+D:/Lab_4/src/Cardinal.hpp:
+
 D:/Lab_4/src/LazySequence.tpp:
+
+C:/Qt/6.11.0/mingw_64/include/QtCore/qcoreevent.h:
+
+D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp:
+
+D:/Lab_4/app_gui/src/LazySequenceController.cpp:
 
 D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp:
 
@@ -5630,10 +5470,6 @@ Lab4_autogen/JGBACW2ZV4/moc_StatisticsWidget.cpp:
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake:
 
 Lab4_autogen/JGBACW2ZV4/moc_TestingWidget.cpp:
-
-C:/Qt/6.11.0/mingw_64/include/QtCore/qcoreevent.h:
-
-D:/Lab_4/app_gui/src/LazySequenceController.cpp:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/random:
 
@@ -5711,8 +5547,6 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/filesystem:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Watcom-DetermineCompiler.cmake:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h:
@@ -5735,49 +5569,17 @@ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qstylefactory.h:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCXXCompiler.cmake.in:
-
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCXXInformation.cmake:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCompilerIdDetection.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:
-
-CMakeFiles/4.3.1/CMakeSystem.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineRCCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeFindDependencyMacro.cmake:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeMinGWFindMake.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeParseImplicitIncludeInfo.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeRCCompiler.cmake.in:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeSystem.cmake.in:
-
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeTestCompilerCommon.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeTestRCCompiler.cmake:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/CheckCSourceCompiles.cmake:
 
@@ -5789,65 +5591,7 @@ C:/Program\ Files/CMake/share/cmake-4.3/Modules/CheckIncludeFile.cmake:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/CheckLibraryExists.cmake:
 
-C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsIntegrationPluginTargets-relwithdebinfo.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/ADSP-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake:
-
-C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Compaq-C-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Diab-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/GHS-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C-DetermineCompiler.cmake:
-
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/HP-C-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/NVIDIA-DetermineCompiler.cmake:
-
-C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargetsPrecheck.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/PGI-DetermineCompiler.cmake:
-
-C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/Renesas-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/XL-C-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/XL-CXX-DetermineCompiler.cmake:
-
-C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginTargets-relwithdebinfo.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/XLClang-C-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake:
 
@@ -5860,10 +5604,6 @@ C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeInspectCXXLinker.cmake:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicPluginHelpers.cmake:
 
@@ -5922,6 +5662,8 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake:
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicPluginHelpers_v2.cmake:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicSbomCpeHelpers.cmake:
+
+C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicSbomDocumentNamespaceHelpers.cmake:
 
@@ -6007,6 +5749,10 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets.cma
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QGifPluginTargetsPrecheck.cmake:
 
+C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake:
+
+C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake:
+
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake:
@@ -6039,7 +5785,11 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginAddit
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginConfig.cmake:
 
+C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginTargets-relwithdebinfo.cmake:
+
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginTargets.cmake:
+
+C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsIntegrationPluginTargets-relwithdebinfo.cmake:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsIntegrationPluginTargetsPrecheck.cmake:
 
@@ -6075,8 +5825,12 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithde
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake:
 
+C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargetsPrecheck.cmake:
+
 CMakeFiles/4.3.1/CMakeCCompiler.cmake:
 
 CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 CMakeFiles/4.3.1/CMakeRCCompiler.cmake:
+
+CMakeFiles/4.3.1/CMakeSystem.cmake:

@@ -1,5 +1,4 @@
 #include "LazySequence.hpp"
-#include "Optional.hpp"
 
 template <typename T>
 LazySequence<T>::DefaultGenerator::DefaultGenerator(
@@ -13,7 +12,6 @@ T LazySequence<T>::DefaultGenerator::GetNext() {
     if (arity == 0) {
         return rule(nullptr);
     }
-    
     auto* prev = new ArraySequence<T>();
     size_t count = owner->materialized->GetCount();
     size_t start = count > arity ? count - arity : 0;
@@ -21,7 +19,6 @@ T LazySequence<T>::DefaultGenerator::GetNext() {
     for (size_t i = start; i < count; ++i) {
         prev->Append(owner->materialized->Get(i));
     }
-    
     T result = rule(prev);
     delete prev;
     return result;
@@ -56,11 +53,9 @@ T LazySequence<T>::SkipGenerator::GetNext() {
         parentSeq->Get(currentPosition);
         currentPosition++;
     }
-    
     if (currentPosition >= endSkip) {
         throw IndexOutOfRangeException("No more elements");
     }
-    
     T result = parentSeq->Get(currentPosition);
     currentPosition++;
     return result;
@@ -175,15 +170,12 @@ T LazySequence<T>::ConcatGenerator::GetNext() {
             firstFinished = true;
         }
     }
-    
     if (firstIsInfinite) {
         throw IndexOutOfRangeException("Infinite sequence never ends");
     }
-    
     if (secondIndex < secondSeq->GetCount()) {
         return secondSeq->Get(secondIndex++);
     }
-    
     throw IndexOutOfRangeException("No more elements");
 }
 
@@ -272,9 +264,7 @@ LazySequence<T>::LazySequence(Sequence<T>* seq)
 }
 
 template <typename T>
-LazySequence<T>::LazySequence(std::function<T(Sequence<T>*)> rule, 
-                               Sequence<T>* firstElements, 
-                               size_t arity)
+LazySequence<T>::LazySequence(std::function<T(Sequence<T>*)> rule, Sequence<T>* firstElements, size_t arity)
     : materialized(std::make_unique<ArraySequence<T>>())
     , generator(nullptr)
     , isFinite(false)
@@ -489,16 +479,7 @@ LazySequence<T>* LazySequence<T>::Where(std::function<bool(const T&)> predicate)
 }
 
 template <typename T>
-LazySequence<T>* LazySequence<T>::Skip(size_t start, size_t end) const {
-    auto* result = new LazySequence<T>();
-    for (size_t i = start; i < end && i < materialized->GetCount(); ++i) {
-        result->materialized->Append(materialized->Get(i));
-    }
-    if (generator && end > materialized->GetCount()) {
-        result->generator = std::make_unique<SkipGenerator>(
-            const_cast<LazySequence*>(this), start, end, const_cast<LazySequence*>(this));
-        result->isFinite = true;
-        result->finiteSize = end - start;
-    }
-    return result;
+Cardinal LazySequence<T>::GetLength() const {
+    if (isFinite) return Cardinal(finiteSize);
+    return Cardinal::Infinity();
 }

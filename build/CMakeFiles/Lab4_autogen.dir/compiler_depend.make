@@ -772,12 +772,11 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   CMakeFiles/4.3.1/CMakeRCCompiler.cmake \
   CMakeFiles/4.3.1/CMakeSystem.cmake \
   Lab4_autogen/moc_predefs.h \
+  D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
   D:/Lab_4/src/OnlineStatistics.tpp \
-  D:/Lab_4/src/Optional.hpp \
-  D:/Lab_4/src/Optional.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \
   D:/Lab_4/src/ReadOnlyStream.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
@@ -786,6 +785,8 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp
 
@@ -835,8 +836,6 @@ C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCXXCompiler.cmake.in:
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicSbomCycloneDXHelpers.cmake:
-
-D:/Lab_4/src/Optional.hpp:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake:
 
@@ -1248,8 +1247,6 @@ C:/Qt/6.11.0/mingw_64/include/QtCore/qbytearrayview.h:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:
 
-D:/Lab_4/src/Optional.tpp:
-
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/FeatureTesting.cmake:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake:
@@ -1301,6 +1298,8 @@ C:/Program\ Files/CMake/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake:
 C:/Qt/6.11.0/mingw_64/include/QtCore/QObject:
 
 C:/Qt/6.11.0/mingw_64/include/QtGui/qbitmap.h:
+
+D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h:
 
@@ -2336,6 +2335,8 @@ D:/Lab_4/app_gui/include/MainWindow.hpp:
 
 D:/Lab_4/app_gui/include/TestingWidget.hpp:
 
+D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp:
+
 D:/Lab_4/app_gui/src/LazySequenceController.cpp:
 
 D:/Lab_4/app_gui/src/MainWindow.cpp:
@@ -2349,6 +2350,8 @@ CMakeFiles/4.3.1/CMakeCCompiler.cmake:
 CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 CMakeFiles/4.3.1/CMakeRCCompiler.cmake:
+
+D:/Lab_4/src/Cardinal.hpp:
 
 D:/Lab_4/src/LazySequence.tpp:
 

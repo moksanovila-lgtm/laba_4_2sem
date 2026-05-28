@@ -5,7 +5,7 @@
 #include "..\third_party\Lab_2\library\include\DynamicArray.hpp"
 #include "..\third_party\Lab_2\library\include\exceptions.hpp"
 #include "LazySequence.hpp"
-#include "Optional.hpp"
+#include "..\third_party\Lab_2\library\include\Optional.hpp"
 #include <string>
 #include <functional>
 #include <fstream>
@@ -49,7 +49,8 @@ private:
     T ReadFromStream();
     
     void FillBuffer(size_t targetPosition);
-    
+    char delimiter;
+
 public:
     ReadOnlyStream(Sequence<T>* seq);
     ReadOnlyStream(LazySequence<T>* lazySeq);

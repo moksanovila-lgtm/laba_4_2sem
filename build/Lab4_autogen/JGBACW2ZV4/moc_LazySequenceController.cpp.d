@@ -334,10 +334,9 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_LazySequenceController.cpp: D:/Lab_4/
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
+  D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
-  D:/Lab_4/src/Optional.hpp \
-  D:/Lab_4/src/Optional.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \
   D:/Lab_4/src/ReadOnlyStream.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
@@ -346,5 +345,7 @@ D:/Lab_4/build/Lab4_autogen/JGBACW2ZV4/moc_LazySequenceController.cpp: D:/Lab_4/
   D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp

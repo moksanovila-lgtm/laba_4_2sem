@@ -264,16 +264,17 @@ tests/CMakeFiles/lab4_tests.dir/test_lazy_sequence.cpp.obj: D:/Lab_4/tests/test_
   _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h \
   _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
   _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
+  D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
-  D:/Lab_4/src/Optional.hpp \
-  D:/Lab_4/src/Optional.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp
 
@@ -553,12 +554,11 @@ tests/CMakeFiles/lab4_tests.dir/test_online_statistics.cpp.obj: D:/Lab_4/tests/t
   _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h \
   _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
   _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
+  D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
   D:/Lab_4/src/OnlineStatistics.tpp \
-  D:/Lab_4/src/Optional.hpp \
-  D:/Lab_4/src/Optional.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \
   D:/Lab_4/src/ReadOnlyStream.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
@@ -567,6 +567,8 @@ tests/CMakeFiles/lab4_tests.dir/test_online_statistics.cpp.obj: D:/Lab_4/tests/t
   D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp
 
@@ -831,10 +833,9 @@ tests/CMakeFiles/lab4_tests.dir/test_readonly_stream.cpp.obj: D:/Lab_4/tests/tes
   _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h \
   _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
   _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
+  D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
-  D:/Lab_4/src/Optional.hpp \
-  D:/Lab_4/src/Optional.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \
   D:/Lab_4/src/ReadOnlyStream.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
@@ -843,6 +844,8 @@ tests/CMakeFiles/lab4_tests.dir/test_readonly_stream.cpp.obj: D:/Lab_4/tests/tes
   D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
   D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp
 
@@ -1123,8 +1126,6 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_relops.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h:
 
-D:/Lab_4/src/Optional.hpp:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h:
@@ -1196,6 +1197,8 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_abs.h:
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/typeinfo:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_mutex.h:
+
+D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h:
 
@@ -1401,11 +1404,13 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 
 _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h:
 
+D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp:
+
 _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h:
 
-D:/Lab_4/src/LazySequence.tpp:
+D:/Lab_4/src/Cardinal.hpp:
 
-D:/Lab_4/src/Optional.tpp:
+D:/Lab_4/src/LazySequence.tpp:
 
 D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp:
 

@@ -242,5 +242,6 @@ tests/CMakeFiles/lab4_tests.dir/test_lazy_sequence.cpp.obj: \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstring \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
  D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp \
- D:/Lab_4/src/Optional.hpp D:/Lab_4/src/Optional.tpp \
- D:/Lab_4/src/LazySequence.tpp
+ D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
+ D:/Lab_4/src/Cardinal.hpp D:/Lab_4/src/LazySequence.tpp
