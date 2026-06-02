@@ -1,374 +1,439 @@
 #include "ReadOnlyStream.hpp"
-#include <sstream>
-#include <algorithm>
+
+template <typename T>
+class ReadOnlyStream<T>::SequenceSource : public ReadOnlyStream<T>::ISource {
+private:
+    std::unique_ptr<Sequence<T>> data;
+    size_t position;
+    bool isOpen;
+    
+public:
+    explicit SequenceSource(Sequence<T>* seq)
+        : data(std::make_unique<ArraySequence<T>>())
+        , position(0)
+        , isOpen(false) {
+        IEnumerator<T>* enumerator = seq->GetEnumerator();
+        while (enumerator->MoveNext()) {
+        data->Append(enumerator->Current());
+        }
+        delete enumerator;
+        }
+    
+    bool IsEndOfStream() const override {
+        return position >= data->GetCount();
+    }
+    
+    T Read() override {
+        if (!isOpen) throw StreamNotOpenException("Stream not open");
+        if (IsEndOfStream()) throw EndOfStreamException("End of sequence");
+        return data->Get(position++);
+    }
+    
+    size_t GetPosition() const override { return position; }
+    bool IsCanSeek() const override { return true; }
+    bool IsCanGoBack() const override { return true; }
+    
+    size_t Seek(size_t index) override {
+    if (!isOpen) throw StreamNotOpenException("Stream not open");
+    if (index > data->GetCount()) {
+        throw IndexOutOfRangeException("Seek position " + std::to_string(index) + 
+        " exceeds stream size " + std::to_string(data->GetCount())
+        );
+    }
+    position = index;
+    return position;
+    }
+    
+    void Open() override { 
+        isOpen = true;  
+        position = 0; 
+    }
+    
+    void Close() override { 
+        isOpen = false;  
+    }
+
+    T Peek() override {
+    if (!isOpen) throw StreamNotOpenException("Stream not open");
+    if (IsEndOfStream()) throw EndOfStreamException("Peek at end of stream");
+    return data->Get(position);
+    }
+    void Reset() override { position = 0; }
+};
+
+template <typename T>
+class ReadOnlyStream<T>::LazySequenceSource : public ReadOnlyStream<T>::ISource {
+private:
+    std::unique_ptr<LazySequence<T>> data;
+    size_t position;
+    bool isOpen;
+    
+public:
+    explicit LazySequenceSource(LazySequence<T>* lazySeq)
+        : data(std::make_unique<LazySequence<T>>(*lazySeq))
+        , position(0)
+        , isOpen(false) {}
+    
+    bool IsEndOfStream() const override {
+        if (data->IsInfinite()) return false;
+        return position >= data->GetCount();
+    }
+    
+    T Read() override {
+        if (!isOpen) throw StreamNotOpenException("Stream not open");
+        if (IsEndOfStream()) throw EndOfStreamException("End of lazy sequence");
+        return data->Get(position++);
+    }
+    
+    size_t GetPosition() const override { return position; }
+    bool IsCanSeek() const override { return true; }
+    bool IsCanGoBack() const override { return true; }
+
+    size_t Seek(size_t index) override {
+    if (!isOpen) throw StreamNotOpenException("Stream not open");
+    if (!data->IsInfinite() && index > data->GetCount()) {
+        throw IndexOutOfRangeException("Seek position " + std::to_string(index) + 
+        " exceeds stream size"
+        );
+    }
+    position = index;
+    return position;
+}
+    
+    void Open() override { 
+        isOpen = true; 
+        position = 0; 
+    }
+    
+    void Close() override { 
+        isOpen = false; 
+    }
+    T Peek() override { 
+    if (!isOpen) throw StreamNotOpenException("Stream not open");      
+    if (IsEndOfStream()) throw EndOfStreamException("Peek at end of stream");  
+    return data->Get(position);
+    }
+    void Reset() override { position = 0; }
+};
+
+template <typename T>
+class ReadOnlyStream<T>::FileSource : public ReadOnlyStream<T>::ISource {
+private:
+    std::ifstream file;
+    std::function<T(const std::string&)> deserializer;
+    size_t position;
+    std::string filename;
+    bool isOpen;
+    
+public:
+    FileSource(const std::string& fname, std::function<T(const std::string&)> deserializer)
+        : deserializer(deserializer)
+        , position(0)
+        , filename(fname)
+        , isOpen(false) {}
+    
+    bool IsEndOfStream() const override {
+        if (!isOpen) return true;
+        return file.eof() || !file.good();
+    }
+    
+    T Read() override {
+        if (!isOpen) throw StreamNotOpenException("File not open");
+        if (IsEndOfStream()) throw EndOfStreamException("End of file");
+        
+        std::string token;
+        if (file >> token) {
+            position++;
+            return deserializer(token);
+        }
+        throw EndOfStreamException("End of file");
+    }
+    
+    size_t GetPosition() const override { return position; }
+    bool IsCanSeek() const override { return true; }
+    bool IsCanGoBack() const override { return true; }
+
+    size_t Seek(size_t index) override {
+    if (!isOpen) throw StreamNotOpenException("File not open");
+    
+    file.clear();
+    file.seekg(0);
+    position = 0;
+    
+    while (position < index && !IsEndOfStream()) {
+        std::string token;
+        if (file >> token) {
+            position++;
+        } else {
+            break;  
+        }
+    }
+    
+    return position;
+    }
+    
+    void Open() override {
+        if (!isOpen) {
+            file.open(filename);
+            if (!file.is_open()) {
+                throw InvalidArgumentException("Cannot open file: " + filename);
+            }
+            isOpen = true;
+            position = 0;
+        }
+    }
+    
+    void Close() override {
+        if (isOpen && file.is_open()) {
+            file.close();
+            isOpen = false;
+        }
+    }
+    
+    T Peek() override {
+        if (!isOpen) throw StreamNotOpenException("File not open");
+        if (IsEndOfStream()) throw EndOfStreamException("End of file");
+        
+        size_t oldPos = position;
+        std::streampos filePos = file.tellg();
+        
+        std::string token;
+        if (file >> token) {
+            file.seekg(filePos);
+            return deserializer(token);
+        }
+        throw EndOfStreamException("End of file");
+    }
+    
+    void Reset() override { Seek(0); }
+};
+
+template <typename T>
+class ReadOnlyStream<T>::StringSource : public ReadOnlyStream<T>::ISource {
+private:
+    std::string data;
+    char delimiter;
+    std::function<T(const std::string&)> deserializer;
+    size_t stringPosition;
+    size_t position;
+    bool isOpen; 
+    
+public:
+    StringSource(char delim, const std::string& str, 
+                 std::function<T(const std::string&)> deserializer)
+        : data(str)
+        , delimiter(delim)
+        , deserializer(deserializer)
+        , stringPosition(0)
+        , position(0) 
+        , isOpen(false) {}
+    
+    bool IsEndOfStream() const override {
+        return stringPosition >= data.length();
+    }
+    
+    T Read() override {
+        if (!isOpen) throw StreamNotOpenException("Stream not open");  
+        if (IsEndOfStream()) throw EndOfStreamException("End of string");
+    
+        size_t end = data.find(delimiter, stringPosition);
+        if (end == std::string::npos) end = data.length();
+        
+        std::string token = data.substr(stringPosition, end - stringPosition);
+        stringPosition = end + 1;
+        position++;
+        
+        return deserializer(token);
+    }
+    
+    size_t GetPosition() const override { return position; }
+    bool IsCanSeek() const override { return true; }
+    bool IsCanGoBack() const override { return true; }
+    
+    size_t Seek(size_t index) override {
+        if (!isOpen) throw StreamNotOpenException("Stream not open");
+        stringPosition = 0;
+        position = 0;
+        
+        for (size_t i = 0; i < index && stringPosition < data.length(); ++i) {
+            size_t end = data.find(delimiter, stringPosition);
+            if (end == std::string::npos) end = data.length();
+            stringPosition = end + 1;
+            position++;
+        }
+        return position;
+    }
+    
+    void Open() override { 
+        isOpen = true; 
+        position = 0; 
+        stringPosition = 0; 
+    }
+
+    void Close() override {isOpen = false;}
+    
+    T Peek() override {
+        if (!isOpen) throw StreamNotOpenException("Stream not open");
+        if (IsEndOfStream()) throw EndOfStreamException("End of string");
+        
+        size_t oldStringPos = stringPosition;
+        size_t oldPos = position;
+        
+        size_t end = data.find(delimiter, stringPosition);
+        if (end == std::string::npos) end = data.length();
+        std::string token = data.substr(stringPosition, end - stringPosition);
+        
+        stringPosition = oldStringPos;
+        position = oldPos;
+        
+        return deserializer(token);
+    }
+    
+    void Reset() override { Seek(0); }
+};
+
+template <typename T>
+class ReadOnlyStream<T>::StreamSource : public ReadOnlyStream<T>::ISource {
+private:
+    std::unique_ptr<ReadOnlyStream<T>> source;
+    
+public:
+    explicit StreamSource(ReadOnlyStream<T>* stream)
+        : source(std::make_unique<ReadOnlyStream<T>>(std::move(*stream))) {}
+    
+    bool IsEndOfStream() const override {
+        return source->IsEndOfStream();
+    }
+    
+    T Read() override {
+        return source->Read();
+    }
+    
+    size_t GetPosition() const override {
+        return source->GetPosition();
+    }
+    
+    bool IsCanSeek() const override {
+        return source->IsCanSeek();
+    }
+    
+    size_t Seek(size_t index) override {
+        return source->Seek(index);
+    }
+    
+    bool IsCanGoBack() const override {
+        return source->IsCanGoBack();
+    }
+    
+    void Open() override {
+        source->Open();
+    }
+    
+    void Close() override {
+        source->Close();
+    }
+    
+    T Peek() override {
+        return source->Peek();
+    }
+    
+    void Reset() override {
+        source->Reset();
+    }
+};
 
 template <typename T>
 ReadOnlyStream<T>::ReadOnlyStream(Sequence<T>* seq)
-    : sourceType(SourceType::SEQUENCE)
-    , sequenceSource(std::make_unique<ArraySequence<T>>())
-    , position(0)
-    , isOpen(false)
-    , canSeek(true)
-    , canGoBack(true)
-    , bufferStart(0)
-{
-    for (size_t i = 0; i < seq->GetCount(); ++i) {
-        sequenceSource->Append(seq->Get(i));
-    }
-}
+    : source(std::make_unique<SequenceSource>(seq))
+    , isOpen(false) {}
 
 template <typename T>
 ReadOnlyStream<T>::ReadOnlyStream(LazySequence<T>* lazySeq)
-    : sourceType(SourceType::LAZY_SEQUENCE)
-    , lazySequenceSource(std::make_unique<LazySequence<T>>(*lazySeq))
-    , position(0)
-    , isOpen(false)
-    , canSeek(true)
-    , canGoBack(true)
-    , bufferStart(0)
-{}
+    : source(std::make_unique<LazySequenceSource>(lazySeq))
+    , isOpen(false) {}
 
 template <typename T>
-ReadOnlyStream<T>::ReadOnlyStream(const std::string& filename, std::function<T(const std::string&)> deserializer)
-    : sourceType(SourceType::FILE)
-    , deserializer(deserializer)
-    , position(0)
-    , isOpen(false)
-    , canSeek(true)
-    , canGoBack(true)
-    , bufferStart(0)
-{
-    fileSource.open(filename);
-    if (!fileSource.is_open()) {
-        throw InvalidArgumentException("Cannot open file: " + filename);
-    }
-}
+ReadOnlyStream<T>::ReadOnlyStream(const std::string& filename, 
+                                   std::function<T(const std::string&)> deserializer)
+    : source(std::make_unique<FileSource>(filename, deserializer))
+    , isOpen(false) {}
 
 template <typename T>
-ReadOnlyStream<T>::ReadOnlyStream(char delimiter, const std::string& data, std::function<T(const std::string&)> deserializer)
-    : sourceType(SourceType::STRING)
-    , stringSource(data)
-    , stringPosition(0)
-    , deserializer(deserializer)
-    , delimiter(delimiter)
-    , position(0)
-    , isOpen(false)
-    , canSeek(true)
-    , canGoBack(true)
-    , bufferStart(0)
-{}
+ReadOnlyStream<T>::ReadOnlyStream(char delimiter, const std::string& data,
+                                   std::function<T(const std::string&)> deserializer)
+    : source(std::make_unique<StringSource>(delimiter, data, deserializer))
+    , isOpen(false) {}
 
 template <typename T>
 ReadOnlyStream<T>::ReadOnlyStream(ReadOnlyStream<T>* stream)
-    : sourceType(SourceType::STREAM)
-    , streamSource(std::make_unique<ReadOnlyStream<T>>(std::move(*stream)))
-    , position(0)
-    , isOpen(false)
-    , canSeek(stream->IsCanSeek())
-    , canGoBack(stream->IsCanGoBack())
-    , bufferStart(0)
-{}
+    : source(std::make_unique<StreamSource>(stream))
+    , isOpen(false) {}
 
 template <typename T>
 ReadOnlyStream<T>::ReadOnlyStream(ReadOnlyStream&& other) noexcept
-    : sourceType(other.sourceType)
-    , sequenceSource(std::move(other.sequenceSource))
-    , lazySequenceSource(std::move(other.lazySequenceSource))
-    , stringSource(std::move(other.stringSource))
-    , stringPosition(other.stringPosition)
-    , streamSource(std::move(other.streamSource))
-    , deserializer(std::move(other.deserializer))
-    , position(other.position)
-    , isOpen(other.isOpen)
-    , canSeek(other.canSeek)
-    , canGoBack(other.canGoBack)
-    , bufferStart(other.bufferStart)
-{
-    buffer = std::move(other.buffer);
-    if (other.fileSource.is_open()) {
-        fileSource = std::move(other.fileSource);
-    }
-}
+    : source(std::move(other.source))
+    , isOpen(other.isOpen) {}
 
 template <typename T>
 ReadOnlyStream<T>& ReadOnlyStream<T>::operator=(ReadOnlyStream&& other) noexcept {
-    if (this != &other) {
-        Close();
-        
-        sourceType = other.sourceType;
-        sequenceSource = std::move(other.sequenceSource);
-        lazySequenceSource = std::move(other.lazySequenceSource);
-        stringSource = std::move(other.stringSource);
-        stringPosition = other.stringPosition;
-        streamSource = std::move(other.streamSource);
-        deserializer = std::move(other.deserializer);
-        position = other.position;
-        isOpen = other.isOpen;
-        canSeek = other.canSeek;
-        canGoBack = other.canGoBack;
-        bufferStart = other.bufferStart;
-    
-        buffer = std::move(other.buffer);
-        
-        if (other.fileSource.is_open()) {
-            fileSource = std::move(other.fileSource);
-        }
+    if (this != &other) {  
+        source = std::move(other.source);  
+        isOpen = other.isOpen;              
     }
     return *this;
 }
 
 template <typename T>
-ReadOnlyStream<T>::~ReadOnlyStream() {
-    Close();
-}
-
-template <typename T>
-T ReadOnlyStream<T>::ReadFromSequence() {
-    if (position >= sequenceSource->GetCount()) {
-        throw EndOfStreamException("ReadFromSequence: end of sequence reached");
-    }
-    return sequenceSource->Get(position++);
-}
-
-template <typename T>
-T ReadOnlyStream<T>::ReadFromLazySequence() {
-    if (!lazySequenceSource->IsInfinite() && position >= lazySequenceSource->GetCount()) {
-        throw EndOfStreamException("ReadFromLazySequence: end of lazy sequence reached");
-    }
-    T value = lazySequenceSource->Get(position);
-    position++;
-    return value;
-}
-
-template <typename T>
-T ReadOnlyStream<T>::ReadFromFile() {
-    if (!fileSource.is_open()) {
-    throw StreamNotOpenException("File not open");
-    }
-    std::string token;
-    if (fileSource >> token) {
-        position++;
-        return deserializer(token);
-    }
-    throw EndOfStreamException("ReadFromFile: end of file reached");
-}
-
-template <typename T>
-T ReadOnlyStream<T>::ReadFromString() {
-    if (stringPosition >= stringSource.length()) {
-        throw EndOfStreamException("ReadFromString: end of string reached");
-    }
-    size_t end = stringSource.find(delimiter, stringPosition);
-    if (end == std::string::npos) end = stringSource.length();
-    std::string token = stringSource.substr(stringPosition, end - stringPosition);
-    stringPosition = end + 1;
-    position++;
-    return deserializer(token);
-}
-
-template <typename T>
-T ReadOnlyStream<T>::ReadFromStream() {
-    if (!streamSource) {
-        throw InvalidArgumentException("Stream source is null");
-    }
-    T value = streamSource->Read();
-    position++;
-    return value;
-}
-
-template <typename T>
-void ReadOnlyStream<T>::FillBuffer(size_t targetPosition) {
-    if (targetPosition >= bufferStart && targetPosition < bufferStart + buffer.GetCount()) {
-        return;
-    }
-    
-    buffer.Clear();
-    bufferStart = targetPosition;
-    
-    size_t oldPosition = position;
-    
-    if (targetPosition < oldPosition && canGoBack) {
-        if (sourceType == SourceType::SEQUENCE || sourceType == SourceType::LAZY_SEQUENCE) {
-            position = 0;
-            while (position < targetPosition) {
-                Read();
-            }
-        }
-    }
-    try {
-        while (buffer.GetCount() < 100 && !IsEndOfStream()) {
-            buffer.Append(Read());  
-        }
-    } catch (const EndOfStreamException&) {
-    }
-    position = oldPosition;
-}
-
-template <typename T>
 bool ReadOnlyStream<T>::IsEndOfStream() const {
-    switch (sourceType) {
-        case SourceType::SEQUENCE:
-            return position >= sequenceSource->GetCount();
-        case SourceType::LAZY_SEQUENCE:
-            if (lazySequenceSource->IsInfinite()) return false;
-            return position >= lazySequenceSource->GetCount();
-        case SourceType::FILE:
-            return fileSource.eof() || !fileSource.good();
-        case SourceType::STRING:
-            return stringPosition >= stringSource.length();
-        case SourceType::STREAM:
-            return streamSource && streamSource->IsEndOfStream();
-        default:
-            return true;
-    }
+    return source->IsEndOfStream();
 }
 
 template <typename T>
 T ReadOnlyStream<T>::Read() {
-    if (!isOpen) {
-        throw StreamNotOpenException("Read() called on closed stream");
-    }
-    if (IsEndOfStream()) {
-        throw EndOfStreamException("Read() called at end of stream");
-    }
-    switch (sourceType) {
-        case SourceType::SEQUENCE:
-            return ReadFromSequence();
-        case SourceType::LAZY_SEQUENCE:
-            return ReadFromLazySequence();
-        case SourceType::FILE:
-            return ReadFromFile();
-        case SourceType::STRING:
-            return ReadFromString();
-        case SourceType::STREAM:
-            return ReadFromStream();
-        default:
-        throw InvalidArgumentException("Unknown source type");
-    }
+    if (!isOpen) throw StreamNotOpenException("Stream not open");
+    return source->Read();
+}
+
+template <typename T>
+size_t ReadOnlyStream<T>::GetPosition() const {
+    return source->GetPosition();
+}
+
+template <typename T>
+bool ReadOnlyStream<T>::IsCanSeek() const {
+    return source->IsCanSeek();
 }
 
 template <typename T>
 size_t ReadOnlyStream<T>::Seek(size_t index) {
-    if (!canSeek) {
-        throw CannotSeekException("Seek() called on stream that does not support seeking");
-    }
-    if (!isOpen) {
-        throw StreamNotOpenException("Seek() called on closed stream");
-    }
-    switch (sourceType) {
-        case SourceType::SEQUENCE:
-            if (index <= sequenceSource->GetCount()) {
-                position = index;
-                return position;
-            }
-            break;
-        case SourceType::LAZY_SEQUENCE:
-            if (!lazySequenceSource->IsInfinite() && index <= lazySequenceSource->GetCount()) {
-                position = index;
-                return position;
-            }
-            if (lazySequenceSource->IsInfinite()) {
-                position = index;
-                return position;
-            }
-            break;
-        case SourceType::FILE:
-            if (fileSource.is_open()) {
-                fileSource.clear();
-                fileSource.seekg(0);
-                position = 0;
-                while (position < index && !IsEndOfStream()) {
-                    try {
-                        Read();
-                    } catch (const EndOfStreamException&) {
-                        break;
-                    }
-                }
-                return position;
-            }
-            break;  
-        case SourceType::STRING:
-            if (index <= stringSource.length()) {
-                stringPosition = 0;
-                position = 0;
-                for (size_t i = 0; i < index && stringPosition < stringSource.length(); ++i) {
-                    size_t end = stringSource.find(' ', stringPosition);
-                    if (end == std::string::npos) end = stringSource.length();
-                    stringPosition = end + 1;
-                    position++;
-                }
-                return position;
-            }
-            break;
-        case SourceType::STREAM:
-            if (streamSource && streamSource->IsCanSeek()) {
-                return streamSource->Seek(index);
-            }
-            break;
-    }
-    throw IndexOutOfRangeException("Cannot seek to position " + std::to_string(index));
+    if (!isOpen) throw StreamNotOpenException("Stream not open");
+    return source->Seek(index);
+}
+
+template <typename T>
+bool ReadOnlyStream<T>::IsCanGoBack() const {
+    return source->IsCanGoBack();
 }
 
 template <typename T>
 void ReadOnlyStream<T>::Open() {
-    if (isOpen) return;
-    
-    switch (sourceType) {
-        case SourceType::FILE:
-            if (!fileSource.is_open()) {
-            }
-            break;
-        default:
-            break;
-    }
     isOpen = true;
-    position = 0;
-    buffer.Clear();
-    bufferStart = 0;
+    source->Open();
 }
 
 template <typename T>
 void ReadOnlyStream<T>::Close() {
-    if (!isOpen) return;
-    
-    switch (sourceType) {
-        case SourceType::FILE:
-            if (fileSource.is_open()) {
-                fileSource.close();
-            }
-            break;
-        case SourceType::STREAM:
-            if (streamSource) {
-                streamSource->Close();
-            }
-            break;
-        default:
-            break;
-    }
     isOpen = false;
+    source->Close();
 }
 
 template <typename T>
 T ReadOnlyStream<T>::Peek() {
-    if (!isOpen) {
-        throw StreamNotOpenException("Peek() called on closed stream");
-    }
-    if (IsEndOfStream()) {
-        throw EndOfStreamException("Peek() called at end of stream");
-    }
-    size_t oldPosition = position;
-    T value = Read();
-    if (canGoBack) {
-        Seek(oldPosition);
-    } else {
-        position = oldPosition;
-    }
-    return value;
+    if (!isOpen) throw StreamNotOpenException("Stream not open");
+    return source->Peek();
 }
 
 template <typename T>
 void ReadOnlyStream<T>::Reset() {
-    position = 0;
-    buffer.Clear();
-    bufferStart = 0;
+    source->Reset();
 }

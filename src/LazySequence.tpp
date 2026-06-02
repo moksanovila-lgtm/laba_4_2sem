@@ -152,10 +152,11 @@ LazySequence<T>::ConcatGenerator::ConcatGenerator(
     , secondIndex(0)
     , firstIsInfinite(firstInfinite)
     , firstFinished(false) {
-    
-    for (size_t i = 0; i < second->GetCount(); ++i) {
-        secondSeq->Append(second->Get(i));
+    IEnumerator<T>* enumerator = second->GetEnumerator();
+    while (enumerator->MoveNext()) {
+        secondSeq->Append(enumerator->Current());
     }
+    delete enumerator;
 }
 
 template <typename T>
@@ -258,9 +259,11 @@ LazySequence<T>::LazySequence(Sequence<T>* seq)
     , isFinite(true)
     , finiteSize(seq->GetCount())
     , materializedCount(seq->GetCount()) {  
-    for (size_t i = 0; i < seq->GetCount(); ++i) {
-        materialized->Append(seq->Get(i));
+    IEnumerator<T>* enumerator = seq->GetEnumerator();
+    while (enumerator->MoveNext()) {
+        materialized->Append(enumerator->Current());
     }
+    delete enumerator;
 }
 
 template <typename T>
@@ -270,9 +273,11 @@ LazySequence<T>::LazySequence(std::function<T(Sequence<T>*)> rule, Sequence<T>* 
     , isFinite(false)
     , finiteSize(0)
     , materializedCount(0) {
-    for (size_t i = 0; i < firstElements->GetCount(); ++i) {
-        materialized->Append(firstElements->Get(i));
+    IEnumerator<T>* enumerator = firstElements->GetEnumerator();
+    while (enumerator->MoveNext()) {
+        materialized->Append(enumerator->Current());
     }
+    delete enumerator;
     generator = std::make_unique<DefaultGenerator>(this, rule, arity);
 }
 
@@ -283,9 +288,11 @@ LazySequence<T>::LazySequence(const LazySequence& other)
     , isFinite(other.isFinite)
     , finiteSize(other.finiteSize)
     , materializedCount(other.materializedCount) {
-    for (size_t i = 0; i < other.materialized->GetCount(); ++i) {
-        materialized->Append(other.materialized->Get(i));
+    IEnumerator<T>* enumerator = other.materialized->GetEnumerator();
+    while (enumerator->MoveNext()) {
+        materialized->Append(enumerator->Current());
     }
+    delete enumerator;
 }
 
 template <typename T>

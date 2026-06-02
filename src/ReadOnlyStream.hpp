@@ -1,82 +1,65 @@
 #pragma once
 
 #include "..\third_party\Lab_2\library\include\Sequence.hpp"
-#include "..\third_party\Lab_2\library\include\ArraySequence.hpp"
-#include "..\third_party\Lab_2\library\include\DynamicArray.hpp"
 #include "..\third_party\Lab_2\library\include\exceptions.hpp"
 #include "LazySequence.hpp"
-#include "..\third_party\Lab_2\library\include\Optional.hpp"
-#include <string>
 #include <functional>
-#include <fstream>
 #include <memory>
+#include <string>
+#include <fstream>
+#include <sstream>
 
 template <typename T>
 class ReadOnlyStream {
 private:
-    enum class SourceType {
-        SEQUENCE,      
-        LAZY_SEQUENCE, 
-        FILE,         
-        STRING,       
-        STREAM       
+    class ISource {
+    public:
+        virtual ~ISource() = default;
+        virtual bool IsEndOfStream() const = 0;
+        virtual T Read() = 0;
+        virtual size_t GetPosition() const = 0;
+        virtual bool IsCanSeek() const = 0;
+        virtual size_t Seek(size_t index) = 0;
+        virtual bool IsCanGoBack() const = 0;
+        virtual void Open() = 0;
+        virtual void Close() = 0;
+        virtual T Peek() = 0;
+        virtual void Reset() = 0;
     };
     
-    SourceType sourceType;
+    class SequenceSource;
+    class LazySequenceSource;
+    class FileSource;
+    class StringSource;
+    class StreamSource;
     
-    std::unique_ptr<Sequence<T>> sequenceSource;
-    std::unique_ptr<LazySequence<T>> lazySequenceSource;
-    std::ifstream fileSource;
-    std::string stringSource;
-    size_t stringPosition;
-    std::unique_ptr<ReadOnlyStream<T>> streamSource;
+    std::unique_ptr<ISource> source;  
+    bool isOpen;
     
-    std::function<T(const std::string&)> deserializer;
-    
-
-    size_t position;
-    bool isOpen;           
-    bool canSeek;            
-    bool canGoBack;          
-    
-    DynamicArray<T> buffer;  
-    size_t bufferStart;       
-    
-    T ReadFromSequence();
-    T ReadFromLazySequence();
-    T ReadFromFile();
-    T ReadFromString();
-    T ReadFromStream();
-    
-    void FillBuffer(size_t targetPosition);
-    char delimiter;
-
 public:
     ReadOnlyStream(Sequence<T>* seq);
     ReadOnlyStream(LazySequence<T>* lazySeq);
-    ReadOnlyStream(const std::string& filename, std::function<T(const std::string&)> deserializer);   
-    ReadOnlyStream(char delimiter, const std::string& data, std::function<T(const std::string&)> deserializer);  
+    ReadOnlyStream(const std::string& filename, std::function<T(const std::string&)> deserializer);
+    ReadOnlyStream(char delimiter, const std::string& data, std::function<T(const std::string&)> deserializer);
     ReadOnlyStream(ReadOnlyStream<T>* stream);
-
-    ReadOnlyStream(const ReadOnlyStream&) = delete;
-    ReadOnlyStream& operator=(const ReadOnlyStream&) = delete;
-
     ReadOnlyStream(ReadOnlyStream&& other) noexcept;
-    ReadOnlyStream& operator=(ReadOnlyStream&& other) noexcept;
+    ReadOnlyStream(const ReadOnlyStream&) = delete;
     
-    ~ReadOnlyStream();
+    ReadOnlyStream& operator=(ReadOnlyStream&& other) noexcept;
+    ReadOnlyStream& operator=(const ReadOnlyStream&) = delete;
     
     bool IsEndOfStream() const;
     T Read();
-    size_t GetPosition() const { return position; }
-    bool IsCanSeek() const { return canSeek; }
+    size_t GetPosition() const;
+    bool IsCanSeek() const;
     size_t Seek(size_t index);
-    bool IsCanGoBack() const { return canGoBack; }
-    
+    bool IsCanGoBack() const;
     void Open();
     void Close();
-    void Reset();
     T Peek();
+    void Reset();
+    
+    ~ReadOnlyStream() = default;
 };
 
 #include "ReadOnlyStream.tpp"
