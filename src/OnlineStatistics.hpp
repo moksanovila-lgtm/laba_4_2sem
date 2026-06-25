@@ -25,14 +25,6 @@ private:
     double sum;
     double sumSq;
     size_t count;
-// template <typename T>
-// class OnlineStatistics {
-// private:
-//     T minVal;
-//     T maxVal;
-//     double sum;
-//     double sumSq;
-//     size_t count;
     
 public:
     OnlineStatistics();
@@ -55,5 +47,3 @@ public:
 };
 
 #include "OnlineStatistics.tpp"
-
-// OnlineStatistics<std::string> s;

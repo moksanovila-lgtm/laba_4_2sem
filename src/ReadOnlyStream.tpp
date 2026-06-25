@@ -8,7 +8,7 @@ private:
     bool isOpen;
     
 public:
-    explicit SequenceSource(Sequence<T>* seq)
+    SequenceSource(Sequence<T>* seq)
         : data(std::make_unique<ArraySequence<T>>())
         , position(0)
         , isOpen(false) {
@@ -69,7 +69,7 @@ private:
     bool isOpen;
     
 public:
-    explicit LazySequenceSource(LazySequence<T>* lazySeq)
+    LazySequenceSource(LazySequence<T>* lazySeq)
         : data(std::make_unique<LazySequence<T>>(*lazySeq))
         , position(0)
         , isOpen(false) {}
@@ -303,7 +303,7 @@ private:
     std::unique_ptr<ReadOnlyStream<T>> source;
     
 public:
-    explicit StreamSource(ReadOnlyStream<T>* stream)
+    StreamSource(ReadOnlyStream<T>* stream)
         : source(std::make_unique<ReadOnlyStream<T>>(std::move(*stream))) {}
     
     bool IsEndOfStream() const override {
