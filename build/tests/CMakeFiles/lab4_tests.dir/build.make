@@ -138,12 +138,28 @@ tests/CMakeFiles/lab4_tests.dir/test_online_statistics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab4_tests.dir/test_online_statistics.cpp.s"
 	cd /d D:\Lab_4\build\tests && C:\w64devkit\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Lab_4\tests\test_online_statistics.cpp -o CMakeFiles\lab4_tests.dir\test_online_statistics.cpp.s
 
+tests/CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.obj: tests/CMakeFiles/lab4_tests.dir/flags.make
+tests/CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.obj: tests/CMakeFiles/lab4_tests.dir/includes_CXX.rsp
+tests/CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.obj: D:/Lab_4/src/Cardinal.cpp
+tests/CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.obj: tests/CMakeFiles/lab4_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Lab_4\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object tests/CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.obj"
+	cd /d D:\Lab_4\build\tests && C:\w64devkit\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.obj -MF CMakeFiles\lab4_tests.dir\__\src\Cardinal.cpp.obj.d -o CMakeFiles\lab4_tests.dir\__\src\Cardinal.cpp.obj -c D:\Lab_4\src\Cardinal.cpp
+
+tests/CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.i"
+	cd /d D:\Lab_4\build\tests && C:\w64devkit\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Lab_4\src\Cardinal.cpp > CMakeFiles\lab4_tests.dir\__\src\Cardinal.cpp.i
+
+tests/CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.s"
+	cd /d D:\Lab_4\build\tests && C:\w64devkit\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Lab_4\src\Cardinal.cpp -o CMakeFiles\lab4_tests.dir\__\src\Cardinal.cpp.s
+
 # Object files for target lab4_tests
 lab4_tests_OBJECTS = \
 "CMakeFiles/lab4_tests.dir/lab4_tests_autogen/mocs_compilation.cpp.obj" \
 "CMakeFiles/lab4_tests.dir/test_lazy_sequence.cpp.obj" \
 "CMakeFiles/lab4_tests.dir/test_readonly_stream.cpp.obj" \
-"CMakeFiles/lab4_tests.dir/test_online_statistics.cpp.obj"
+"CMakeFiles/lab4_tests.dir/test_online_statistics.cpp.obj" \
+"CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.obj"
 
 # External object files for target lab4_tests
 lab4_tests_EXTERNAL_OBJECTS =
@@ -152,13 +168,14 @@ tests/lab4_tests.exe: tests/CMakeFiles/lab4_tests.dir/lab4_tests_autogen/mocs_co
 tests/lab4_tests.exe: tests/CMakeFiles/lab4_tests.dir/test_lazy_sequence.cpp.obj
 tests/lab4_tests.exe: tests/CMakeFiles/lab4_tests.dir/test_readonly_stream.cpp.obj
 tests/lab4_tests.exe: tests/CMakeFiles/lab4_tests.dir/test_online_statistics.cpp.obj
+tests/lab4_tests.exe: tests/CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.obj
 tests/lab4_tests.exe: tests/CMakeFiles/lab4_tests.dir/build.make
 tests/lab4_tests.exe: lib/libgtest_main.a
 tests/lab4_tests.exe: lib/libgtest.a
 tests/lab4_tests.exe: tests/CMakeFiles/lab4_tests.dir/linkLibs.rsp
 tests/lab4_tests.exe: tests/CMakeFiles/lab4_tests.dir/objects1.rsp
 tests/lab4_tests.exe: tests/CMakeFiles/lab4_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Lab_4\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable lab4_tests.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Lab_4\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable lab4_tests.exe"
 	cd /d D:\Lab_4\build\tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\lab4_tests.dir\link.txt --verbose=$(VERBOSE)
 	cd /d D:\Lab_4\build\tests && "C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=lab4_tests -D TEST_EXECUTABLE=D:/Lab_4/build/tests/lab4_tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=D:/Lab_4/build/tests -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=lab4_tests_TESTS -D CTEST_FILE=D:/Lab_4/build/tests/lab4_tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/CMake/share/cmake-4.3/Modules/GoogleTestAddTests.cmake"
 

@@ -17,7 +17,15 @@
 	"CROSS_CONFIG" : false,
 	"DEP_FILE" : "D:/Lab_4/build/tests/lab4_tests_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "lab4_tests_autogen/timestamp",
-	"HEADERS" : [],
+	"HEADERS" : 
+	[
+		[
+			"D:/Lab_4/src/Cardinal.hpp",
+			"MU",
+			"VNU7RW3YIC/moc_Cardinal.cpp",
+			null
+		]
+	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "D:/Lab_4/build/tests/lab4_tests_autogen/include",
 	"MOC_COMPILATION_FILE" : "D:/Lab_4/build/tests/lab4_tests_autogen/mocs_compilation.cpp",
@@ -59,7 +67,7 @@
 	"MOC_PREDEFS_CMD" : 
 	[
 		"C:/w64devkit/bin/c++.exe",
-		"-std=gnu++17",
+		"-std=gnu++20",
 		"-w",
 		"-dM",
 		"-E",
@@ -78,6 +86,7 @@
 	"SETTINGS_FILE" : "D:/Lab_4/build/tests/CMakeFiles/lab4_tests_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "D:/Lab_4/src/Cardinal.cpp", "MU", null ],
 		[ "D:/Lab_4/tests/test_lazy_sequence.cpp", "MU", null ],
 		[ "D:/Lab_4/tests/test_online_statistics.cpp", "MU", null ],
 		[ "D:/Lab_4/tests/test_readonly_stream.cpp", "MU", null ]

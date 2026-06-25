@@ -6,6 +6,8 @@ tests/lab4_tests_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/FetchContent.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/FetchContent/CMakeLists.cmake.in \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/GoogleTest.cmake \
+  D:/Lab_4/src/Cardinal.cpp \
+  D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/tests/CMakeLists.txt \
   D:/Lab_4/tests/test_lazy_sequence.cpp \
   D:/Lab_4/tests/test_online_statistics.cpp \
@@ -14,17 +16,21 @@ tests/lab4_tests_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
 
 C:/Program\ Files/CMake/bin/cmake.exe:
 
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/ExternalProject/shared_internal_commands.cmake:
+D:/Lab_4/tests/CMakeLists.txt:
+
+D:/Lab_4/src/Cardinal.cpp:
 
 D:/Lab_4/tests/test_lazy_sequence.cpp:
 
-D:/Lab_4/tests/CMakeLists.txt:
+C:/Program\ Files/CMake/share/cmake-4.3/Modules/ExternalProject/shared_internal_commands.cmake:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/FetchContent/CMakeLists.cmake.in:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/FetchContent.cmake:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/GoogleTest.cmake:
+
+D:/Lab_4/src/Cardinal.hpp:
 
 D:/Lab_4/tests/test_online_statistics.cpp:
 

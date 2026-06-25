@@ -279,6 +279,7 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_lockfree_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_wait.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_string.h \
@@ -286,6 +287,7 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono_io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/concept_check.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cpp_type_traits.h \
@@ -296,7 +298,7 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/formatfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functexcept.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h \
@@ -305,12 +307,17 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/invoke.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ios_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/istream.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/iterator_concepts.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/list.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/localefwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/max_size_type.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memory_resource.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memoryfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/monostate.h \
@@ -325,7 +332,14 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/postypes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/predefined_ops.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ptr_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/range_access.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algo.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algobase.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_base.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_cmp.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_uninitialized.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_util.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/refwrap.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/requires_hosted.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr.h \
@@ -335,6 +349,7 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_abs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_function.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_mutex.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algo.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algobase.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h \
@@ -362,6 +377,8 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/streambuf_iterator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode-data.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uniform_int_dist.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unique_ptr.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unordered_map.h \
@@ -374,6 +391,7 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cassert \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cctype \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/charconv \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/chrono \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/climits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/clocale \
@@ -398,18 +416,21 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/numeric_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/type_traits.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/format \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/functional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iterator \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/map \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/memory \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/new \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numbers \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numeric \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/optional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ostream \
@@ -418,8 +439,10 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_memory_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_numeric_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/pstl_config.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ranges \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ratio \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/set \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/span \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/sstream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdexcept \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdlib.h \
@@ -449,10 +472,8 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/vector \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/version \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -460,7 +481,9 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h \
@@ -475,6 +498,7 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   D:/Lab_4/app_gui/include/StatisticsWidget.hpp \
   D:/Lab_4/app_gui/include/TestingWidget.hpp \
   D:/Lab_4/src/Cardinal.hpp \
+  D:/Lab_4/src/ISource.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
@@ -664,6 +688,7 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_lockfree_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_wait.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_string.h \
@@ -671,6 +696,7 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono_io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/concept_check.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cpp_type_traits.h \
@@ -681,7 +707,7 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/formatfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functexcept.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h \
@@ -690,12 +716,17 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/invoke.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ios_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/istream.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/iterator_concepts.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/list.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/localefwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/max_size_type.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memory_resource.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memoryfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/monostate.h \
@@ -710,9 +741,16 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/postypes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/predefined_ops.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ptr_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/range_access.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algo.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algobase.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_base.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_cmp.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_uninitialized.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_util.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/refwrap.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/requires_hosted.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr.h \
@@ -722,6 +760,7 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_abs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_function.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_mutex.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algo.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algobase.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h \
@@ -747,6 +786,8 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/streambuf_iterator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode-data.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uniform_int_dist.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unique_ptr.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unordered_map.h \
@@ -757,6 +798,7 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/version.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cctype \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/charconv \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/chrono \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/clocale \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cmath \
@@ -780,9 +822,10 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/numeric_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/type_traits.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/format \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/functional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream \
@@ -790,9 +833,11 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iterator \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/map \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/memory \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/new \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numbers \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numeric \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/optional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ostream \
@@ -802,7 +847,9 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_numeric_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/pstl_config.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/random \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ranges \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ratio \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/span \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/sstream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdexcept \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdlib.h \
@@ -831,10 +878,8 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/vector \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/version \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -842,8 +887,10 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h \
@@ -853,6 +900,7 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceController.cpp.obj: D:/Lab_4/app_gui
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
   D:/Lab_4/app_gui/include/LazySequenceController.hpp \
   D:/Lab_4/src/Cardinal.hpp \
+  D:/Lab_4/src/ISource.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \
@@ -1140,6 +1188,7 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_lockfree_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_wait.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_string.h \
@@ -1147,6 +1196,7 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono_io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/concept_check.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cpp_type_traits.h \
@@ -1157,7 +1207,7 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/formatfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functexcept.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h \
@@ -1166,12 +1216,17 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/invoke.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ios_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/istream.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/iterator_concepts.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/list.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/localefwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/max_size_type.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memory_resource.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memoryfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/monostate.h \
@@ -1186,7 +1241,14 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/postypes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/predefined_ops.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ptr_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/range_access.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algo.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algobase.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_base.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_cmp.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_uninitialized.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_util.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/refwrap.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/requires_hosted.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr.h \
@@ -1196,6 +1258,7 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_abs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_function.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_mutex.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algo.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algobase.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h \
@@ -1223,6 +1286,8 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/streambuf_iterator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode-data.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uniform_int_dist.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unique_ptr.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unordered_map.h \
@@ -1235,6 +1300,7 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cassert \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cctype \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/charconv \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/chrono \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/climits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/clocale \
@@ -1259,18 +1325,21 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/numeric_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/type_traits.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/format \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/functional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iterator \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/map \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/memory \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/new \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numbers \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numeric \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/optional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ostream \
@@ -1279,8 +1348,10 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_memory_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_numeric_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/pstl_config.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ranges \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ratio \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/set \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/span \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/sstream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdexcept \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdlib.h \
@@ -1310,10 +1381,8 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/vector \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/version \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -1321,7 +1390,9 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h \
@@ -1333,6 +1404,7 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: D:/Lab_4/app_gui/src
   D:/Lab_4/app_gui/include/LazySequenceWidget.hpp \
   D:/Lab_4/app_gui/include/StatisticsWidget.hpp \
   D:/Lab_4/src/Cardinal.hpp \
+  D:/Lab_4/src/ISource.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \
@@ -1630,6 +1702,7 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_lockfree_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_wait.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_string.h \
@@ -1637,6 +1710,7 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono_io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/concept_check.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cpp_type_traits.h \
@@ -1647,7 +1721,7 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/formatfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functexcept.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h \
@@ -1656,12 +1730,17 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/invoke.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ios_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/istream.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/iterator_concepts.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/list.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/localefwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/max_size_type.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memory_resource.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memoryfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/monostate.h \
@@ -1676,7 +1755,14 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/postypes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/predefined_ops.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ptr_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/range_access.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algo.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algobase.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_base.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_cmp.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_uninitialized.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_util.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/refwrap.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/requires_hosted.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr.h \
@@ -1686,6 +1772,7 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_abs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_function.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_mutex.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algo.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algobase.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h \
@@ -1713,6 +1800,8 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/streambuf_iterator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode-data.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uniform_int_dist.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unique_ptr.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unordered_map.h \
@@ -1725,6 +1814,7 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cassert \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cctype \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/charconv \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/chrono \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/climits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/clocale \
@@ -1749,18 +1839,21 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/numeric_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/type_traits.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/format \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/functional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iterator \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/map \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/memory \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/new \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numbers \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numeric \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/optional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ostream \
@@ -1769,8 +1862,10 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_memory_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_numeric_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/pstl_config.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ranges \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ratio \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/set \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/span \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/sstream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdexcept \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdlib.h \
@@ -1800,10 +1895,8 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/vector \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/version \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -1811,7 +1904,9 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h \
@@ -1824,6 +1919,7 @@ CMakeFiles/Lab4.dir/app_gui/src/MainWindow.cpp.obj: D:/Lab_4/app_gui/src/MainWin
   D:/Lab_4/app_gui/include/MainWindow.hpp \
   D:/Lab_4/app_gui/include/TestingWidget.hpp \
   D:/Lab_4/src/Cardinal.hpp \
+  D:/Lab_4/src/ISource.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/ReadOnlyStream.hpp \
@@ -2005,6 +2101,7 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsController.cpp.obj: D:/Lab_4/app_gui/s
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_lockfree_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_wait.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_string.h \
@@ -2012,6 +2109,8 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsController.cpp.obj: D:/Lab_4/app_gui/s
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono_io.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/concept_check.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cpp_type_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cxxabi_forced.h \
@@ -2021,6 +2120,7 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsController.cpp.obj: D:/Lab_4/app_gui/s
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/formatfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functexcept.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h \
@@ -2029,12 +2129,17 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsController.cpp.obj: D:/Lab_4/app_gui/s
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/invoke.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ios_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/istream.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/iterator_concepts.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/list.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/localefwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/max_size_type.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memory_resource.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memoryfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/monostate.h \
@@ -2049,7 +2154,14 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsController.cpp.obj: D:/Lab_4/app_gui/s
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/postypes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/predefined_ops.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ptr_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/range_access.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algo.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algobase.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_base.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_cmp.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_uninitialized.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_util.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/refwrap.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/requires_hosted.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr.h \
@@ -2059,6 +2171,7 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsController.cpp.obj: D:/Lab_4/app_gui/s
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_abs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_function.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_mutex.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algo.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algobase.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h \
@@ -2084,6 +2197,8 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsController.cpp.obj: D:/Lab_4/app_gui/s
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/streambuf_iterator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode-data.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uniform_int_dist.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unique_ptr.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unordered_map.h \
@@ -2094,6 +2209,7 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsController.cpp.obj: D:/Lab_4/app_gui/s
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/version.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cctype \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/charconv \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/chrono \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/clocale \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cmath \
@@ -2117,17 +2233,21 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsController.cpp.obj: D:/Lab_4/app_gui/s
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/numeric_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/type_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/format \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/functional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iterator \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/map \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/memory \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/new \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numbers \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numeric \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/optional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ostream \
@@ -2136,7 +2256,9 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsController.cpp.obj: D:/Lab_4/app_gui/s
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_memory_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_numeric_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/pstl_config.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ranges \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ratio \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/span \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/sstream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdexcept \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdlib.h \
@@ -2174,7 +2296,9 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsController.cpp.obj: D:/Lab_4/app_gui/s
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h \
@@ -2423,6 +2547,7 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_lockfree_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_wait.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_string.h \
@@ -2430,6 +2555,7 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono_io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/concept_check.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cpp_type_traits.h \
@@ -2440,7 +2566,7 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/formatfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functexcept.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h \
@@ -2449,12 +2575,17 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/invoke.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ios_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/istream.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/iterator_concepts.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/list.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/localefwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/max_size_type.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memory_resource.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memoryfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/monostate.h \
@@ -2469,7 +2600,14 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/postypes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/predefined_ops.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ptr_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/range_access.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algo.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algobase.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_base.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_cmp.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_uninitialized.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_util.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/refwrap.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/requires_hosted.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr.h \
@@ -2479,6 +2617,7 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_abs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_function.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_mutex.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algo.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algobase.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h \
@@ -2506,6 +2645,8 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/streambuf_iterator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode-data.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uniform_int_dist.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unique_ptr.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unordered_map.h \
@@ -2518,6 +2659,7 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cassert \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cctype \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/charconv \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/chrono \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/climits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/clocale \
@@ -2542,18 +2684,21 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/numeric_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/type_traits.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/format \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/functional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iterator \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/map \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/memory \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/new \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numbers \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numeric \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/optional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ostream \
@@ -2562,8 +2707,10 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_memory_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_numeric_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/pstl_config.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ranges \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ratio \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/set \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/span \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/sstream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdexcept \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdlib.h \
@@ -2593,10 +2740,8 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/vector \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/version \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -2604,7 +2749,9 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h \
@@ -2614,6 +2761,7 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
   D:/Lab_4/app_gui/include/StatisticsWidget.hpp \
   D:/Lab_4/src/Cardinal.hpp \
+  D:/Lab_4/src/ISource.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
@@ -2927,6 +3075,7 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_lockfree_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_wait.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_string.h \
@@ -2934,6 +3083,7 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono_io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/concept_check.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cpp_type_traits.h \
@@ -2944,11 +3094,11 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/formatfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_dir.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_fwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_ops.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_path.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functexcept.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h \
@@ -2957,6 +3107,7 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/invoke.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ios_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/istream.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/iterator_concepts.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/list.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc \
@@ -2966,6 +3117,7 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/localefwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/max_size_type.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memory_resource.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memoryfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/monostate.h \
@@ -2984,6 +3136,12 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/range_access.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algo.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algobase.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_base.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_cmp.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_uninitialized.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_util.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/refwrap.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/requires_hosted.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr.h \
@@ -2993,6 +3151,7 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_abs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_function.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_mutex.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algo.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algobase.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h \
@@ -3020,6 +3179,8 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/streambuf_iterator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode-data.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uniform_int_dist.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unique_ptr.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unordered_map.h \
@@ -3032,6 +3193,7 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cassert \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cctype \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/charconv \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/chrono \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/climits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/clocale \
@@ -3058,7 +3220,7 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/type_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/filesystem \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/format \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/functional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip \
@@ -3072,6 +3234,7 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/map \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/memory \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/new \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numbers \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numeric \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/optional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ostream \
@@ -3081,8 +3244,10 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_numeric_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/pstl_config.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/random \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ranges \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ratio \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/set \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/span \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/sstream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdexcept \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdlib.h \
@@ -3112,10 +3277,8 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/vector \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/version \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -3137,6 +3300,7 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   D:/Lab_4/app_gui/include/LazySequenceController.hpp \
   D:/Lab_4/app_gui/include/TestingWidget.hpp \
   D:/Lab_4/src/Cardinal.hpp \
+  D:/Lab_4/src/ISource.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
@@ -3380,6 +3544,7 @@ CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj: D:/Lab_4/app_gui/src/main.cpp \
   C:/w64devkit/include/time.h \
   C:/w64devkit/include/vadefs.h \
   C:/w64devkit/include/wchar.h \
+  C:/w64devkit/include/wctype.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/algorithm \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/array \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/atomic \
@@ -3393,11 +3558,16 @@ CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj: D:/Lab_4/app_gui/src/main.cpp \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_lockfree_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_wait.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_string.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_string.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono_io.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/concept_check.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cpp_type_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cxxabi_forced.h \
@@ -3407,6 +3577,7 @@ CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj: D:/Lab_4/app_gui/src/main.cpp \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/formatfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functexcept.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h \
@@ -3414,10 +3585,18 @@ CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj: D:/Lab_4/app_gui/src/main.cpp \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hashtable_policy.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/invoke.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ios_base.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/istream.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/iterator_concepts.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/list.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/localefwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/max_size_type.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memory_resource.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memoryfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/monostate.h \
@@ -3425,20 +3604,31 @@ CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj: D:/Lab_4/app_gui/src/main.cpp \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/nested_exception.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/new_allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/node_handle.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream_insert.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/parse_numbers.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/postypes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/predefined_ops.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ptr_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/range_access.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algo.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algobase.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_base.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_cmp.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_uninitialized.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_util.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/refwrap.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/requires_hosted.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr_atomic.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/specfun.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_abs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_function.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_mutex.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algo.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algobase.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h \
@@ -3466,6 +3656,8 @@ CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj: D:/Lab_4/app_gui/src/main.cpp \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/streambuf_iterator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode-data.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uniform_int_dist.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unique_ptr.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unordered_map.h \
@@ -3478,6 +3670,7 @@ CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj: D:/Lab_4/app_gui/src/main.cpp \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cassert \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cctype \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/charconv \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/chrono \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/climits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/clocale \
@@ -3491,6 +3684,7 @@ CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj: D:/Lab_4/app_gui/src/main.cpp \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstring \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ctime \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cwchar \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cwctype \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/debug/assertions.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/debug/debug.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/exception \
@@ -3501,24 +3695,34 @@ CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj: D:/Lab_4/app_gui/src/main.cpp \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/numeric_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/type_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/format \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/functional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iterator \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/map \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/memory \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/new \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numbers \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numeric \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/optional \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ostream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/execution_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_algorithm_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_memory_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_numeric_defs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/pstl_config.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ranges \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ratio \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/set \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/span \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/sstream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdexcept \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdlib.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/streambuf \
@@ -3551,10 +3755,14 @@ CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj: D:/Lab_4/app_gui/src/main.cpp \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h \
@@ -3563,6 +3771,120 @@ CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj: D:/Lab_4/app_gui/src/main.cpp \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
   D:/Lab_4/app_gui/include/MainWindow.hpp
+
+CMakeFiles/Lab4.dir/src/Cardinal.cpp.obj: D:/Lab_4/src/Cardinal.cpp \
+  C:/w64devkit/include/_mingw.h \
+  C:/w64devkit/include/_mingw_mac.h \
+  C:/w64devkit/include/_mingw_off_t.h \
+  C:/w64devkit/include/_mingw_secapi.h \
+  C:/w64devkit/include/_mingw_stat64.h \
+  C:/w64devkit/include/corecrt.h \
+  C:/w64devkit/include/corecrt_stdio_config.h \
+  C:/w64devkit/include/corecrt_wctype.h \
+  C:/w64devkit/include/corecrt_wstdlib.h \
+  C:/w64devkit/include/crtdefs.h \
+  C:/w64devkit/include/ctype.h \
+  C:/w64devkit/include/errno.h \
+  C:/w64devkit/include/limits.h \
+  C:/w64devkit/include/locale.h \
+  C:/w64devkit/include/malloc.h \
+  C:/w64devkit/include/sdks/_mingw_ddk.h \
+  C:/w64devkit/include/sec_api/stdio_s.h \
+  C:/w64devkit/include/sec_api/stdlib_s.h \
+  C:/w64devkit/include/sec_api/string_s.h \
+  C:/w64devkit/include/sec_api/wchar_s.h \
+  C:/w64devkit/include/stddef.h \
+  C:/w64devkit/include/stdio.h \
+  C:/w64devkit/include/stdlib.h \
+  C:/w64devkit/include/string.h \
+  C:/w64devkit/include/swprintf.inl \
+  C:/w64devkit/include/vadefs.h \
+  C:/w64devkit/include/wchar.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/backward/binders.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bit \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/alloc_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocator.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_string.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_string.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/concept_check.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cpp_type_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cxxabi_forced.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functexcept.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/invoke.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/iterator_concepts.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/localefwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/max_size_type.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memory_resource.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memoryfwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/move.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/new_allocator.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream_insert.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/postypes.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/predefined_ops.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ptr_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/range_access.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_base.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_cmp.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_util.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/refwrap.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/requires_hosted.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_abs.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algobase.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_construct.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_function.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_iterator.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_iterator_base_funcs.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_iterator_base_types.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_pair.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uses_allocator.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uses_allocator_args.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/utility.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/version.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cctype \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/clocale \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/compare \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/concepts \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstddef \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstdio \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstdlib \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstring \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cwchar \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/debug/assertions.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/debug/debug.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/alloc_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/numeric_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/type_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/new \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numbers \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/pstl_config.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdlib.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/string \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/string_view \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tuple \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/type_traits \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
+  D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp \
+  D:/Lab_4/src/Cardinal.hpp
 
 Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake \
@@ -4046,6 +4368,7 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_lockfree_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_wait.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_string.h \
@@ -4053,6 +4376,7 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono_io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/concept_check.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cpp_type_traits.h \
@@ -4063,7 +4387,6 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functexcept.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h \
@@ -4072,12 +4395,17 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/invoke.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ios_base.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/istream.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/iterator_concepts.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/list.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/localefwd.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/max_size_type.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memory_resource.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memoryfwd.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/move.h \
@@ -4091,7 +4419,14 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/postypes.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/predefined_ops.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ptr_traits.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/range_access.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algo.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algobase.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_base.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_cmp.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_uninitialized.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_util.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/refwrap.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/requires_hosted.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr.h \
@@ -4101,6 +4436,7 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_abs.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_function.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_mutex.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algo.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algobase.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h \
@@ -4140,6 +4476,7 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cassert \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cctype \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/charconv \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/chrono \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/climits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/clocale \
@@ -4164,15 +4501,17 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/numeric_traits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/type_traits.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/format \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/functional \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iterator \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/list \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/map \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/memory \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/new \
@@ -4213,10 +4552,8 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/vector \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/version \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
-  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -4224,7 +4561,9 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdbool.h \
@@ -4250,7 +4589,9 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   CMakeFiles/4.3.1/CMakeRCCompiler.cmake \
   CMakeFiles/4.3.1/CMakeSystem.cmake \
   Lab4_autogen/moc_predefs.h \
+  D:/Lab_4/src/Cardinal.cpp \
   D:/Lab_4/src/Cardinal.hpp \
+  D:/Lab_4/src/ISource.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
@@ -4272,6 +4613,8 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
 C:/Qt/6.11.0/mingw_64/include/QtCore/q20memory.h:
 
 Lab4_autogen/mocs_compilation.cpp:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algobase.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc:
 
@@ -4331,6 +4674,8 @@ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlayoutitem.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/q20functional.h:
 
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode.h:
+
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h:
 
 C:/w64devkit/include/malloc.h:
@@ -4381,13 +4726,15 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginAdditionalTargetInfo.c
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qiterable.h:
 
-C:/Qt/6.11.0/mingw_64/include/QtWidgets/qpushbutton.h:
-
 C:/Qt/6.11.0/mingw_64/include/QtCore/qiodevice.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qcompare_impl.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qstringbuilder.h:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_base.h:
+
+C:/Qt/6.11.0/mingw_64/include/QtWidgets/qpushbutton.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/QTableWidget:
 
@@ -4429,6 +4776,8 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/execution_defs.h
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qatomic.h:
 
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/span:
+
 C:/Qt/6.11.0/mingw_64/include/QtCore/qatomic_cxx11.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/QButtonGroup:
@@ -4436,10 +4785,6 @@ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QButtonGroup:
 C:/Qt/6.11.0/mingw_64/include/QtCore/qbytearraylist.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qbasicatomic.h:
-
-D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp:
-
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qdebug.h:
 
@@ -4480,6 +4825,8 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/aligned_buffer.h:
 C:/Qt/6.11.0/mingw_64/include/QtCore/qdatastream.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtGui/qpaintdevice.h:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono_io.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qendian.h:
 
@@ -4523,17 +4870,21 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qglobalstatic.h:
 
+C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargetsPrecheck.cmake:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h:
+
 C:/Qt/6.11.0/mingw_64/include/QtCore/qhash.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qrefcount.h:
 
-C:/Qt/6.11.0/mingw_64/include/QtCore/qiodevicebase.h:
-
-D:/Lab_4/app_gui/src/LazySequenceWidget.cpp:
+Lab4_autogen/JGBACW2ZV4/moc_StatisticsController.cpp:
 
 D:/Lab_4/src/ReadOnlyStream.hpp:
 
-Lab4_autogen/JGBACW2ZV4/moc_StatisticsController.cpp:
+D:/Lab_4/app_gui/src/LazySequenceWidget.cpp:
+
+C:/Qt/6.11.0/mingw_64/include/QtCore/qiodevicebase.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qtenvironmentvariables.h:
 
@@ -4564,8 +4915,6 @@ C:/Qt/6.11.0/mingw_64/include/QtCore/qtdeprecationmarkers.h:
 C:/Qt/6.11.0/mingw_64/include/QtCore/qtextstream.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qmalloc.h:
-
-C:/Qt/6.11.0/mingw_64/include/QtWidgets/QMessageBox:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qmap.h:
 
@@ -4631,9 +4980,9 @@ C:/Qt/6.11.0/mingw_64/include/QtCore/qregularexpression.h:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake:
 
-C:/Qt/6.11.0/mingw_64/include/QtCore/qscopedpointer.h:
-
 Lab4_autogen/JGBACW2ZV4/moc_LazySequenceController.cpp:
+
+C:/Qt/6.11.0/mingw_64/include/QtCore/qscopedpointer.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qscopeguard.h:
 
@@ -4682,8 +5031,6 @@ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qspinbox.h:
 C:/Qt/6.11.0/mingw_64/include/QtCore/qstringalgorithms.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qstringconverter.h:
-
-C:/Qt/6.11.0/mingw_64/include/QtWidgets/QVBoxLayout:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qstringconverter_base.h:
 
@@ -4765,11 +5112,11 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdbool.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qtresource.h:
 
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.tcc:
+
 C:/Qt/6.11.0/mingw_64/include/QtCore/qttypetraits.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/vector.tcc:
-
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.tcc:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qtversion.h:
 
@@ -4829,11 +5176,11 @@ C:/Qt/6.11.0/mingw_64/include/QtGui/qcolor.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_relops.h:
 
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h:
+
 C:/Qt/6.11.0/mingw_64/include/QtGui/qfont.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/refwrap.h:
-
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtGui/qfontinfo.h:
 
@@ -4875,6 +5222,8 @@ C:/Qt/6.11.0/mingw_64/include/QtGui/qpen.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstring:
 
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc:
+
 C:/w64devkit/include/stdlib.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtGui/qpicture.h:
@@ -4886,8 +5235,6 @@ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtableview.h:
 C:/Qt/6.11.0/mingw_64/include/QtGui/qpolygon.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h:
-
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/climits:
 
@@ -4905,9 +5252,9 @@ C:/Qt/6.11.0/mingw_64/include/QtGui/qtransform.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtGui/qtgui-config.h:
 
-C:/Qt/6.11.0/mingw_64/include/QtGui/qtguiexports.h:
-
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qgridlayout.h:
+
+C:/Qt/6.11.0/mingw_64/include/QtGui/qtguiexports.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtGui/qwindowdefs_win.h:
 
@@ -4932,6 +5279,8 @@ C:/Qt/6.11.0/mingw_64/include/QtWidgets/QPushButton:
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_pair.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/QRadioButton:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_cmp.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/QSpinBox:
 
@@ -4964,6 +5313,8 @@ C:/Qt/6.11.0/mingw_64/include/QtWidgets/qframe.h:
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_multimap.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlabel.h:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/max_size_type.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlistview.h:
 
@@ -5028,6 +5379,8 @@ C:/w64devkit/include/_mingw_stat64.h:
 D:/Lab_4/app_gui/include/LazySequenceController.hpp:
 
 C:/w64devkit/include/_timeval.h:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/charconv:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-relwithdebinfo.cmake:
 
@@ -5161,6 +5514,8 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_base.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_lockfree_defines.h:
 
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_wait.h:
+
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/GNUInstallDirs.cmake:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h:
@@ -5207,6 +5562,8 @@ D:/Lab_4/app_gui/include/StatisticsWidget.hpp:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h:
 
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/formatfwd.h:
+
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h:
@@ -5223,6 +5580,8 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_dir.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/istream.tcc:
 
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/iterator_concepts.h:
+
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/predefined_ops.h:
@@ -5232,6 +5591,8 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.t
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicSbomCycloneDXHelpers.cmake:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargetsPrecheck.cmake:
 
@@ -5253,11 +5614,17 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream.h:
 
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream_insert.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/postypes.h:
+
+C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargetsPrecheck.cmake:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_algo.h:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_uninitialized.h:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ranges_util.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/QDataStream:
 
@@ -5275,6 +5642,10 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/specfun.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_abs.h:
 
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/typeinfo:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_mutex.h:
+
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algo.h:
 
 D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp:
@@ -5289,10 +5660,6 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_iterator_bas
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_multiset.h:
 
-C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake:
-
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.h:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_numeric.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_raw_storage_iter.h:
@@ -5304,6 +5671,8 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_tempbuf.h:
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_tree.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unicode-data.h:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake:
 
@@ -5339,13 +5708,17 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/numeric_traits.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h:
 
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/fstream:
+C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/format:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/functional:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd:
 
@@ -5359,9 +5732,13 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/list:
 
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/map:
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale:
 
 Lab4_autogen/JGBACW2ZV4/moc_LazySequenceWidget.cpp:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/map:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numbers:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ostream:
 
@@ -5370,6 +5747,8 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_algorithm_d
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_memory_defs.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_numeric_defs.h:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ranges:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake:
 
@@ -5403,13 +5782,11 @@ C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeRCInformation.cmake:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/type_traits:
 
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/typeinfo:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/unordered_map:
 
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/unordered_set:
-
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qdialog.h:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/unordered_set:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/Platform/Windows-GNU-C-ABI.cmake:
 
@@ -5421,17 +5798,15 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-relwithdebinfo.c
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h:
 
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h:
-
 C:/Program\ Files/CMake/bin/cmake.exe:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h:
 
-C:/Qt/6.11.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h:
-
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h:
 
@@ -5453,15 +5828,21 @@ D:/Lab_4/app_gui/include/TestingWidget.hpp:
 
 D:/Lab_4/src/Cardinal.hpp:
 
+D:/Lab_4/src/ISource.hpp:
+
 D:/Lab_4/src/LazySequence.tpp:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qcoreevent.h:
 
-D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp:
-
 D:/Lab_4/app_gui/src/LazySequenceController.cpp:
 
+D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp:
+
 D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream:
+
+D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp:
 
 Lab4_autogen/JGBACW2ZV4/moc_MainWindow.cpp:
 
@@ -5471,13 +5852,25 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake:
 
 Lab4_autogen/JGBACW2ZV4/moc_TestingWidget.cpp:
 
+C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.h:
+
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/random:
+
+C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/QGroupBox:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/QHBoxLayout:
 
+C:/Qt/6.11.0/mingw_64/include/QtWidgets/QMessageBox:
+
+C:/Qt/6.11.0/mingw_64/include/QtWidgets/QVBoxLayout:
+
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qboxlayout.h:
+
+C:/Qt/6.11.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qgroupbox.h:
 
@@ -5531,27 +5924,11 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_path.h:
 
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h:
-
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc:
-
-C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargetsPrecheck.cmake:
-
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h:
-
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/codecvt:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/filesystem:
-
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip:
-
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale:
-
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h:
-
-C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsIntegrationPluginAdditionalTargetInfo.cmake:
 
@@ -5566,6 +5943,8 @@ C:/Qt/6.11.0/mingw_64/include/QtGui/qinputmethod.h:
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qapplication.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtWidgets/qstylefactory.h:
+
+D:/Lab_4/src/Cardinal.cpp:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake:
 
@@ -5600,8 +5979,6 @@ C:/Program\ Files/CMake/share/cmake-4.3/Modules/FindPackageMessage.cmake:
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/FindThreads.cmake:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake:
-
-C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake:
 
@@ -5824,8 +6201,6 @@ C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmak
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake:
 
 C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake:
-
-C:/Qt/6.11.0/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargetsPrecheck.cmake:
 
 CMakeFiles/4.3.1/CMakeCCompiler.cmake:
 

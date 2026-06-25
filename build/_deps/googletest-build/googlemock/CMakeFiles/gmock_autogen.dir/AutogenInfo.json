@@ -57,7 +57,7 @@
 	"MOC_PREDEFS_CMD" : 
 	[
 		"C:/w64devkit/bin/c++.exe",
-		"-std=c++17",
+		"-std=c++20",
 		"-w",
 		"-dM",
 		"-E",

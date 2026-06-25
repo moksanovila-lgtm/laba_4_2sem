@@ -586,6 +586,30 @@ app_gui/src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab4.dir\build.make CMakeFiles/Lab4.dir/app_gui/src/main.cpp.s
 .PHONY : app_gui/src/main.cpp.s
 
+src/Cardinal.obj: src/Cardinal.cpp.obj
+.PHONY : src/Cardinal.obj
+
+# target to build an object file
+src/Cardinal.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab4.dir\build.make CMakeFiles/Lab4.dir/src/Cardinal.cpp.obj
+.PHONY : src/Cardinal.cpp.obj
+
+src/Cardinal.i: src/Cardinal.cpp.i
+.PHONY : src/Cardinal.i
+
+# target to preprocess a source file
+src/Cardinal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab4.dir\build.make CMakeFiles/Lab4.dir/src/Cardinal.cpp.i
+.PHONY : src/Cardinal.cpp.i
+
+src/Cardinal.s: src/Cardinal.cpp.s
+.PHONY : src/Cardinal.s
+
+# target to generate assembly for a file
+src/Cardinal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab4.dir\build.make CMakeFiles/Lab4.dir/src/Cardinal.cpp.s
+.PHONY : src/Cardinal.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -640,6 +664,9 @@ help:
 	@echo ... app_gui/src/main.obj
 	@echo ... app_gui/src/main.i
 	@echo ... app_gui/src/main.s
+	@echo ... src/Cardinal.obj
+	@echo ... src/Cardinal.i
+	@echo ... src/Cardinal.s
 .PHONY : help
 
 

@@ -202,6 +202,30 @@ lab4_tests_autogen/fast:
 	cd /d D:\Lab_4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\lab4_tests_autogen.dir\build.make tests/CMakeFiles/lab4_tests_autogen.dir/build
 .PHONY : lab4_tests_autogen/fast
 
+__/src/Cardinal.obj: __/src/Cardinal.cpp.obj
+.PHONY : __/src/Cardinal.obj
+
+# target to build an object file
+__/src/Cardinal.cpp.obj:
+	cd /d D:\Lab_4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\lab4_tests.dir\build.make tests/CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.obj
+.PHONY : __/src/Cardinal.cpp.obj
+
+__/src/Cardinal.i: __/src/Cardinal.cpp.i
+.PHONY : __/src/Cardinal.i
+
+# target to preprocess a source file
+__/src/Cardinal.cpp.i:
+	cd /d D:\Lab_4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\lab4_tests.dir\build.make tests/CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.i
+.PHONY : __/src/Cardinal.cpp.i
+
+__/src/Cardinal.s: __/src/Cardinal.cpp.s
+.PHONY : __/src/Cardinal.s
+
+# target to generate assembly for a file
+__/src/Cardinal.cpp.s:
+	cd /d D:\Lab_4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\lab4_tests.dir\build.make tests/CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.s
+.PHONY : __/src/Cardinal.cpp.s
+
 lab4_tests_autogen/mocs_compilation.obj: lab4_tests_autogen/mocs_compilation.cpp.obj
 .PHONY : lab4_tests_autogen/mocs_compilation.obj
 
@@ -313,6 +337,9 @@ help:
 	@echo ... lab4_tests_autogen
 	@echo ... lab4_tests_autogen_timestamp_deps
 	@echo ... lab4_tests
+	@echo ... __/src/Cardinal.obj
+	@echo ... __/src/Cardinal.i
+	@echo ... __/src/Cardinal.s
 	@echo ... lab4_tests_autogen/mocs_compilation.obj
 	@echo ... lab4_tests_autogen/mocs_compilation.i
 	@echo ... lab4_tests_autogen/mocs_compilation.s

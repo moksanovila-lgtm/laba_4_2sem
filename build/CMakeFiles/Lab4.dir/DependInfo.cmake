@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Lab_4/app_gui/src/StatisticsWidget.cpp" "CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj" "gcc" "CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj.d"
   "D:/Lab_4/app_gui/src/TestingWidget.cpp" "CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj" "gcc" "CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj.d"
   "D:/Lab_4/app_gui/src/main.cpp" "CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj" "gcc" "CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj.d"
+  "D:/Lab_4/src/Cardinal.cpp" "CMakeFiles/Lab4.dir/src/Cardinal.cpp.obj" "gcc" "CMakeFiles/Lab4.dir/src/Cardinal.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

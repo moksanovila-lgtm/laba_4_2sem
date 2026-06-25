@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj.d"
   "CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj"
   "CMakeFiles/Lab4.dir/app_gui/src/main.cpp.obj.d"
+  "CMakeFiles/Lab4.dir/src/Cardinal.cpp.obj"
+  "CMakeFiles/Lab4.dir/src/Cardinal.cpp.obj.d"
   "CMakeFiles/Lab4_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/Lab4_autogen.dir/ParseCache.txt"
   "Lab4_autogen"

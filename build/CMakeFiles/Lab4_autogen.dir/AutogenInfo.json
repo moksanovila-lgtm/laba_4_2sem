@@ -337,6 +337,7 @@
 			"UVLADIE3JM/moc_Cardinal.cpp",
 			null
 		],
+		[ "D:/Lab_4/src/ISource.hpp", "MU", "UVLADIE3JM/moc_ISource.cpp", null ],
 		[
 			"D:/Lab_4/src/LazySequence.hpp",
 			"MU",
@@ -411,7 +412,7 @@
 	"MOC_PREDEFS_CMD" : 
 	[
 		"C:/w64devkit/bin/c++.exe",
-		"-std=gnu++17",
+		"-std=gnu++20",
 		"-w",
 		"-dM",
 		"-E",
@@ -436,7 +437,8 @@
 		[ "D:/Lab_4/app_gui/src/StatisticsController.cpp", "MU", null ],
 		[ "D:/Lab_4/app_gui/src/StatisticsWidget.cpp", "MU", null ],
 		[ "D:/Lab_4/app_gui/src/TestingWidget.cpp", "MU", null ],
-		[ "D:/Lab_4/app_gui/src/main.cpp", "MU", null ]
+		[ "D:/Lab_4/app_gui/src/main.cpp", "MU", null ],
+		[ "D:/Lab_4/src/Cardinal.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

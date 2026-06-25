@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.obj"
+  "CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.obj.d"
   "CMakeFiles/lab4_tests.dir/lab4_tests_autogen/mocs_compilation.cpp.obj"
   "CMakeFiles/lab4_tests.dir/lab4_tests_autogen/mocs_compilation.cpp.obj.d"
   "CMakeFiles/lab4_tests.dir/test_lazy_sequence.cpp.obj"

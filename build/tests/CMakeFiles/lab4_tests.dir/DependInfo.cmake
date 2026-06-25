@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "tests/lab4_tests_autogen/timestamp" "custom" "tests/lab4_tests_autogen/deps"
+  "D:/Lab_4/src/Cardinal.cpp" "tests/CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.obj" "gcc" "tests/CMakeFiles/lab4_tests.dir/__/src/Cardinal.cpp.obj.d"
   "D:/Lab_4/build/tests/lab4_tests_autogen/mocs_compilation.cpp" "tests/CMakeFiles/lab4_tests.dir/lab4_tests_autogen/mocs_compilation.cpp.obj" "gcc" "tests/CMakeFiles/lab4_tests.dir/lab4_tests_autogen/mocs_compilation.cpp.obj.d"
   "D:/Lab_4/tests/test_lazy_sequence.cpp" "tests/CMakeFiles/lab4_tests.dir/test_lazy_sequence.cpp.obj" "gcc" "tests/CMakeFiles/lab4_tests.dir/test_lazy_sequence.cpp.obj.d"
   "D:/Lab_4/tests/test_online_statistics.cpp" "tests/CMakeFiles/lab4_tests.dir/test_online_statistics.cpp.obj" "gcc" "tests/CMakeFiles/lab4_tests.dir/test_online_statistics.cpp.obj.d"
