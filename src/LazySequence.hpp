@@ -89,10 +89,9 @@ private:
     };
     
 private:
-    std::unique_ptr<Sequence<T>> materialized;  
+    std::unique_ptr<Sequence<T>> materialized;   
     std::unique_ptr<IGenerator> generator;      
-    bool isFinite;
-    size_t finiteSize;
+    Cardinal length;
     size_t materializedCount;
     
     void Materialize(size_t index);
@@ -124,8 +123,8 @@ public:
     LazySequence<T>* Where(std::function<bool(const T&)> predicate) const;
     
     T operator[](size_t index) const { return Get(index); }
-    bool IsEmpty() const { return GetCount() == 0; }
-    bool IsInfinite() const { return !isFinite; }
+    bool IsInfinite() const { return length.IsInfinite(); }
+    bool IsEmpty() const { return length.IsFinite() && length.GetValue() == 0; }
     
     ~LazySequence() = default;
 };

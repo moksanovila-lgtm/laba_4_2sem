@@ -1,39 +1,16 @@
 #pragma once
 
-#include "..\third_party\Lab_2\library\include\Sequence.hpp"
 #include "..\third_party\Lab_2\library\include\exceptions.hpp"
 #include "LazySequence.hpp"
-#include <functional>
 #include <memory>
+#include <functional>
 #include <string>
-#include <fstream>
-#include <sstream>
+#include "ISource.hpp"
 
 template <typename T>
 class ReadOnlyStream {
 private:
-    class ISource {
-    public:
-        virtual ~ISource() = default;
-        virtual bool IsEndOfStream() const = 0;
-        virtual T Read() = 0;
-        virtual size_t GetPosition() const = 0;
-        virtual bool IsCanSeek() const = 0;
-        virtual size_t Seek(size_t index) = 0;
-        virtual bool IsCanGoBack() const = 0;
-        virtual void Open() = 0;
-        virtual void Close() = 0;
-        virtual T Peek() = 0;
-        virtual void Reset() = 0;
-    };
-    
-    class SequenceSource;
-    class LazySequenceSource;
-    class FileSource;
-    class StringSource;
-    class StreamSource;
-    
-    std::unique_ptr<ISource> source;  
+    std::unique_ptr<ISource<T>> source;  
     bool isOpen;
     
 public:

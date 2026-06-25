@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(Lab4Tests)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(FetchContent)
@@ -15,13 +15,20 @@ FetchContent_MakeAvailable(googletest)
 set(LAB4_SRC ${CMAKE_CURRENT_SOURCE_DIR}/../src)
 set(LAB2_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/../third_party/Lab_2/library/include)
 
+set(MODEL_SOURCES
+    ${LAB4_SRC}/Cardinal.cpp
+)
+
 set(TEST_SOURCES
     test_lazy_sequence.cpp
     test_readonly_stream.cpp
     test_online_statistics.cpp
 )
 
-add_executable(lab4_tests ${TEST_SOURCES})
+add_executable(lab4_tests
+ ${TEST_SOURCES}
+ ${MODEL_SOURCES}
+ )
 
 target_link_libraries(lab4_tests
     GTest::gtest_main

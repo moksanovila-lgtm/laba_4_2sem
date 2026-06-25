@@ -3,9 +3,21 @@
 #include <cmath>
 #include <string>
 #include <sstream>
+#include <concepts>
+#include <type_traits>
 #include "exceptions.hpp"
 
 template <typename T>
+concept Statisticable = requires(T a, T b) {
+    a + b;      
+    a - b;     
+    a * b;      
+    a / b;      
+    a < b;      
+    a > b;
+};
+
+template <Statisticable T>  
 class OnlineStatistics {
 private:
     T minVal;
@@ -13,6 +25,14 @@ private:
     double sum;
     double sumSq;
     size_t count;
+// template <typename T>
+// class OnlineStatistics {
+// private:
+//     T minVal;
+//     T maxVal;
+//     double sum;
+//     double sumSq;
+//     size_t count;
     
 public:
     OnlineStatistics();
@@ -35,3 +55,5 @@ public:
 };
 
 #include "OnlineStatistics.tpp"
+
+// OnlineStatistics<std::string> s;

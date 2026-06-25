@@ -1,7 +1,7 @@
 #include "OnlineStatistics.hpp"
 #include "..\third_party\Lab_2\library\include\exceptions.hpp"
 
-template <typename T>
+template <Statisticable T>
 OnlineStatistics<T>::OnlineStatistics()
     : minVal(0)
     , maxVal(0)
@@ -9,7 +9,7 @@ OnlineStatistics<T>::OnlineStatistics()
     , sumSq(0.0)
     , count(0) {}
 
-template <typename T>
+template <Statisticable T>
 void OnlineStatistics<T>::Update(const T& value) {
     if (count == 0) {
         minVal = value;
@@ -23,7 +23,7 @@ void OnlineStatistics<T>::Update(const T& value) {
     count++;
 }
 
-template <typename T>
+template <Statisticable T>
 void OnlineStatistics<T>::Reset() {
     minVal = T();
     maxVal = T();
@@ -32,49 +32,49 @@ void OnlineStatistics<T>::Reset() {
     count = 0;
 }
 
-template <typename T>
+template <Statisticable T>
 T OnlineStatistics<T>::GetMin() const {
     if (count == 0) throw EmptySequenceException("No data");
     return minVal;
 }
 
-template <typename T>
+template <Statisticable T>
 T OnlineStatistics<T>::GetMax() const {
     if (count == 0) throw EmptySequenceException("No data");
     return maxVal;
 }
 
-template <typename T>
+template <Statisticable T>
 double OnlineStatistics<T>::GetAverage() const {
     if (count == 0) throw EmptySequenceException("No data");
     return sum / count;
 }
 
-template <typename T>
+template <Statisticable T>
 double OnlineStatistics<T>::GetVariance() const {
     if (count == 0) throw EmptySequenceException("No data");
     double avg = GetAverage();
     return (sumSq / count) - (avg * avg);
 }
 
-template <typename T>
+template <Statisticable T>
 double OnlineStatistics<T>::GetStdDeviation() const {
     return std::sqrt(GetVariance());
 }
 
-template <typename T>
+template <Statisticable T>
 double OnlineStatistics<T>::GetRMS() const {
     if (count == 0) throw EmptySequenceException("No data");
     return std::sqrt(sumSq / count);
 }
 
-template <typename T>
+template <Statisticable T>
 double OnlineStatistics<T>::GetRange() const {
     if (count == 0) throw EmptySequenceException("No data");
     return static_cast<double>(maxVal) - static_cast<double>(minVal);
 }
 
-template <typename T>
+template <Statisticable T>
 double OnlineStatistics<T>::GetCoefficientOfVariation() const {
     if (count == 0) throw EmptySequenceException("No data");
     double avg = GetAverage();
@@ -82,12 +82,12 @@ double OnlineStatistics<T>::GetCoefficientOfVariation() const {
     return GetStdDeviation() / avg;
 }
 
-template <typename T>
+template <Statisticable T>
 size_t OnlineStatistics<T>::GetCount() const {
     return count;
 }
 
-template <typename T>
+template <Statisticable T>
 std::string OnlineStatistics<T>::ToString() const {
     if (count == 0) {
         return "No data collected";
@@ -107,7 +107,7 @@ std::string OnlineStatistics<T>::ToString() const {
     return oss.str();
 }
 
-template <typename T>
+template <Statisticable T>
 OnlineStatistics<T>::operator std::string() const {
     return ToString();
 }

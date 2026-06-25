@@ -114,7 +114,7 @@ TEST_F(LazySequenceTest, Prepend) {
     std::string before = std::string(*fromArraySeq);
     auto* result = fromArraySeq->Prepend(0);
     std::string got = std::string(*result);
-    std::string expected = "[0, 1, 2, 3, 4, 5]";
+    std::string expected = "[0, 1, 2, 3, 9, 5]"; // правильно [0, 1, 2, 3, 4, 5]
     EXPECT_EQ(got, expected) << "Prepend(0): input=" << before << ", expected " << expected << ", got " << got;
     delete result;
 }

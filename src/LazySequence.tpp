@@ -211,14 +211,13 @@ IEnumerator<T>* LazySequence<T>::GetEnumerator() const {
     public:
         LazyEnumerator(const LazySequence* sequence) 
             : seq(sequence), currentIndex(0) {}
-        
         bool MoveNext() override {
-            if (seq->IsInfinite()) {
+            if (seq->length.IsInfinite()) {  
                 currentValue = seq->Get(currentIndex);
                 currentIndex++;
                 return true;
             }
-            if (currentIndex < seq->GetCount()) {
+            if (currentIndex < seq->length.GetValue()) {  
                 currentValue = seq->Get(currentIndex);
                 currentIndex++;
                 return true;
@@ -236,16 +235,14 @@ template <typename T>
 LazySequence<T>::LazySequence()
     : materialized(std::make_unique<ArraySequence<T>>())
     , generator(nullptr)
-    , isFinite(true)
-    , finiteSize(0)
+    , length(Cardinal(0))
     , materializedCount(0) {}
 
 template <typename T>
 LazySequence<T>::LazySequence(const T* items, int count)
     : materialized(std::make_unique<ArraySequence<T>>())
     , generator(nullptr)
-    , isFinite(true)
-    , finiteSize(count)
+    , length(Cardinal(count))
     , materializedCount(0) {
     for (int i = 0; i < count; ++i) {
         materialized->Append(items[i]);
@@ -256,8 +253,7 @@ template <typename T>
 LazySequence<T>::LazySequence(Sequence<T>* seq)
     : materialized(std::make_unique<ArraySequence<T>>())
     , generator(nullptr)
-    , isFinite(true)
-    , finiteSize(seq->GetCount())
+    , length(Cardinal(seq->GetCount()))
     , materializedCount(seq->GetCount()) {  
     IEnumerator<T>* enumerator = seq->GetEnumerator();
     while (enumerator->MoveNext()) {
@@ -270,8 +266,7 @@ template <typename T>
 LazySequence<T>::LazySequence(std::function<T(Sequence<T>*)> rule, Sequence<T>* firstElements, size_t arity)
     : materialized(std::make_unique<ArraySequence<T>>())
     , generator(nullptr)
-    , isFinite(false)
-    , finiteSize(0)
+    , length(Cardinal::Infinity()) 
     , materializedCount(0) {
     IEnumerator<T>* enumerator = firstElements->GetEnumerator();
     while (enumerator->MoveNext()) {
@@ -285,8 +280,7 @@ template <typename T>
 LazySequence<T>::LazySequence(const LazySequence& other)
     : materialized(std::make_unique<ArraySequence<T>>())
     , generator(nullptr)
-    , isFinite(other.isFinite)
-    , finiteSize(other.finiteSize)
+    , length(other.length)
     , materializedCount(other.materializedCount) {
     IEnumerator<T>* enumerator = other.materialized->GetEnumerator();
     while (enumerator->MoveNext()) {
@@ -297,6 +291,9 @@ LazySequence<T>::LazySequence(const LazySequence& other)
 
 template <typename T>
 void LazySequence<T>::Materialize(size_t index) {
+    if (length.IsFinite() && index >= length.GetValue()) {
+        throw IndexOutOfRangeException("Index out of range");
+    }
     while (materialized->GetCount() <= index && generator && generator->HasNext()) {
         materialized->Append(generator->GetNext());
         materializedCount++;
@@ -305,13 +302,16 @@ void LazySequence<T>::Materialize(size_t index) {
 
 template <typename T>
 T LazySequence<T>::Get(size_t index) const {
-    if (isFinite && index >= finiteSize) {
-        std::string msg = "Index " + std::to_string(index) + " out of range (size=" + std::to_string(finiteSize) + ")";
+    if (length.IsFinite() && index >= length.GetValue()) {
+        std::string msg = "Index " + std::to_string(index) + 
+                          " out of range (size=" + std::to_string(length.GetValue()) + ")";
         throw IndexOutOfRangeException(msg);
     }
     const_cast<LazySequence*>(this)->Materialize(index);
     if (index >= materialized->GetCount()) {
-        std::string msg = "Index " + std::to_string(index) + " out of range (materialized count=" + std::to_string(materialized->GetCount()) + ")";
+        std::string msg = "Index " + std::to_string(index) + 
+                          " out of range (materialized count=" + 
+                          std::to_string(materialized->GetCount()) + ")";
         throw IndexOutOfRangeException(msg);
     }
     return materialized->Get(index);
@@ -319,13 +319,18 @@ T LazySequence<T>::Get(size_t index) const {
 
 template <typename T>
 size_t LazySequence<T>::GetCount() const {
-    if (isFinite) return finiteSize;
-    return 0;
+    if (length.IsInfinite()) {
+        throw InfiniteSequenceException("Cannot get count of infinite sequence");
+    }
+    return length.GetValue();
 }
 
 template <typename T>
 T LazySequence<T>::GetFirst() const {
-    if (GetCount() == 0) {
+    if (length.IsInfinite()) {
+        return Get(0); 
+    }
+    if (length.GetValue() == 0) {
         throw EmptySequenceException("Sequence is empty");
     }
     return Get(0);
@@ -333,23 +338,22 @@ T LazySequence<T>::GetFirst() const {
 
 template <typename T>
 T LazySequence<T>::GetLast() const {
-    if (isFinite && finiteSize > 0) {
-        return Get(finiteSize - 1);
+    if (length.IsInfinite()) {
+        throw InfiniteSequenceException("Cannot get last element of infinite sequence");
     }
-    throw EmptySequenceException("Cannot get last element of infinite sequence");
+    if (length.GetValue() == 0) {
+        throw EmptySequenceException("Sequence is empty");
+    }
+    return Get(length.GetValue() - 1);
 }
 
 template <typename T>
 LazySequence<T>* LazySequence<T>::GetSubsequence(size_t startIndex, size_t endIndex) const {
     if (startIndex > endIndex) {
-        std::string msg = "GetSubsequence: startIndex (" + std::to_string(startIndex) + 
-                          ") > endIndex (" + std::to_string(endIndex) + ")";
-        throw IndexOutOfRangeException(msg);
+        throw IndexOutOfRangeException("startIndex > endIndex");
     }
-    if (isFinite && endIndex >= finiteSize) {
-        std::string msg = "GetSubsequence: endIndex (" + std::to_string(endIndex) + 
-                          ") exceeds sequence size (" + std::to_string(finiteSize) + ")";
-        throw IndexOutOfRangeException(msg);
+    if (length.IsFinite() && endIndex >= length.GetValue()) {
+        throw IndexOutOfRangeException("endIndex exceeds sequence size");
     }
     auto* result = new LazySequence<T>();
     for (size_t i = startIndex; i <= endIndex && i < materialized->GetCount(); ++i) {
@@ -358,11 +362,9 @@ LazySequence<T>* LazySequence<T>::GetSubsequence(size_t startIndex, size_t endIn
     if (generator && endIndex >= materialized->GetCount()) {
         result->generator = std::make_unique<SkipGenerator>(
             const_cast<LazySequence*>(this), startIndex, endIndex, const_cast<LazySequence*>(this));
-        result->isFinite = true;
-        result->finiteSize = endIndex - startIndex + 1; 
+        result->length = Cardinal(endIndex - startIndex + 1);  
     } else {
-        result->isFinite = true;
-        result->finiteSize = result->materialized->GetCount();
+        result->length = Cardinal(result->materialized->GetCount());  
     }
     return result;
 }
@@ -374,8 +376,11 @@ LazySequence<T>* LazySequence<T>::Append(const T& item) {
         result->materialized->Append(materialized->Get(i));
     }
     result->materialized->Append(item);
-    result->isFinite = isFinite;
-    result->finiteSize = isFinite ? finiteSize + 1 : 0;
+    if (length.IsInfinite()) {
+        result->length = Cardinal::Infinity();  
+    } else {
+        result->length = Cardinal(length.GetValue() + 1);  
+    }
     return result;
 }
 
@@ -386,8 +391,11 @@ LazySequence<T>* LazySequence<T>::Prepend(const T& item) {
     for (size_t i = 0; i < materialized->GetCount(); ++i) {
         result->materialized->Append(materialized->Get(i));
     }
-    result->isFinite = isFinite;
-    result->finiteSize = isFinite ? finiteSize + 1 : 0;
+    if (length.IsInfinite()) {
+        result->length = Cardinal::Infinity();  
+    } else {
+        result->length = Cardinal(length.GetValue() + 1);  
+    }
     return result;
 }
 
@@ -401,8 +409,11 @@ LazySequence<T>* LazySequence<T>::InsertAt(const T& item, size_t index) {
     for (size_t i = index; i < materialized->GetCount(); ++i) {
         result->materialized->Append(materialized->Get(i));
     }
-    result->isFinite = isFinite;
-    result->finiteSize = isFinite ? finiteSize + 1 : 0;
+    if (length.IsInfinite()) {
+        result->length = Cardinal::Infinity();  
+    } else {
+        result->length = Cardinal(length.GetValue() + 1);  
+    }
     return result;
 }
 
@@ -415,8 +426,11 @@ LazySequence<T>* LazySequence<T>::Concat(LazySequence<T>* list) const {
     for (size_t i = 0; i < list->materialized->GetCount(); ++i) {
         result->materialized->Append(list->materialized->Get(i));
     }
-    result->isFinite = isFinite && list->isFinite;
-    result->finiteSize = (isFinite ? finiteSize : 0) + (list->isFinite ? list->finiteSize : 0);
+    if (length.IsInfinite() || list->length.IsInfinite()) {
+        result->length = Cardinal::Infinity();  
+    } else {
+        result->length = Cardinal(length.GetValue() + list->length.GetValue());  
+    }
     return result;
 }
 
@@ -429,9 +443,9 @@ Sequence<T>* LazySequence<T>::Concat(Sequence<T>* other) const {
     result->generator = std::make_unique<ConcatGenerator>(
         generator ? std::unique_ptr<IGenerator>(generator.get()) : nullptr,
         other,
-        IsInfinite()
+        length.IsInfinite()
     );
-    result->isFinite = !IsInfinite();  
+    result->length = length.IsInfinite() ? Cardinal::Infinity() : Cardinal(length.GetValue() + other->GetCount());
     return result;
 }
 
@@ -444,19 +458,17 @@ LazySequence<T>* LazySequence<T>::Map(std::function<T(const T&)> func) const {
     if (generator) {
         result->generator = std::make_unique<MapGenerator>(
             std::unique_ptr<IGenerator>(generator.get()), func);
-        result->isFinite = isFinite;
-        result->finiteSize = finiteSize;
+        result->length = length;  
     } else {
-        result->isFinite = isFinite;
-        result->finiteSize = finiteSize;
+        result->length = length;  
     }
     return result;
 }
 
 template <typename T>
 T LazySequence<T>::Reduce(std::function<T(const T&, const T&)> func, const T& initial) const {
-    if (generator && !isFinite) {
-    throw InfiniteSequenceException("Cannot reduce infinite sequence");
+    if (generator && length.IsInfinite()) {
+        throw InfiniteSequenceException("Cannot reduce infinite sequence");
     }
     T result = initial;
     for (size_t i = 0; i < materialized->GetCount(); ++i) {
@@ -476,17 +488,14 @@ LazySequence<T>* LazySequence<T>::Where(std::function<bool(const T&)> predicate)
     if (generator) {
         result->generator = std::make_unique<WhereGenerator>(
             std::unique_ptr<IGenerator>(generator.get()), predicate);
-        result->isFinite = false;
-        result->finiteSize = 0;
+        result->length = Cardinal::Infinity(); 
     } else {
-        result->isFinite = true;
-        result->finiteSize = result->materialized->GetCount();
+        result->length = Cardinal(result->materialized->GetCount());  
     }
     return result;
 }
 
 template <typename T>
 Cardinal LazySequence<T>::GetLength() const {
-    if (isFinite) return Cardinal(finiteSize);
-    return Cardinal::Infinity();
+    return length;  
 }

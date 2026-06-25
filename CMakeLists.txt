@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(Lab4)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -41,11 +41,15 @@ file(GLOB MODEL_FILES
     "${MODEL_PATH}/*.hpp"
     "${MODEL_PATH}/*.tpp"
 )
+set(MODEL_SOURCES
+    ${MODEL_PATH}/Cardinal.cpp  
+)
 
 add_executable(${PROJECT_NAME}
     ${GUI_SOURCES}
     ${GUI_HEADERS}
     ${MODEL_FILES}
+    ${MODEL_SOURCES}
 )
 
 target_link_libraries(${PROJECT_NAME}

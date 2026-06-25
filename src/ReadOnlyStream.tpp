@@ -1,7 +1,7 @@
 #include "ReadOnlyStream.hpp"
 
 template <typename T>
-class ReadOnlyStream<T>::SequenceSource : public ReadOnlyStream<T>::ISource {
+class SequenceSource : public ISource<T>{
 private:
     std::unique_ptr<Sequence<T>> data;
     size_t position;
@@ -62,7 +62,7 @@ public:
 };
 
 template <typename T>
-class ReadOnlyStream<T>::LazySequenceSource : public ReadOnlyStream<T>::ISource {
+class LazySequenceSource : public ISource<T> {
 private:
     std::unique_ptr<LazySequence<T>> data;
     size_t position;
@@ -117,9 +117,11 @@ public:
 };
 
 template <typename T>
-class ReadOnlyStream<T>::FileSource : public ReadOnlyStream<T>::ISource {
+class FileSource : public ISource<T> {
 private:
-    std::ifstream file;
+    static constexpr size_t BUFFER_SIZE = 1024;
+
+    FILE* file;
     std::function<T(const std::string&)> deserializer;
     size_t position;
     std::string filename;
@@ -127,22 +129,27 @@ private:
     
 public:
     FileSource(const std::string& fname, std::function<T(const std::string&)> deserializer)
-        : deserializer(deserializer)
+        : file(nullptr)
+        , deserializer(deserializer)
         , position(0)
         , filename(fname)
         , isOpen(false) {}
     
     bool IsEndOfStream() const override {
-        if (!isOpen) return true;
-        return file.eof() || !file.good();
+        if (!isOpen || file == nullptr) return true;
+        return feof(file) != 0 || ferror(file) != 0;
     }
     
     T Read() override {
         if (!isOpen) throw StreamNotOpenException("File not open");
         if (IsEndOfStream()) throw EndOfStreamException("End of file");
         
-        std::string token;
-        if (file >> token) {
+        char buffer[BUFFER_SIZE];
+        if (fgets(buffer, sizeof(buffer), file) != nullptr) {
+            std::string token(buffer);
+            if (!token.empty() && token.back() == '\n') {
+                token.pop_back();
+            }
             position++;
             return deserializer(token);
         }
@@ -154,28 +161,21 @@ public:
     bool IsCanGoBack() const override { return true; }
 
     size_t Seek(size_t index) override {
-    if (!isOpen) throw StreamNotOpenException("File not open");
-    
-    file.clear();
-    file.seekg(0);
-    position = 0;
-    
-    while (position < index && !IsEndOfStream()) {
-        std::string token;
-        if (file >> token) {
+        if (!isOpen) throw StreamNotOpenException("File not open");
+        rewind(file);
+        position = 0;
+        char buffer[1024];
+        while (position < index && fgets(buffer, sizeof(buffer), file) != nullptr) {
             position++;
-        } else {
-            break;  
         }
-    }
-    
-    return position;
+        
+        return position;
     }
     
     void Open() override {
         if (!isOpen) {
-            file.open(filename);
-            if (!file.is_open()) {
+            file = fopen(filename.c_str(), "r");
+            if (file == nullptr) {
                 throw InvalidArgumentException("Cannot open file: " + filename);
             }
             isOpen = true;
@@ -184,8 +184,9 @@ public:
     }
     
     void Close() override {
-        if (isOpen && file.is_open()) {
-            file.close();
+        if (isOpen && file != nullptr) {
+            fclose(file);
+            file = nullptr;
             isOpen = false;
         }
     }
@@ -193,23 +194,27 @@ public:
     T Peek() override {
         if (!isOpen) throw StreamNotOpenException("File not open");
         if (IsEndOfStream()) throw EndOfStreamException("End of file");
-        
-        size_t oldPos = position;
-        std::streampos filePos = file.tellg();
-        
-        std::string token;
-        if (file >> token) {
-            file.seekg(filePos);
+        long pos = ftell(file);
+        char buffer[BUFFER_SIZE];
+        if (fgets(buffer, sizeof(buffer), file) != nullptr) {
+            fseek(file, pos, SEEK_SET);
+            
+            std::string token(buffer);
+            if (!token.empty() && token.back() == '\n') {
+                token.pop_back();
+            }
             return deserializer(token);
         }
         throw EndOfStreamException("End of file");
     }
     
-    void Reset() override { Seek(0); }
+    void Reset() override { 
+        Seek(0); 
+    }
 };
 
 template <typename T>
-class ReadOnlyStream<T>::StringSource : public ReadOnlyStream<T>::ISource {
+class StringSource : public ISource<T> {
 private:
     std::string data;
     char delimiter;
@@ -293,7 +298,7 @@ public:
 };
 
 template <typename T>
-class ReadOnlyStream<T>::StreamSource : public ReadOnlyStream<T>::ISource {
+class StreamSource : public ISource<T> {
 private:
     std::unique_ptr<ReadOnlyStream<T>> source;
     
@@ -344,29 +349,29 @@ public:
 
 template <typename T>
 ReadOnlyStream<T>::ReadOnlyStream(Sequence<T>* seq)
-    : source(std::make_unique<SequenceSource>(seq))
+    : source(std::make_unique<SequenceSource<T>>(seq))
     , isOpen(false) {}
 
 template <typename T>
 ReadOnlyStream<T>::ReadOnlyStream(LazySequence<T>* lazySeq)
-    : source(std::make_unique<LazySequenceSource>(lazySeq))
+    : source(std::make_unique<LazySequenceSource<T>>(lazySeq))
     , isOpen(false) {}
 
 template <typename T>
 ReadOnlyStream<T>::ReadOnlyStream(const std::string& filename, 
                                    std::function<T(const std::string&)> deserializer)
-    : source(std::make_unique<FileSource>(filename, deserializer))
+    : source(std::make_unique<FileSource<T>>(filename, deserializer))
     , isOpen(false) {}
 
 template <typename T>
 ReadOnlyStream<T>::ReadOnlyStream(char delimiter, const std::string& data,
                                    std::function<T(const std::string&)> deserializer)
-    : source(std::make_unique<StringSource>(delimiter, data, deserializer))
+    : source(std::make_unique<StringSource<T>>(delimiter, data, deserializer))
     , isOpen(false) {}
 
 template <typename T>
 ReadOnlyStream<T>::ReadOnlyStream(ReadOnlyStream<T>* stream)
-    : source(std::make_unique<StreamSource>(stream))
+    : source(std::make_unique<StreamSource<T>>(stream))
     , isOpen(false) {}
 
 template <typename T>
