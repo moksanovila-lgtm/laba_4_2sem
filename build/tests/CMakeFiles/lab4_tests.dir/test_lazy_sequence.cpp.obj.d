@@ -250,10 +250,10 @@ tests/CMakeFiles/lab4_tests.dir/test_lazy_sequence.cpp.obj: \
  D:/Lab_4/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
  D:/Lab_4/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
  D:/Lab_4/src/LazySequence.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
- D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstring \

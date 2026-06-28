@@ -696,6 +696,7 @@ tests/CMakeFiles/lab4_tests.dir/test_online_statistics.cpp.obj: D:/Lab_4/tests/t
   _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
   D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/ISource.hpp \
+  D:/Lab_4/src/IStatisticsStrategy.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
@@ -1618,5 +1619,7 @@ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/poly_laguerre.tcc
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/riemann_zeta.tcc:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/special_function_util.h:
+
+D:/Lab_4/src/IStatisticsStrategy.hpp:
 
 D:/Lab_4/src/ReadOnlyStream.hpp:

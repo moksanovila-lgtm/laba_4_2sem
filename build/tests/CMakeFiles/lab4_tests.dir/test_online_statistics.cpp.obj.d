@@ -265,17 +265,17 @@ tests/CMakeFiles/lab4_tests.dir/test_online_statistics.cpp.obj: \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/poly_hermite.tcc \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/poly_laguerre.tcc \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/riemann_zeta.tcc \
- D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp \
- C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstring \
- D:/Lab_4/src/OnlineStatistics.tpp D:/Lab_4/src/ReadOnlyStream.hpp \
- D:/Lab_4/src/LazySequence.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
- D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp \
+ C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstring \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
  D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp \
+ D:/Lab_4/src/IStatisticsStrategy.hpp D:/Lab_4/src/OnlineStatistics.tpp \
+ D:/Lab_4/src/ReadOnlyStream.hpp D:/Lab_4/src/LazySequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/Optional.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
  D:/Lab_4/src/Cardinal.hpp D:/Lab_4/src/LazySequence.tpp \
