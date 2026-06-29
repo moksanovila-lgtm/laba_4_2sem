@@ -232,7 +232,6 @@ void TestingWidget::onRunLargeData() {
         };
         
         ReadOnlyStream<long long> stream(filename.toStdString(), deserializer);
-        stream.Open();
         
         OnlineStatistics<long long> stats;
         
@@ -240,7 +239,6 @@ void TestingWidget::onRunLargeData() {
             stats.Update(stream.Read());
         }
         
-        stream.Close();
         
         auto end = std::chrono::high_resolution_clock::now();
         double timeSec = std::chrono::duration<double>(end - start).count();
@@ -332,11 +330,9 @@ void TestingWidget::onRunAutoTests() {
             ReadOnlyStream<long long> stream(&tempSeq);
             
             OnlineStatistics<long long> stats;
-            stream.Open();
             for (int i = 0; i < 100 && !stream.IsEndOfStream(); ++i) {
                 stats.Update(stream.Read());
             }
-            stream.Close();
             
             r.actualMin = stats.GetMin();
             r.actualMax = stats.GetMax();
@@ -394,11 +390,9 @@ void TestingWidget::onRunAutoTests() {
             ReadOnlyStream<long long> stream(&tempSeq);
             
             OnlineStatistics<long long> stats;
-            stream.Open();
             for (int i = 0; i < 50 && !stream.IsEndOfStream(); ++i) {
                 stats.Update(stream.Read());
             }
-            stream.Close();
             
             r.actualMin = stats.GetMin();
             r.actualMax = stats.GetMax();
@@ -454,11 +448,9 @@ void TestingWidget::onRunAutoTests() {
         ReadOnlyStream<long long> stream(&tempSeq);
         
         OnlineStatistics<long long> stats;
-        stream.Open();
         for (int i = 0; i < 10 && !stream.IsEndOfStream(); ++i) {
             stats.Update(stream.Read());
         }
-        stream.Close();
         
         r.actualMin = stats.GetMin();
         r.actualMax = stats.GetMax();
@@ -514,11 +506,9 @@ void TestingWidget::onRunAutoTests() {
         ReadOnlyStream<long long> stream(&tempSeq);
         
         OnlineStatistics<long long> stats;
-        stream.Open();
         for (int i = 0; i < 10 && !stream.IsEndOfStream(); ++i) {
             stats.Update(stream.Read());
         }
-        stream.Close();
         
         r.actualMin = stats.GetMin();
         r.actualMax = stats.GetMax();
@@ -633,11 +623,9 @@ void TestingWidget::onCalculateFromList() {
     ReadOnlyStream<double> stream(&lazySeq);
     
     OnlineStatistics<double> stats;
-    stream.Open();
     while (!stream.IsEndOfStream()) {
         stats.Update(stream.Read());
     }
-    stream.Close();
     
     QString result = QString(
         "Результаты обработки (%1 элементов):\n"

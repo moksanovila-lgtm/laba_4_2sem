@@ -41,6 +41,6 @@ private slots:
     void onDataTypeChanged(int index);
 
 public:
-    explicit TestingWidget(QWidget* parent = nullptr);
+    TestingWidget(QWidget* parent = nullptr);
     ~TestingWidget();
 };

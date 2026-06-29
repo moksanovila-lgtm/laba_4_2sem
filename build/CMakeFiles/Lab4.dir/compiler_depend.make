@@ -499,6 +499,7 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: Lab4_autogen/mocs_com
   D:/Lab_4/app_gui/include/TestingWidget.hpp \
   D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/ISource.hpp \
+  D:/Lab_4/src/IStatisticsStrategy.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
@@ -2307,8 +2308,16 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsController.cpp.obj: D:/Lab_4/app_gui/s
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
   C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
   D:/Lab_4/app_gui/include/StatisticsController.hpp \
+  D:/Lab_4/src/IStatisticsStrategy.hpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
   D:/Lab_4/src/OnlineStatistics.tpp \
+  D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp \
+  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
+  D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
+  D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
   D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp
 
 CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/StatisticsWidget.cpp \
@@ -2762,6 +2771,7 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: D:/Lab_4/app_gui/src/S
   D:/Lab_4/app_gui/include/StatisticsWidget.hpp \
   D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/ISource.hpp \
+  D:/Lab_4/src/IStatisticsStrategy.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
@@ -3301,6 +3311,7 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: D:/Lab_4/app_gui/src/Test
   D:/Lab_4/app_gui/include/TestingWidget.hpp \
   D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/ISource.hpp \
+  D:/Lab_4/src/IStatisticsStrategy.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
@@ -4643,11 +4654,11 @@ C:/Qt/6.11.0/mingw_64/include/QtCore/qconstructormacros.h:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qarraydataops.h:
 
+D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp:
+
 C:/Qt/6.11.0/mingw_64/include/QtCore/q17memory.h:
 
 C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h:
-
-D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp:
 
 C:/Qt/6.11.0/mingw_64/include/QtGui/qbitmap.h:
 
@@ -5831,6 +5842,8 @@ D:/Lab_4/src/Cardinal.hpp:
 
 D:/Lab_4/src/ISource.hpp:
 
+D:/Lab_4/src/IStatisticsStrategy.hpp:
+
 D:/Lab_4/src/LazySequence.tpp:
 
 C:/Qt/6.11.0/mingw_64/include/QtCore/qcoreevent.h:
@@ -6210,5 +6223,3 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 CMakeFiles/4.3.1/CMakeRCCompiler.cmake:
 
 CMakeFiles/4.3.1/CMakeSystem.cmake:
-
-D:/Lab_4/src/IStatisticsStrategy.hpp:

@@ -59,7 +59,7 @@ private slots:
     void onStatsModeChanged();
 
 public:
-    explicit LazySequenceWidget(QTabWidget* tabWidget, QWidget* parent = nullptr);
+    LazySequenceWidget(QTabWidget* tabWidget, QWidget* parent = nullptr);
     ~LazySequenceWidget();
     
     LazySequenceController* getController() const { return controller; }

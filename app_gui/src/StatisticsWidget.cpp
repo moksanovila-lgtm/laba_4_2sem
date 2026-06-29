@@ -80,11 +80,9 @@ void StatisticsWidget::collectStatistics() {
     
     try {
         OnlineStatistics<long long> stats;
-        sourceStream->Open();
         for (int i = 0; i < elementCount && !sourceStream->IsEndOfStream(); ++i) {
             stats.Update(sourceStream->Read());
         }
-        sourceStream->Close();
         
         minVal = stats.GetMin();
         maxVal = stats.GetMax();

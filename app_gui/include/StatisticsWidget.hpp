@@ -36,7 +36,7 @@ private:
     void updateDisplay();
 
 public:
-    explicit StatisticsWidget(ReadOnlyStream<long long>* stream, int count, 
+    StatisticsWidget(ReadOnlyStream<long long>* stream, int count, 
                               const QString& title, QWidget* parent = nullptr);
     ~StatisticsWidget();
 };

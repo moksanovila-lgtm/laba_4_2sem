@@ -1,5 +1,5 @@
 {
-  "tests": 44,
+  "tests": 40,
   "name": "AllTests",
   "testsuites": [
     {
@@ -14,138 +14,118 @@
         {
           "name": "Max",
           "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
-          "line": 38
+          "line": 36
         },
         {
           "name": "Average",
           "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
-          "line": 49
+          "line": 45
         },
         {
           "name": "Count",
           "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
-          "line": 60
+          "line": 54
         },
         {
           "name": "Variance",
           "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
-          "line": 71
+          "line": 63
         },
         {
           "name": "StdDeviation",
           "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
-          "line": 82
+          "line": 72
         },
         {
           "name": "RMS",
           "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
-          "line": 93
+          "line": 81
         },
         {
           "name": "Range",
           "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
-          "line": 102
+          "line": 90
         },
         {
           "name": "CoefficientOfVariation",
           "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
-          "line": 113
+          "line": 99
         },
         {
           "name": "EmptySequenceThrows",
           "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
-          "line": 122
+          "line": 108
         },
         {
           "name": "Reset",
           "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
-          "line": 160
+          "line": 146
         },
         {
           "name": "ConstantSequence",
           "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
-          "line": 177
+          "line": 163
         },
         {
           "name": "SingleElement",
           "file": "D:\\Lab_4\\tests\\test_online_statistics.cpp",
-          "line": 192
+          "line": 178
         }
       ]
     },
     {
       "name": "ReadOnlyStreamTest",
-      "tests": 14,
+      "tests": 10,
       "testsuite": [
         {
-          "name": "OpenAndClose",
+          "name": "Read",
           "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
           "line": 27
         },
         {
-          "name": "Read",
-          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
-          "line": 32
-        },
-        {
-          "name": "ReadThrowsWhenClosed",
-          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
-          "line": 43
-        },
-        {
           "name": "IsEndOfStream",
           "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
-          "line": 50
+          "line": 36
         },
         {
           "name": "GetPosition",
           "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
-          "line": 60
+          "line": 44
         },
         {
           "name": "Seek",
           "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
-          "line": 70
+          "line": 52
         },
         {
           "name": "SeekThrowsOutOfRange",
           "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
-          "line": 80
-        },
-        {
-          "name": "SeekThrowsWhenClosed",
-          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
-          "line": 89
+          "line": 60
         },
         {
           "name": "Reset",
           "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
-          "line": 96
+          "line": 67
         },
         {
           "name": "Peek",
           "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
-          "line": 108
-        },
-        {
-          "name": "PeekThrowsWhenClosed",
-          "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
-          "line": 118
+          "line": 77
         },
         {
           "name": "PeekThrowsAtEnd",
           "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
-          "line": 125
+          "line": 85
         },
         {
           "name": "IsCanSeek",
           "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
-          "line": 138
+          "line": 96
         },
         {
           "name": "IsCanGoBack",
           "file": "D:\\Lab_4\\tests\\test_readonly_stream.cpp",
-          "line": 142
+          "line": 100
         }
       ]
     },

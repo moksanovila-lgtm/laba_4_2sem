@@ -13,6 +13,4 @@ public:
     virtual bool IsCanGoBack() const = 0;
     virtual T Peek() = 0;
     virtual void Reset() = 0;
-    virtual void Open() {};
-    virtual void Close() {};
 };

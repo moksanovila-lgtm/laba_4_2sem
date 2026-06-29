@@ -11,7 +11,6 @@ template <typename T>
 class ReadOnlyStream {
 private:
     std::unique_ptr<ISource<T>> source;  
-    bool isOpen;
     
 public:
     ReadOnlyStream(Sequence<T>* seq);
@@ -31,8 +30,6 @@ public:
     bool IsCanSeek() const;
     size_t Seek(size_t index);
     bool IsCanGoBack() const;
-    void Open();
-    void Close();
     T Peek();
     void Reset();
     

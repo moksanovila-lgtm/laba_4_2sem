@@ -10,7 +10,7 @@ private:
     OnlineStatistics<long long> stats;
     
 public:
-    explicit StatisticsController(QObject* parent = nullptr);
+    StatisticsController(QObject* parent = nullptr);
     ~StatisticsController();
     
     void updateFromValue(long long value);

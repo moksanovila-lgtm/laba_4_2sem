@@ -26,66 +26,54 @@ protected:
 
 TEST_F(OnlineStatisticsTest, Min) {
     OnlineStatistics<long long> stats;
-    stream->Open();
     while (!stream->IsEndOfStream()) {
         stats.Update(stream->Read());
     }
-    stream->Close();
     long long min = stats.GetMin();
     EXPECT_EQ(min, 1) << "GetMin() on [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]: expected 1, got " << min;
 }
 
 TEST_F(OnlineStatisticsTest, Max) {
     OnlineStatistics<long long> stats;
-    stream->Open();
     while (!stream->IsEndOfStream()) {
         stats.Update(stream->Read());
     }
-    stream->Close();
     long long max = stats.GetMax();
     EXPECT_EQ(max, 10) << "GetMax() on [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]: expected 10, got " << max;
 }
 
 TEST_F(OnlineStatisticsTest, Average) {
     OnlineStatistics<long long> stats;
-    stream->Open();
     while (!stream->IsEndOfStream()) {
         stats.Update(stream->Read());
     }
-    stream->Close();
     double avg = stats.GetAverage();
     EXPECT_DOUBLE_EQ(avg, 5.5) << "GetAverage() on [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]: expected 5.5, got " << avg;
 }
 
 TEST_F(OnlineStatisticsTest, Count) {
     OnlineStatistics<long long> stats;
-    stream->Open();
     while (!stream->IsEndOfStream()) {
         stats.Update(stream->Read());
     }
-    stream->Close();
     size_t count = stats.GetCount();
     EXPECT_EQ(count, 10) << "GetCount() on [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]: expected 10, got " << count;
 }
 
 TEST_F(OnlineStatisticsTest, Variance) {
     OnlineStatistics<long long> stats;
-    stream->Open();
     while (!stream->IsEndOfStream()) {
         stats.Update(stream->Read());
     }
-    stream->Close();
     double variance = stats.GetVariance();
     EXPECT_NEAR(variance, 8.25, 0.1) << "GetVariance() on [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]: expected 8.25, got " << variance;
 }
 
 TEST_F(OnlineStatisticsTest, StdDeviation) {
     OnlineStatistics<long long> stats;
-    stream->Open();
     while (!stream->IsEndOfStream()) {
         stats.Update(stream->Read());
     }
-    stream->Close();
     double stdDev = stats.GetStdDeviation();
     EXPECT_NEAR(stdDev, 2.872, 0.01) << "GetStdDeviation() on [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]: expected 2.872, got " << stdDev;
 }
@@ -101,11 +89,9 @@ TEST_F(OnlineStatisticsTest, RMS) {
 
 TEST_F(OnlineStatisticsTest, Range) {
     OnlineStatistics<long long> stats;
-    stream->Open();
     while (!stream->IsEndOfStream()) {
         stats.Update(stream->Read());
     }
-    stream->Close();
     double range = stats.GetRange();
     EXPECT_EQ(range, 9) << "GetRange() on [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]: expected 9, got " << range;
 }

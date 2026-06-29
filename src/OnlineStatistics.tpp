@@ -110,11 +110,13 @@ std::string OnlineStatistics<T>::ToString() const {
     oss << "  RMS: " << GetRMS() << "\n";
     oss << "  CoeffOfVariation: " << GetCoefficientOfVariation();
 
-    auto strategyResults = GetAllStrategyResults();
-    if (!strategyResults.empty()) {
+    ArraySequence<std::string> names = GetStrategyNames();
+    ArraySequence<double> values = GetStrategyValues();
+    
+    if (names.GetCount() > 0) {
         oss << "\n Additional statistics:\n";
-        for (const auto& [name, value] : strategyResults) {
-            oss << "  " << name << ": " << value << "\n";
+        for (size_t i = 0; i < names.GetCount(); ++i) {
+            oss << "  " << names.Get(i) << ": " << values.Get(i) << "\n";
         }
     }
 
@@ -124,6 +126,20 @@ std::string OnlineStatistics<T>::ToString() const {
 template <Statisticable T>  
 OnlineStatistics<T>::operator std::string() const {
     return ToString();
+}
+
+template <Statisticable T>
+void OnlineStatistics<T>::UpdateStrategies(const T& value) {
+    for (size_t i = 0; i < strategies.GetCount(); ++i) {
+        strategies.Get(i)->Update(value);
+    }
+}
+
+template <Statisticable T>  
+OnlineStatistics<T>::~OnlineStatistics() {
+    for (size_t i = 0; i < strategies.GetCount(); ++i) {
+        delete strategies.Get(i);
+    }
 }
 
 template <Statisticable T>
@@ -142,16 +158,6 @@ double OnlineStatistics<T>::GetStrategyResult(const std::string& name) const {
 }
 
 template <Statisticable T>
-std::map<std::string, double> OnlineStatistics<T>::GetAllStrategyResults() const {
-    std::map<std::string, double> results;
-    for (size_t i = 0; i < strategies.GetCount(); ++i) {
-        IStatisticsStrategy<T>* s = strategies.Get(i);
-        results[s->GetName()] = s->GetResult();
-    }
-    return results;
-}
-
-template <Statisticable T>
 ArraySequence<std::string> OnlineStatistics<T>::GetStrategyNames() const {
     ArraySequence<std::string> names;
     for (size_t i = 0; i < strategies.GetCount(); ++i) {
@@ -161,22 +167,17 @@ ArraySequence<std::string> OnlineStatistics<T>::GetStrategyNames() const {
 }
 
 template <Statisticable T>
-void OnlineStatistics<T>::ResetAllStrategies() {
+ArraySequence<double> OnlineStatistics<T>::GetStrategyValues() const {
+    ArraySequence<double> values;
     for (size_t i = 0; i < strategies.GetCount(); ++i) {
-        strategies.Get(i)->Reset();
+        values.Append(strategies.Get(i)->GetResult());
     }
+    return values;
 }
 
 template <Statisticable T>
-void OnlineStatistics<T>::UpdateStrategies(const T& value) {
+void OnlineStatistics<T>::ResetAllStrategies() {
     for (size_t i = 0; i < strategies.GetCount(); ++i) {
-        strategies.Get(i)->Update(value);
-    }
-}
-
-template <Statisticable T>  
-OnlineStatistics<T>::~OnlineStatistics() {
-    for (size_t i = 0; i < strategies.GetCount(); ++i) {
-        delete strategies.Get(i);
+        strategies.Get(i)->Reset();
     }
 }

@@ -707,6 +707,7 @@ Lab4_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   D:/Lab_4/src/Cardinal.cpp \
   D:/Lab_4/src/Cardinal.hpp \
   D:/Lab_4/src/ISource.hpp \
+  D:/Lab_4/src/IStatisticsStrategy.hpp \
   D:/Lab_4/src/LazySequence.hpp \
   D:/Lab_4/src/LazySequence.tpp \
   D:/Lab_4/src/OnlineStatistics.hpp \
@@ -2154,6 +2155,8 @@ D:/Lab_4/src/Cardinal.cpp:
 D:/Lab_4/src/Cardinal.hpp:
 
 D:/Lab_4/src/ISource.hpp:
+
+D:/Lab_4/src/IStatisticsStrategy.hpp:
 
 D:/Lab_4/src/LazySequence.tpp:
 

@@ -33,7 +33,7 @@ template <typename T>
 Optional<T> LazySequence<T>::DefaultGenerator::TryGetNext() {
     try { 
         return Optional<T>(GetNext()); 
-    } catch (...) { 
+    } catch (const IndexOutOfRangeException&) { 
         return Optional<T>(); 
     }
 }
@@ -70,7 +70,7 @@ template <typename T>
 Optional<T> LazySequence<T>::SkipGenerator::TryGetNext() {
     try { 
         return Optional<T>(GetNext()); 
-    } catch (...) { 
+    } catch (const IndexOutOfRangeException&) { 
         return Optional<T>(); 
     }
 }
@@ -95,7 +95,7 @@ template <typename T>
 Optional<T> LazySequence<T>::MapGenerator::TryGetNext() {
     try { 
         return Optional<T>(GetNext()); 
-    } catch (...) { 
+    } catch (const IndexOutOfRangeException&) { 
         return Optional<T>(); 
     }
 }
@@ -137,7 +137,7 @@ template <typename T>
 Optional<T> LazySequence<T>::WhereGenerator::TryGetNext() {
     try { 
         return Optional<T>(GetNext()); 
-    } catch (...) { 
+    } catch (const IndexOutOfRangeException&) { 
         return Optional<T>(); 
     }
 }
@@ -195,7 +195,7 @@ template <typename T>
 Optional<T> LazySequence<T>::ConcatGenerator::TryGetNext() {
     try {
         return Optional<T>(GetNext());
-    } catch (...) {
+    } catch (const IndexOutOfRangeException&) {
         return Optional<T>();
     }
 }

@@ -52,15 +52,10 @@ public:
 
     void AddStrategy(IStatisticsStrategy<T>* strategy);
     double GetStrategyResult(const std::string& name) const;
-    std::map<std::string, double> GetAllStrategyResults() const;
     ArraySequence<std::string> GetStrategyNames() const;
+    ArraySequence<double> GetStrategyValues() const;
     void ResetAllStrategies();
 };
 
 #include "OnlineStatistics.tpp"
 
-// class A {
-//     double operator+(A other) {
-//         return 0;
-//     }
-// };

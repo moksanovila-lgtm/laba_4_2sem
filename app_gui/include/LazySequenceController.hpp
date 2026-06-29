@@ -17,7 +17,7 @@ public:
         GEN_CONSTANT = 3
     };
     
-    explicit LazySequenceController(QObject* parent = nullptr);
+    LazySequenceController(QObject* parent = nullptr);
     ~LazySequenceController();
     
     void setGenerator(GeneratorType type, long long p1 = 0, long long p2 = 0);

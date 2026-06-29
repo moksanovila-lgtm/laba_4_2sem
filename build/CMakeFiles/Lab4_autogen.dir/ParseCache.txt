@@ -2070,6 +2070,8 @@ D:/Lab_4/app_gui/include/MainWindow.hpp
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h
  mdp:D:/Lab_4/app_gui/include/MainWindow.hpp
  mdp:D:/Lab_4/build/Lab4_autogen/moc_predefs.h
+D:/Lab_4/src/ISource.hpp
+D:/Lab_4/app_gui/src/StatisticsWidget.cpp
 D:/Lab_4/app_gui/include/TestingWidget.hpp
  mmc:Q_OBJECT
  mdp:C:/Qt/6.11.0/mingw_64/include/QtCore/q17memory.h
@@ -2533,8 +2535,6 @@ D:/Lab_4/app_gui/include/TestingWidget.hpp
  mdp:C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h
  mdp:D:/Lab_4/app_gui/include/TestingWidget.hpp
  mdp:D:/Lab_4/build/Lab4_autogen/moc_predefs.h
-D:/Lab_4/src/ISource.hpp
-D:/Lab_4/app_gui/src/StatisticsWidget.cpp
 D:/Lab_4/src/Cardinal.hpp
 D:/Lab_4/src/LazySequence.hpp
 D:/Lab_4/src/OnlineStatistics.hpp

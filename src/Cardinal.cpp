@@ -65,7 +65,6 @@ Cardinal Cardinal::operator*(const Cardinal& other) const {
 }
 
 bool Cardinal::operator==(const Cardinal& other) const {
-    if (isInfinite && other.isInfinite) return true;
     if (isInfinite || other.isInfinite) return false;
     return value == other.value;
 }

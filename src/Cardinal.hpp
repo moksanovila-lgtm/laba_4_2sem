@@ -35,13 +35,3 @@ public:
     
     friend std::ostream& operator<<(std::ostream& os, const Cardinal& c);
 };
-
-// class cardinal_t {
-//     size_t value_;
-//     public:
-//     cardinal_t(size_t value) : value_(value) {}
-// };
-
-// void test() {
-//     cardinal_t c = 5;
-// }
