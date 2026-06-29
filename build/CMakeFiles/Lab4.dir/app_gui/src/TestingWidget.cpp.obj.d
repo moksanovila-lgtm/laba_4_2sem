@@ -464,10 +464,10 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: \
  D:/Lab_4/app_gui/include/LazySequenceController.hpp \
  C:/Qt/6.11.0/mingw_64/include/QtCore/QObject \
  D:/Lab_4/src/LazySequence.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
- D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
@@ -477,7 +477,7 @@ CMakeFiles/Lab4.dir/app_gui/src/TestingWidget.cpp.obj: \
  D:/Lab_4/src/Cardinal.hpp D:/Lab_4/src/LazySequence.tpp \
  D:/Lab_4/src/ReadOnlyStream.hpp D:/Lab_4/src/ISource.hpp \
  D:/Lab_4/src/ReadOnlyStream.tpp D:/Lab_4/src/OnlineStatistics.hpp \
- D:/Lab_4/src/OnlineStatistics.tpp \
+ D:/Lab_4/src/IStatisticsStrategy.hpp D:/Lab_4/src/OnlineStatistics.tpp \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/random \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.h \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \

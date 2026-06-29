@@ -425,10 +425,10 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: \
  D:/Lab_4/src/ReadOnlyStream.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp \
  D:/Lab_4/src/LazySequence.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
- D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
  D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp \
@@ -436,7 +436,8 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsWidget.cpp.obj: \
  D:/Lab_4/third_party/Lab_2/library/include/Optional.tpp \
  D:/Lab_4/src/Cardinal.hpp D:/Lab_4/src/LazySequence.tpp \
  D:/Lab_4/src/ISource.hpp D:/Lab_4/src/ReadOnlyStream.tpp \
- D:/Lab_4/src/OnlineStatistics.hpp D:/Lab_4/src/OnlineStatistics.tpp \
+ D:/Lab_4/src/OnlineStatistics.hpp D:/Lab_4/src/IStatisticsStrategy.hpp \
+ D:/Lab_4/src/OnlineStatistics.tpp \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QVBoxLayout \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qboxlayout.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qlayout.h \

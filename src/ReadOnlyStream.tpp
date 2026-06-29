@@ -5,13 +5,11 @@ class SequenceSource : public ISource<T>{
 private:
     std::unique_ptr<Sequence<T>> data;
     size_t position;
-    bool isOpen;
     
 public:
     SequenceSource(Sequence<T>* seq)
         : data(std::make_unique<ArraySequence<T>>())
-        , position(0)
-        , isOpen(false) {
+        , position(0) {
         IEnumerator<T>* enumerator = seq->GetEnumerator();
         while (enumerator->MoveNext()) {
         data->Append(enumerator->Current());
@@ -24,7 +22,6 @@ public:
     }
     
     T Read() override {
-        if (!isOpen) throw StreamNotOpenException("Stream not open");
         if (IsEndOfStream()) throw EndOfStreamException("End of sequence");
         return data->Get(position++);
     }
@@ -34,7 +31,6 @@ public:
     bool IsCanGoBack() const override { return true; }
     
     size_t Seek(size_t index) override {
-    if (!isOpen) throw StreamNotOpenException("Stream not open");
     if (index > data->GetCount()) {
         throw IndexOutOfRangeException("Seek position " + std::to_string(index) + 
         " exceeds stream size " + std::to_string(data->GetCount())
@@ -43,18 +39,8 @@ public:
     position = index;
     return position;
     }
-    
-    void Open() override { 
-        isOpen = true;  
-        position = 0; 
-    }
-    
-    void Close() override { 
-        isOpen = false;  
-    }
 
     T Peek() override {
-    if (!isOpen) throw StreamNotOpenException("Stream not open");
     if (IsEndOfStream()) throw EndOfStreamException("Peek at end of stream");
     return data->Get(position);
     }
@@ -66,13 +52,11 @@ class LazySequenceSource : public ISource<T> {
 private:
     std::unique_ptr<LazySequence<T>> data;
     size_t position;
-    bool isOpen;
     
 public:
     LazySequenceSource(LazySequence<T>* lazySeq)
         : data(std::make_unique<LazySequence<T>>(*lazySeq))
-        , position(0)
-        , isOpen(false) {}
+        , position(0) {}
     
     bool IsEndOfStream() const override {
         if (data->IsInfinite()) return false;
@@ -80,7 +64,6 @@ public:
     }
     
     T Read() override {
-        if (!isOpen) throw StreamNotOpenException("Stream not open");
         if (IsEndOfStream()) throw EndOfStreamException("End of lazy sequence");
         return data->Get(position++);
     }
@@ -90,7 +73,6 @@ public:
     bool IsCanGoBack() const override { return true; }
 
     size_t Seek(size_t index) override {
-    if (!isOpen) throw StreamNotOpenException("Stream not open");
     if (!data->IsInfinite() && index > data->GetCount()) {
         throw IndexOutOfRangeException("Seek position " + std::to_string(index) + 
         " exceeds stream size"
@@ -100,16 +82,7 @@ public:
     return position;
 }
     
-    void Open() override { 
-        isOpen = true; 
-        position = 0; 
-    }
-    
-    void Close() override { 
-        isOpen = false; 
-    }
-    T Peek() override { 
-    if (!isOpen) throw StreamNotOpenException("Stream not open");      
+    T Peek() override {      
     if (IsEndOfStream()) throw EndOfStreamException("Peek at end of stream");  
     return data->Get(position);
     }
@@ -119,7 +92,7 @@ public:
 template <typename T>
 class FileSource : public ISource<T> {
 private:
-    static constexpr size_t BUFFER_SIZE = 1024;
+    static constexpr size_t BUFFER_SIZE = 1000;
 
     FILE* file;
     std::function<T(const std::string&)> deserializer;
@@ -164,7 +137,7 @@ public:
         if (!isOpen) throw StreamNotOpenException("File not open");
         rewind(file);
         position = 0;
-        char buffer[1024];
+        char buffer[BUFFER_SIZE];
         while (position < index && fgets(buffer, sizeof(buffer), file) != nullptr) {
             position++;
         }
@@ -221,7 +194,6 @@ private:
     std::function<T(const std::string&)> deserializer;
     size_t stringPosition;
     size_t position;
-    bool isOpen; 
     
 public:
     StringSource(char delim, const std::string& str, 
@@ -230,15 +202,13 @@ public:
         , delimiter(delim)
         , deserializer(deserializer)
         , stringPosition(0)
-        , position(0) 
-        , isOpen(false) {}
+        , position(0) {}
     
     bool IsEndOfStream() const override {
         return stringPosition >= data.length();
     }
     
     T Read() override {
-        if (!isOpen) throw StreamNotOpenException("Stream not open");  
         if (IsEndOfStream()) throw EndOfStreamException("End of string");
     
         size_t end = data.find(delimiter, stringPosition);
@@ -256,7 +226,6 @@ public:
     bool IsCanGoBack() const override { return true; }
     
     size_t Seek(size_t index) override {
-        if (!isOpen) throw StreamNotOpenException("Stream not open");
         stringPosition = 0;
         position = 0;
         
@@ -269,16 +238,7 @@ public:
         return position;
     }
     
-    void Open() override { 
-        isOpen = true; 
-        position = 0; 
-        stringPosition = 0; 
-    }
-
-    void Close() override {isOpen = false;}
-    
     T Peek() override {
-        if (!isOpen) throw StreamNotOpenException("Stream not open");
         if (IsEndOfStream()) throw EndOfStreamException("End of string");
         
         size_t oldStringPos = stringPosition;

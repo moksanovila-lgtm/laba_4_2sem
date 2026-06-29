@@ -354,5 +354,12 @@ CMakeFiles/Lab4.dir/app_gui/src/StatisticsController.cpp.obj: \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
  D:/Lab_4/src/OnlineStatistics.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp \
- D:/Lab_4/src/OnlineStatistics.tpp
+ D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
+ D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.tpp \
+ D:/Lab_4/src/IStatisticsStrategy.hpp D:/Lab_4/src/OnlineStatistics.tpp

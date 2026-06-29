@@ -456,10 +456,10 @@ CMakeFiles/Lab4.dir/app_gui/src/LazySequenceWidget.cpp.obj: \
  D:/Lab_4/app_gui/include/LazySequenceController.hpp \
  C:/Qt/6.11.0/mingw_64/include/QtCore/QObject \
  D:/Lab_4/src/LazySequence.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
- D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \

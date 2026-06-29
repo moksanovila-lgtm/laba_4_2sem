@@ -4,17 +4,18 @@
 #include <string>
 #include <sstream>
 #include <concepts>
-#include <type_traits>
+#include "ArraySequence.hpp"  
+#include "IStatisticsStrategy.hpp"
 #include "exceptions.hpp"
 
 template <typename T>
 concept Statisticable = requires(T a, T b) {
-    a + b;      
-    a - b;     
-    a * b;      
-    a / b;      
-    a < b;      
-    a > b;
+    { a + b } -> std::convertible_to<T>;   
+    { a - b } -> std::convertible_to<T>;   
+    { a * b } -> std::convertible_to<T>;  
+    { a / b } -> std::convertible_to<T>;  
+    { a < b } -> std::convertible_to<bool>; 
+    { a > b } -> std::convertible_to<bool>; 
 };
 
 template <Statisticable T>  
@@ -25,9 +26,13 @@ private:
     double sum;
     double sumSq;
     size_t count;
-    
+
+    ArraySequence<IStatisticsStrategy<T>*> strategies;
+    void UpdateStrategies(const T& value);
+
 public:
     OnlineStatistics();
+    ~OnlineStatistics(); 
     
     void Update(const T& value);
     void Reset();
@@ -44,6 +49,18 @@ public:
     
     std::string ToString() const;
     operator std::string() const;
+
+    void AddStrategy(IStatisticsStrategy<T>* strategy);
+    double GetStrategyResult(const std::string& name) const;
+    std::map<std::string, double> GetAllStrategyResults() const;
+    ArraySequence<std::string> GetStrategyNames() const;
+    void ResetAllStrategies();
 };
 
 #include "OnlineStatistics.tpp"
+
+// class A {
+//     double operator+(A other) {
+//         return 0;
+//     }
+// };

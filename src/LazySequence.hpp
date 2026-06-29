@@ -1,9 +1,8 @@
 #pragma once
 
-#include "..\third_party\Lab_2\library\include\Sequence.hpp"
-#include "..\third_party\Lab_2\library\include\ArraySequence.hpp"
-#include "..\third_party\Lab_2\library\include\exceptions.hpp"
-#include "..\third_party\Lab_2\library\include\Optional.hpp"
+#include "ArraySequence.hpp"
+#include "exceptions.hpp"
+#include "Optional.hpp"
 #include "Cardinal.hpp"
 #include <memory>
 #include <functional>

@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include "..\third_party\Lab_2\library\include\exceptions.hpp"
+#include "exceptions.hpp"
 
 class Cardinal {
 private:
@@ -18,6 +18,16 @@ public:
     bool IsFinite() const;
     
     size_t GetValue() const;
+
+    Cardinal operator+(const Cardinal& other) const;
+    Cardinal operator-(const Cardinal& other) const;
+    Cardinal operator*(const Cardinal& other) const;
+    bool operator==(const Cardinal& other) const;
+    bool operator!=(const Cardinal& other) const;
+    bool operator<(const Cardinal& other) const;
+    bool operator>(const Cardinal& other) const;
+    bool operator<=(const Cardinal& other) const;
+    bool operator>=(const Cardinal& other) const;
     
     std::string ToString() const;
     

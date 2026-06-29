@@ -355,10 +355,10 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip \
  C:/w64devkit/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
  D:/Lab_4/src/LazySequence.hpp \
+ D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/Sequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/ICollection.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/IEnumerator.hpp \
- D:/Lab_4/third_party/Lab_2/library/include/ArraySequence.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/exceptions.hpp \
  D:/Lab_4/third_party/Lab_2/library/include/DynamicArray.tpp \
@@ -484,7 +484,8 @@ CMakeFiles/Lab4.dir/Lab4_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qmainwindow.h \
  D:\Lab_4\build\Lab4_autogen\JGBACW2ZV4/moc_StatisticsController.cpp \
  D:/Lab_4/app_gui/include/StatisticsController.hpp \
- D:/Lab_4/src/OnlineStatistics.hpp D:/Lab_4/src/OnlineStatistics.tpp \
+ D:/Lab_4/src/OnlineStatistics.hpp D:/Lab_4/src/IStatisticsStrategy.hpp \
+ D:/Lab_4/src/OnlineStatistics.tpp \
  D:\Lab_4\build\Lab4_autogen\JGBACW2ZV4/moc_StatisticsWidget.cpp \
  D:/Lab_4/app_gui/include/StatisticsWidget.hpp \
  D:\Lab_4\build\Lab4_autogen\JGBACW2ZV4/moc_TestingWidget.cpp \

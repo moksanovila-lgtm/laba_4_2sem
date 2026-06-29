@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\third_party\Lab_2\library\include\exceptions.hpp"
+#include "exceptions.hpp"
 #include "LazySequence.hpp"
 #include <memory>
 #include <functional>

@@ -1,8 +1,5 @@
 #pragma once
 
-#include <functional>
-#include <string>
-
 template <typename T>
 class ISource {
 public:
@@ -14,8 +11,8 @@ public:
     virtual bool IsCanSeek() const = 0;
     virtual size_t Seek(size_t index) = 0;
     virtual bool IsCanGoBack() const = 0;
-    virtual void Open() = 0;
-    virtual void Close() = 0;
     virtual T Peek() = 0;
     virtual void Reset() = 0;
+    virtual void Open() {};
+    virtual void Close() {};
 };
