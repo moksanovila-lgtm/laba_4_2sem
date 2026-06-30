@@ -280,14 +280,6 @@ public:
         return source->IsCanGoBack();
     }
     
-    void Open() override {
-        source->Open();
-    }
-    
-    void Close() override {
-        source->Close();
-    }
-    
     T Peek() override {
         return source->Peek();
     }
